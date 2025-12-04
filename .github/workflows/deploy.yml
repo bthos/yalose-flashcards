@@ -87,9 +87,10 @@ jobs:
             git remote add origin ${{ github.server_url }}/${{ github.repository }}.git
             git checkout -b gh-pages
             echo "# GitHub Pages" > README.md
+            touch .nojekyll
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add README.md
+            git add README.md .nojekyll
             git commit -m "Initialize gh-pages branch"
             git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
           fi
@@ -113,13 +114,16 @@ jobs:
           # Copy QA build to qa directory
           cp -r qa-build/* gh-pages/qa/
           
+          # Add .nojekyll file to prevent Jekyll processing
+          touch gh-pages/.nojekyll
+          
           # Configure git
           cd gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           # Commit and push if there are changes
-          git add qa
+          git add qa .nojekyll
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Deploy QA build to /qa"
             git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
