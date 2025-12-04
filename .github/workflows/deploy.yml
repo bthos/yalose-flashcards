@@ -1,5 +1,14 @@
 name: Deploy to QA and Production
 
+# This workflow deploys the application through two environments:
+# 1. QA - Automatically deploys after successful build
+# 2. Production - Deploys after QA (can be configured to require manual approval)
+#
+# To configure manual approval for Production:
+# 1. Go to Settings > Environments in your GitHub repository
+# 2. Create/edit the 'production' environment
+# 3. Add required reviewers under "Deployment protection rules"
+
 on:
   push:
     branches: ['main']
