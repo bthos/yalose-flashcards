@@ -56,9 +56,29 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: ./qa-artifact
+      
       - name: QA Validation
         run: |
-          echo "QA validation passed"
+          echo "=== QA Validation ==="
+          echo "Verifying build artifact..."
+          
+          # Extract and verify the artifact
+          cd qa-artifact
+          tar -xzf artifact.tar.gz
+          
+          # Check that critical files exist
+          if [ ! -f "index.html" ]; then
+            echo "ERROR: index.html not found in build artifact"
+            exit 1
+          fi
+          
+          echo "✓ Build artifact verified successfully"
+          echo "✓ QA validation passed"
           echo "Build artifact is ready for production deployment"
 
   deploy-prod:
