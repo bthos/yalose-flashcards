@@ -2,15 +2,15 @@ name: Deploy to QA and Production
 
 # This workflow deploys the application through two environments:
 # 1. QA - Deploys to /qa subdirectory on GitHub Pages for validation
-# 2. Production - Deploys to root of GitHub Pages after manual approval
-#
-# Manual Approval Process:
-# - After QA deployment succeeds, the workflow will pause at the 'approve-production' job
-# - The 'production-approval' environment requires manual approval from designated reviewers
-# - To configure reviewers: Settings > Environments > production-approval > Required reviewers
-# - Once approved, the production deployment will proceed
+# 2. Production - Deploys to root of GitHub Pages after QA validation (overwrites entire gh-pages branch including /qa)
 #
 # Note: The QA deployment at /qa is temporary and will be overwritten by the production deployment.
+# QA is available for testing between the deploy-qa and deploy-prod steps.
+#
+# To configure manual approval between QA and Production:
+# 1. Go to Settings > Environments in your GitHub repository
+# 2. Create/edit the 'production' environment
+# 3. Add required reviewers under "Deployment protection rules"
 
 on:
   push:
@@ -129,24 +129,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  approve-production:
-    environment:
-      name: production-approval
-    runs-on: ubuntu-latest
-    needs: deploy-qa
-    steps:
-      - name: Wait for Manual Approval
-        run: |
-          echo "✅ QA deployment completed successfully"
-          echo "⏳ Waiting for manual approval to proceed with production deployment"
-          echo "👉 Approve this deployment in the GitHub Actions UI to continue"
-
   deploy-prod:
     environment:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: approve-production
+    needs: deploy-qa
     steps:
       - name: Deploy to Production
         id: deployment
