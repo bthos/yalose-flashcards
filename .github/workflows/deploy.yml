@@ -80,6 +80,12 @@ jobs:
             git init
             git remote add origin ${{ github.server_url }}/${{ github.repository }}.git
             git checkout -b gh-pages
+            echo "# GitHub Pages" > README.md
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "Initialize gh-pages branch"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
