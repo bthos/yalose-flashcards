@@ -15,14 +15,30 @@ function FlashCard({ word, onKnown, onReview }) {
   const handleKnown = (e) => {
     e.stopPropagation();
     if (onKnown) {
-      onKnown(word.id);
+      // If card is flipped, flip it back first and wait for animation
+      if (isFlipped) {
+        setIsFlipped(false);
+        setTimeout(() => {
+          onKnown(word.id);
+        }, 600); // Wait for CSS transition to complete (0.6s)
+      } else {
+        onKnown(word.id);
+      }
     }
   };
 
   const handleReview = (e) => {
     e.stopPropagation();
     if (onReview) {
-      onReview(word.id);
+      // If card is flipped, flip it back first and wait for animation
+      if (isFlipped) {
+        setIsFlipped(false);
+        setTimeout(() => {
+          onReview(word.id);
+        }, 600); // Wait for CSS transition to complete (0.6s)
+      } else {
+        onReview(word.id);
+      }
     }
   };
 
