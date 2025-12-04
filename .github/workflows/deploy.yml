@@ -1,16 +1,13 @@
 name: Deploy to QA and Production
 
 # This workflow deploys the application through two environments:
-# 1. QA - Validates the build artifact and can include approval gates
-# 2. Production - Deploys to GitHub Pages after QA validation
+# 1. QA - Deploys to /qa subdirectory on GitHub Pages
+# 2. Production - Deploys to root of GitHub Pages after QA validation
 #
 # To configure manual approval between QA and Production:
 # 1. Go to Settings > Environments in your GitHub repository
 # 2. Create/edit the 'production' environment
 # 3. Add required reviewers under "Deployment protection rules"
-#
-# Note: GitHub Pages has a single deployment endpoint per repository.
-# The QA environment serves as a validation gate before production deployment.
 
 on:
   push:
@@ -18,7 +15,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -29,6 +26,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      production-artifact: ${{ steps.upload-prod.outputs.artifact-id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,10 +41,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build
+      - name: Build for QA
+        run: npm run build:qa
+      
+      - name: Upload QA build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-build
+          path: ./dist
+      
+      - name: Build for Production
         run: npm run build
       
-      - name: Upload artifact
+      - name: Upload Production artifact
+        id: upload-prod
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -53,33 +62,39 @@ jobs:
   deploy-qa:
     environment:
       name: qa
+      url: https://bthos.github.io/yalose-flashcards/qa/
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download artifact
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+      
+      - name: Download QA artifact
         uses: actions/download-artifact@v4.1.3
         with:
-          name: github-pages
-          path: ./qa-artifact
+          name: qa-build
+          path: ./qa-build
       
-      - name: QA Validation
+      - name: Deploy to QA directory
         run: |
-          echo "=== QA Validation ==="
-          echo "Verifying build artifact..."
+          # Create/clean QA directory
+          mkdir -p gh-pages/qa
+          rm -rf gh-pages/qa/*
           
-          # Extract and verify the artifact
-          cd qa-artifact
-          tar -xzf artifact.tar.gz
+          # Copy QA build to qa directory
+          cp -r qa-build/* gh-pages/qa/
           
-          # Check that critical files exist
-          if [ ! -f "index.html" ]; then
-            echo "ERROR: index.html not found in build artifact"
-            exit 1
-          fi
+          # Configure git
+          cd gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          echo "✓ Build artifact verified successfully"
-          echo "✓ QA validation passed"
-          echo "Build artifact is ready for production deployment"
+          # Commit and push
+          git add qa
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy QA build to /qa" && git push)
 
   deploy-prod:
     environment:
@@ -91,3 +106,5 @@ jobs:
       - name: Deploy to Production
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: artifact
