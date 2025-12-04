@@ -2,10 +2,10 @@ name: Deploy to QA and Production
 
 # This workflow deploys the application through two environments:
 # 1. QA - Deploys to /qa subdirectory on GitHub Pages for validation
-# 2. Production - Deploys to root of GitHub Pages after QA validation (overwrites entire gh-pages branch including /qa)
+# 2. Production - Deploys to root of GitHub Pages after QA validation
 #
-# Note: The QA deployment at /qa is temporary and will be overwritten by the production deployment.
-# QA is available for testing between the deploy-qa and deploy-prod steps.
+# Both QA and Production are deployed together to GitHub Pages, with QA accessible at /qa
+# and Production at the root. The QA deployment persists even after production deployment.
 #
 # To configure manual approval between QA and Production:
 # 1. Go to Settings > Environments in your GitHub repository
@@ -45,11 +45,10 @@ jobs:
       - name: Build for QA
         run: npm run build:qa
       
-      - name: Upload QA build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-build
-          path: ./dist
+      - name: Save QA build
+        run: |
+          mkdir -p qa-build
+          cp -r dist/* qa-build/
       
       - name: Clean dist directory
         run: rm -rf ./dist
@@ -57,8 +56,15 @@ jobs:
       - name: Build for Production
         run: npm run build
       
-      - name: Upload Production artifact
-        id: upload-prod
+      - name: Combine QA and Production builds
+        run: |
+          # Create qa subdirectory in production build
+          mkdir -p dist/qa
+          # Copy QA build into the qa subdirectory
+          cp -r qa-build/* dist/qa/
+      
+      - name: Upload combined build artifact
+        id: upload-artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -70,68 +76,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-        continue-on-error: true
-      
-      - name: Initialize gh-pages if needed
-        run: |
-          if [ ! -d "gh-pages/.git" ]; then
-            echo "gh-pages branch doesn't exist, creating it..."
-            mkdir -p gh-pages
-            cd gh-pages
-            git init
-            git remote add origin ${{ github.server_url }}/${{ github.repository }}.git
-            git checkout -b gh-pages
-            echo "# GitHub Pages" > README.md
-            touch .nojekyll
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add README.md .nojekyll
-            git commit -m "Initialize gh-pages branch"
-            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Download QA artifact
-        uses: actions/download-artifact@v4.1.3
-        with:
-          name: qa-build
-          path: ./qa-build
-      
-      - name: Deploy to QA directory
-        run: |
-          # Create/clean QA directory
-          mkdir -p gh-pages/qa
-          if [ -d "gh-pages/qa" ]; then
-            rm -rf gh-pages/qa/*
-          fi
-          
-          # Copy QA build to qa directory
-          cp -r qa-build/* gh-pages/qa/
-          
-          # Add .nojekyll file to prevent Jekyll processing
-          touch gh-pages/.nojekyll
-          
-          # Configure git
-          cd gh-pages
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Commit and push if there are changes
-          git add qa .nojekyll
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Deploy QA build to /qa"
-            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
-          else
-            echo "No changes to commit"
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages (includes QA at /qa and Production at root)
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   deploy-prod:
     environment:
@@ -140,6 +87,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-qa
     steps:
-      - name: Deploy to Production
+      - name: Deploy to Production (same content as QA deployment)
         id: deployment
         uses: actions/deploy-pages@v4
