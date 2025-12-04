@@ -60,6 +60,44 @@
   margin: 0;
 }
 
+.progress-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.progress-text {
+  font-size: 1rem;
+  color: var(--color-electric-yellow);
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.reset-button {
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: var(--color-electric-yellow);
+  color: var(--color-deep-purple);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  margin-top: 20px;
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 600px) {
   .app-header h1 {
     font-size: 3rem;
@@ -67,5 +105,10 @@
 
   .app-header .tagline {
     font-size: 1.2rem;
+  }
+
+  .reset-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
   }
 }
