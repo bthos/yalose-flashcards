@@ -94,7 +94,9 @@ jobs:
         run: |
           # Create/clean QA directory
           mkdir -p gh-pages/qa
-          rm -rf gh-pages/qa/*
+          if [ -d "gh-pages/qa" ]; then
+            rm -rf gh-pages/qa/*
+          fi
           
           # Copy QA build to qa directory
           cp -r qa-build/* gh-pages/qa/
