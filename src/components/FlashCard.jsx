@@ -36,7 +36,7 @@ function FlashCard({ word, onKnown, onReview }) {
           </div>
           <div className="flashcard-back">
             <h2>{word.translations.en}</h2>
-            <p className="definition">{word.definitions[0]}</p>
+            <p className="definition">{word.definitions && word.definitions.length > 0 ? word.definitions[0] : 'No definition available'}</p>
             {word.tags && word.tags.length > 0 && (
               <div className="tags">
                 {word.tags.map((tag, index) => (

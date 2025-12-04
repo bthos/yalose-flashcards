@@ -49,9 +49,9 @@ function App() {
     const filteredWords = vocabulary.filter(word => word.id !== wordId);
     setVocabulary(filteredWords);
     
-    // Reset index if needed
-    if (currentIndex >= filteredWords.length && filteredWords.length > 0) {
-      setCurrentIndex(filteredWords.length - 1);
+    // Reset index if needed - if we removed the last word, go back to start
+    if (filteredWords.length > 0 && currentIndex >= filteredWords.length) {
+      setCurrentIndex(0);
     }
   };
 
