@@ -1,0 +1,16 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "spanish": "correr",
+      "english": "to run",
+      "definition": "Moverse rápidamente con pasos largos y rápidos",
+      "examples": [
+        "Me gusta correr por la mañana",
+        "El niño corre en el parque"
+      ],
+      "category": "verb",
+      "difficulty": "beginner"
+    }
+  ]
+}
