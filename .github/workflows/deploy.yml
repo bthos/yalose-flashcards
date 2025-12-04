@@ -88,7 +88,7 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add README.md
             git commit -m "Initialize gh-pages branch"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
+            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -155,7 +155,23 @@ jobs:
         run: |
           # Remove old production files but keep qa directory
           cd gh-pages
-          find . -maxdepth 1 ! -name 'qa' ! -name '.git' ! -name '.' ! -name '..' -exec rm -rf {} +
+          
+          # List of items to keep
+          KEEP_ITEMS=("qa" ".git")
+          
+          # Remove everything except items in KEEP_ITEMS
+          for item in *; do
+            if [[ ! " ${KEEP_ITEMS[@]} " =~ " ${item} " ]]; then
+              rm -rf "$item"
+            fi
+          done
+          
+          # Also remove hidden files except .git
+          for item in .[^.]*; do
+            if [[ "$item" != ".git" && -e "$item" ]]; then
+              rm -rf "$item"
+            fi
+          done
           
           # Copy production build to root
           cp -r ../prod-artifact/* .
