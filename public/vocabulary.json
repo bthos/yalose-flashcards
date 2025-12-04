@@ -1,16 +1,46 @@
 {
   "words": [
     {
-      "id": 1,
-      "spanish": "correr",
-      "english": "to run",
-      "definition": "Moverse rápidamente con pasos largos y rápidos",
-      "examples": [
-        "Me gusta correr por la mañana",
-        "El niño corre en el parque"
+      "id": "unique_hash_001",
+      "word": "correr",
+      "frequency_rank": 450,
+      "rae_link": "https://dle.rae.es/correr",
+      "definitions": [
+        "Moverse rápidamente con pasos largos y rápidos"
       ],
-      "category": "verb",
-      "difficulty": "beginner"
+      "translations": {
+        "en": "to run",
+        "fr": "courir"
+      },
+      "tags": ["verb", "movement"]
+    },
+    {
+      "id": "unique_hash_002",
+      "word": "casa",
+      "frequency_rank": 120,
+      "rae_link": "https://dle.rae.es/casa",
+      "definitions": [
+        "Edificio para habitar"
+      ],
+      "translations": {
+        "en": "house",
+        "fr": "maison"
+      },
+      "tags": ["noun", "home"]
+    },
+    {
+      "id": "unique_hash_003",
+      "word": "comer",
+      "frequency_rank": 380,
+      "rae_link": "https://dle.rae.es/comer",
+      "definitions": [
+        "Ingerir alimento"
+      ],
+      "translations": {
+        "en": "to eat",
+        "fr": "manger"
+      },
+      "tags": ["verb", "food"]
     }
   ]
 }

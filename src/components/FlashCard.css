@@ -1,8 +1,16 @@
+.flashcard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 500px;
+}
+
 .flashcard-container {
   perspective: 1000px;
   cursor: pointer;
   width: 100%;
-  max-width: 500px;
   height: 400px;
 }
 
@@ -69,29 +77,66 @@
   font-style: italic;
 }
 
-.flashcard-back .examples {
+.flashcard-back .tags {
   margin-top: 24px;
-  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.flashcard-back .example-label {
-  font-size: 1.1rem;
+.flashcard-back .tag {
+  background-color: var(--color-electric-yellow);
+  color: var(--color-deep-purple);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 8px;
-  text-align: left;
 }
 
-.flashcard-back .example {
-  font-size: 1rem;
-  margin: 6px 0;
-  text-align: left;
-  font-weight: 400;
+.flashcard-actions {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.action-button {
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.action-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-button {
+  background-color: var(--color-electric-yellow);
+  color: var(--color-deep-purple);
+}
+
+.known-button {
+  background-color: var(--color-deep-purple);
+  color: var(--color-electric-yellow);
+  border: 3px solid var(--color-electric-yellow);
 }
 
 /* Ensure high contrast and readability */
 @media (max-width: 600px) {
   .flashcard-container {
-    max-width: 90vw;
     height: 350px;
   }
 
@@ -108,11 +153,13 @@
     font-size: 1.1rem;
   }
 
-  .flashcard-back .example-label {
-    font-size: 1rem;
+  .flashcard-back .tag {
+    font-size: 0.8rem;
+    padding: 4px 12px;
   }
 
-  .flashcard-back .example {
-    font-size: 0.9rem;
+  .action-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
   }
 }
