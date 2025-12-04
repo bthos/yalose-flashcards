@@ -7,6 +7,10 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /* YaLoSé Brand Colors */
+  --color-electric-yellow: #FFEB3B;
+  --color-deep-purple: #311B92;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

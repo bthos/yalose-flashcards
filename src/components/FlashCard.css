@@ -35,13 +35,13 @@
 }
 
 .flashcard-front {
-  background-color: #FFEB3B; /* Electric Yellow */
-  color: #311B92; /* Deep Purple */
+  background-color: var(--color-electric-yellow);
+  color: var(--color-deep-purple);
 }
 
 .flashcard-back {
-  background-color: #311B92; /* Deep Purple */
-  color: #FFEB3B; /* Electric Yellow */
+  background-color: var(--color-deep-purple);
+  color: var(--color-electric-yellow);
   transform: rotateY(180deg);
 }
 

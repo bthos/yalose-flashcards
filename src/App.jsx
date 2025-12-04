@@ -8,7 +8,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/yalose-flashcards/vocabulary.json')
+    fetch(`${import.meta.env.BASE_URL}vocabulary.json`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load vocabulary data');
