@@ -40,6 +40,9 @@ function App() {
   }, [knownWords]);
 
   const handleKnown = (wordId) => {
+    // Prevent multiple clicks during animation
+    if (exitDirection) return;
+    
     // Set exit direction for animation
     setExitDirection('right');
     
@@ -67,6 +70,9 @@ function App() {
   };
 
   const handleReview = () => {
+    // Prevent multiple clicks during animation
+    if (exitDirection) return;
+    
     // Set exit direction for animation
     setExitDirection('left');
     
