@@ -1,4 +1,16 @@
-name: Deploy to GitHub Pages
+name: Deploy to QA and Production
+
+# This workflow deploys the application through two environments:
+# 1. QA - Deploys to /qa subdirectory on GitHub Pages for validation
+# 2. Production - Deploys to root of GitHub Pages after QA validation (overwrites entire gh-pages branch including /qa)
+#
+# Note: The QA deployment at /qa is temporary and will be overwritten by the production deployment.
+# QA is available for testing between the deploy-qa and deploy-prod steps.
+#
+# To configure manual approval between QA and Production:
+# 1. Go to Settings > Environments in your GitHub repository
+# 2. Create/edit the 'production' environment
+# 3. Add required reviewers under "Deployment protection rules"
 
 on:
   push:
@@ -6,7 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -30,21 +42,100 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build
+      - name: Build for QA
+        run: npm run build:qa
+      
+      - name: Upload QA build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-build
+          path: ./dist
+      
+      - name: Clean dist directory
+        run: rm -rf ./dist
+      
+      - name: Build for Production
         run: npm run build
       
-      - name: Upload artifact
+      - name: Upload Production artifact
+        id: upload-prod
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
-  deploy:
+  deploy-qa:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: qa
+      url: https://bthos.github.io/yalose-flashcards/qa/
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        continue-on-error: true
+      
+      - name: Initialize gh-pages if needed
+        run: |
+          if [ ! -d "gh-pages/.git" ]; then
+            echo "gh-pages branch doesn't exist, creating it..."
+            mkdir -p gh-pages
+            cd gh-pages
+            git init
+            git remote add origin ${{ github.server_url }}/${{ github.repository }}.git
+            git checkout -b gh-pages
+            echo "# GitHub Pages" > README.md
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "Initialize gh-pages branch"
+            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Download QA artifact
+        uses: actions/download-artifact@v4.1.3
+        with:
+          name: qa-build
+          path: ./qa-build
+      
+      - name: Deploy to QA directory
+        run: |
+          # Create/clean QA directory
+          mkdir -p gh-pages/qa
+          if [ -d "gh-pages/qa" ]; then
+            rm -rf gh-pages/qa/*
+          fi
+          
+          # Copy QA build to qa directory
+          cp -r qa-build/* gh-pages/qa/
+          
+          # Configure git
+          cd gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Commit and push if there are changes
+          git add qa
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Deploy QA build to /qa"
+            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin gh-pages
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-prod:
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: deploy-qa
+    steps:
+      - name: Deploy to Production
         id: deployment
         uses: actions/deploy-pages@v4
