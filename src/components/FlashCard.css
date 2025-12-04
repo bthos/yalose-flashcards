@@ -1,3 +1,37 @@
+/* Slide transition animations */
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .flashcard-wrapper {
   display: flex;
   flex-direction: column;
@@ -5,6 +39,18 @@
   gap: 24px;
   width: 100%;
   max-width: 500px;
+}
+
+.flashcard-wrapper.exit-left {
+  animation: slideOutLeft 0.5s ease-in-out forwards;
+}
+
+.flashcard-wrapper.exit-right {
+  animation: slideOutRight 0.5s ease-in-out forwards;
+}
+
+.flashcard-wrapper.fade-in {
+  animation: fadeIn 0.5s ease-out;
 }
 
 .flashcard-container {
