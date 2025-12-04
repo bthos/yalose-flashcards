@@ -1,0 +1,16 @@
+[
+  {
+    "id": "unique_hash_001",
+    "word": "correr",
+    "frequency_rank": 450,
+    "rae_link": "https://dle.rae.es/correr",
+    "definitions": [
+      "Desplazarse rápidamente con pasos largos."
+    ],
+    "translations": {
+      "en": "to run",
+      "fr": "courir"
+    },
+    "tags": ["verb", "movement"]
+  }
+]
