@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to QA and Production
 
 on:
   push:
@@ -38,13 +38,24 @@ jobs:
         with:
           path: ./dist
 
-  deploy:
+  deploy-qa:
     environment:
-      name: github-pages
+      name: qa
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to QA
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-prod:
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: deploy-qa
+    steps:
+      - name: Deploy to Production
         id: deployment
         uses: actions/deploy-pages@v4
