@@ -107,7 +107,7 @@ function App() {
     return (
       <div className="app-container">
         <header className="app-header">
-          <h1>YaLoSé</h1>
+          <h1>Yalosé</h1>
           <p className="tagline">"I already know it!"</p>
         </header>
         <main className="app-main">
@@ -133,7 +133,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>YaLoSé</h1>
+        <h1>Yalosé</h1>
         <p className="tagline">"I already know it!"</p>
       </header>
       <main className="app-main">
