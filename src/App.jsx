@@ -11,6 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [exitDirection, setExitDirection] = useState(null);
+  const [hasTransitioned, setHasTransitioned] = useState(false);
   const [knownWords, setKnownWords] = useState(() => {
     // Load known words from localStorage on initialization
     const stored = localStorage.getItem(KNOWN_WORDS_KEY);
@@ -43,6 +44,9 @@ function App() {
     // Prevent multiple clicks during animation
     if (exitDirection) return;
     
+    // Mark that a transition has occurred
+    setHasTransitioned(true);
+    
     // Set exit direction for animation
     setExitDirection('right');
     
@@ -72,6 +76,9 @@ function App() {
   const handleReview = () => {
     // Prevent multiple clicks during animation
     if (exitDirection) return;
+    
+    // Mark that a transition has occurred
+    setHasTransitioned(true);
     
     // Set exit direction for animation
     setExitDirection('left');
@@ -136,6 +143,7 @@ function App() {
           onKnown={handleKnown}
           onReview={handleReview}
           exitDirection={exitDirection}
+          hasTransitioned={hasTransitioned}
         />
         {vocabulary.length > 1 && (
           <div className="navigation">
