@@ -4,7 +4,7 @@ import './FlashCard.css';
 // Match the CSS transition duration (0.6s)
 const FLIP_TRANSITION_DURATION = 600;
 
-function FlashCard({ word, onKnown, onReview }) {
+function FlashCard({ word, onKnown, onReview, exitDirection }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef(null);
@@ -63,7 +63,7 @@ function FlashCard({ word, onKnown, onReview }) {
   };
 
   return (
-    <div className="flashcard-wrapper">
+    <div className={`flashcard-wrapper ${exitDirection ? `exit-${exitDirection}` : 'fade-in'}`}>
       <div className="flashcard-container" onClick={handleCardClick}>
         <div className={`flashcard ${isFlipped ? 'flipped' : ''}`}>
           <div className="flashcard-front">

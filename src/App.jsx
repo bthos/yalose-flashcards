@@ -3,12 +3,14 @@ import FlashCard from './components/FlashCard'
 import './App.css'
 
 const KNOWN_WORDS_KEY = 'yalose-known-words';
+const SLIDE_ANIMATION_DURATION = 500; // milliseconds
 
 function App() {
   const [vocabulary, setVocabulary] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [exitDirection, setExitDirection] = useState(null);
   const [knownWords, setKnownWords] = useState(() => {
     // Load known words from localStorage on initialization
     const stored = localStorage.getItem(KNOWN_WORDS_KEY);
@@ -38,28 +40,46 @@ function App() {
   }, [knownWords]);
 
   const handleKnown = (wordId) => {
-    // Add word to known words list
-    const updatedKnownWords = [...knownWords, wordId];
-    setKnownWords(updatedKnownWords);
+    // Set exit direction for animation
+    setExitDirection('right');
     
-    // Save to localStorage
-    localStorage.setItem(KNOWN_WORDS_KEY, JSON.stringify(updatedKnownWords));
-    
-    // Remove word from current vocabulary
-    const filteredWords = vocabulary.filter(word => word.id !== wordId);
-    setVocabulary(filteredWords);
-    
-    // Reset index if needed - if we removed the last word, go back to start
-    if (filteredWords.length > 0 && currentIndex >= filteredWords.length) {
-      setCurrentIndex(0);
-    }
+    // Wait for animation to complete before updating state
+    setTimeout(() => {
+      // Add word to known words list
+      const updatedKnownWords = [...knownWords, wordId];
+      setKnownWords(updatedKnownWords);
+      
+      // Save to localStorage
+      localStorage.setItem(KNOWN_WORDS_KEY, JSON.stringify(updatedKnownWords));
+      
+      // Remove word from current vocabulary
+      const filteredWords = vocabulary.filter(word => word.id !== wordId);
+      setVocabulary(filteredWords);
+      
+      // Reset index if needed - if we removed the last word, go back to start
+      if (filteredWords.length > 0 && currentIndex >= filteredWords.length) {
+        setCurrentIndex(0);
+      }
+      
+      // Reset exit direction
+      setExitDirection(null);
+    }, SLIDE_ANIMATION_DURATION);
   };
 
   const handleReview = () => {
-    // Move to next word (keeping current word in rotation)
-    if (vocabulary && vocabulary.length > 1) {
-      setCurrentIndex((currentIndex + 1) % vocabulary.length);
-    }
+    // Set exit direction for animation
+    setExitDirection('left');
+    
+    // Wait for animation to complete before updating state
+    setTimeout(() => {
+      // Move to next word (keeping current word in rotation)
+      if (vocabulary && vocabulary.length > 1) {
+        setCurrentIndex((currentIndex + 1) % vocabulary.length);
+      }
+      
+      // Reset exit direction
+      setExitDirection(null);
+    }, SLIDE_ANIMATION_DURATION);
   };
 
   if (loading) {
@@ -105,9 +125,11 @@ function App() {
       </header>
       <main className="app-main">
         <FlashCard 
+          key={currentWord.id}
           word={currentWord} 
           onKnown={handleKnown}
           onReview={handleReview}
+          exitDirection={exitDirection}
         />
         {vocabulary.length > 1 && (
           <div className="navigation">
