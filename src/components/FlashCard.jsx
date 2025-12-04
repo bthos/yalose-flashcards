@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './FlashCard.css';
 
+// Match the CSS transition duration (0.6s)
+const FLIP_TRANSITION_DURATION = 600;
+
 function FlashCard({ word, onKnown, onReview }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -12,34 +15,29 @@ function FlashCard({ word, onKnown, onReview }) {
     setIsFlipped(!isFlipped);
   };
 
+  // Helper function to handle card actions with flip-back animation
+  const handleCardAction = (callback) => {
+    if (!callback) return;
+    
+    // If card is flipped, flip it back first and wait for animation
+    if (isFlipped) {
+      setIsFlipped(false);
+      setTimeout(() => {
+        callback(word.id);
+      }, FLIP_TRANSITION_DURATION);
+    } else {
+      callback(word.id);
+    }
+  };
+
   const handleKnown = (e) => {
     e.stopPropagation();
-    if (onKnown) {
-      // If card is flipped, flip it back first and wait for animation
-      if (isFlipped) {
-        setIsFlipped(false);
-        setTimeout(() => {
-          onKnown(word.id);
-        }, 600); // Wait for CSS transition to complete (0.6s)
-      } else {
-        onKnown(word.id);
-      }
-    }
+    handleCardAction(onKnown);
   };
 
   const handleReview = (e) => {
     e.stopPropagation();
-    if (onReview) {
-      // If card is flipped, flip it back first and wait for animation
-      if (isFlipped) {
-        setIsFlipped(false);
-        setTimeout(() => {
-          onReview(word.id);
-        }, 600); // Wait for CSS transition to complete (0.6s)
-      } else {
-        onReview(word.id);
-      }
-    }
+    handleCardAction(onReview);
   };
 
   return (
