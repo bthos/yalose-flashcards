@@ -19,14 +19,15 @@ function FlashCard({ word, onKnown, onReview }) {
   const handleCardAction = (callback) => {
     if (!callback) return;
     
+    const wordId = word.id; // Capture the current word ID
     // If card is flipped, flip it back first and wait for animation
     if (isFlipped) {
       setIsFlipped(false);
       setTimeout(() => {
-        callback(word.id);
+        callback(wordId);
       }, FLIP_TRANSITION_DURATION);
     } else {
-      callback(word.id);
+      callback(wordId);
     }
   };
 
