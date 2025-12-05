@@ -87,6 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-qa
     steps:
-      - name: Deploy to Production (same content as QA deployment)
+      - name: Deploy combined artifact to Production (QA at /qa, Production at root) after approval
+        # This step deploys the same combined artifact as QA, containing both QA at /qa and Production at root.
         id: deployment
         uses: actions/deploy-pages@v4
