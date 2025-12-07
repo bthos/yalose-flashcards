@@ -96,7 +96,7 @@ The following GitHub Actions workflows enforce the branch strategy:
 
 - **QA Deployment** (`.github/workflows/deploy-qa.yml`)
   - Triggers on: Push to `qa` branch
-  - Deploys: QA build to GitHub Pages at `/qa` subdirectory
+  - Deploys: QA build to GitHub Pages at `/yalose-flashcards/qa/` (i.e., the `/qa` subdirectory relative to the repository's Pages root)
 
 - **Production Deployment** (`.github/workflows/deploy-prod.yml`)
   - Triggers on: Push to `main` branch
