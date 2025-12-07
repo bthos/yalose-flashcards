@@ -54,17 +54,20 @@ function App() {
         
         // Check if we have a new version
         if (data.version && data.version !== storedVersion) {
-          console.log('New vocabulary version available, updating...');
           // Store the new version and data
           localStorage.setItem(VOCABULARY_VERSION_KEY, data.version);
           localStorage.setItem(VOCABULARY_CACHE_KEY, JSON.stringify(data));
           loadVocabulary(data);
         } else if (storedVersion && data.version === storedVersion) {
-          console.log('Vocabulary is up to date');
           // Load from cache if available
           const cachedData = localStorage.getItem(VOCABULARY_CACHE_KEY);
           if (cachedData) {
-            loadVocabulary(JSON.parse(cachedData));
+            try {
+              loadVocabulary(JSON.parse(cachedData));
+            } catch {
+              // Cache corrupted, fetch fresh data
+              loadVocabulary(data);
+            }
           } else {
             loadVocabulary(data);
           }
@@ -72,10 +75,9 @@ function App() {
           // No version info, just load the data
           loadVocabulary(data);
         }
-      } catch (error) {
-        console.warn('Failed to fetch from GitHub, falling back to local version:', error);
+      } catch {
         // Fall back to local version
-        return fetchLocalVocabulary();
+        fetchLocalVocabulary();
       }
     };
 
