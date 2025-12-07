@@ -108,4 +108,4 @@ The following GitHub Actions workflows enforce the branch strategy:
 - These are **recommended** settings. Adjust based on team size and workflow needs.
 - For smaller teams or solo projects, reducing required reviewers is acceptable.
 - Always ensure at least basic status checks are enabled to prevent broken code from being merged.
-- Consider setting up CODEOWNERS file to automatically request reviews from specific team members.
+- Consider setting up a CODEOWNERS file to automatically request reviews from specific team members.
