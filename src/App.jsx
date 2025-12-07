@@ -3,7 +3,18 @@ import FlashCard from './components/FlashCard'
 import './App.css'
 
 const KNOWN_WORDS_KEY = 'yalose-known-words';
+const VOCABULARY_VERSION_KEY = 'yalose-vocabulary-version';
+const VOCABULARY_CACHE_KEY = 'yalose-vocabulary-cache';
 const SLIDE_ANIMATION_DURATION = 500; // milliseconds
+
+// GitHub repository configuration
+const GITHUB_REPO_OWNER = 'bthos';
+const GITHUB_REPO_NAME = 'yalose-flashcards';
+const GITHUB_BRANCH = 'main';
+const VOCABULARY_FILE_PATH = 'public/vocabulary.json';
+
+// Construct the GitHub raw URL
+const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${VOCABULARY_FILE_PATH}`;
 
 function App() {
   const [vocabulary, setVocabulary] = useState(null);
@@ -19,25 +30,82 @@ function App() {
   });
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}vocabulary.json`)
-      .then(response => {
+    // Function to load and process vocabulary data
+    const loadVocabulary = (data) => {
+      // Filter out known words from the vocabulary
+      const filteredWords = data.words.filter(
+        word => !knownWords.includes(word.id)
+      );
+      setVocabulary(filteredWords);
+      setLoading(false);
+    };
+
+    // Function to fetch vocabulary from GitHub
+    const fetchFromGitHub = async () => {
+      const storedVersion = localStorage.getItem(VOCABULARY_VERSION_KEY);
+      const cachedData = localStorage.getItem(VOCABULARY_CACHE_KEY);
+
+      // If we have a cached version, use it while checking for updates in background
+      if (storedVersion && cachedData) {
+        try {
+          loadVocabulary(JSON.parse(cachedData));
+        } catch (error) {
+          // Cache corrupted, continue with fetch
+          if (import.meta.env.DEV) {
+            console.warn('Cache corrupted, using fresh data:', error);
+          }
+        }
+      }
+
+      try {
+        const response = await fetch(GITHUB_RAW_URL);
+        if (!response.ok) {
+          throw new Error('Failed to fetch from GitHub');
+        }
+        const data = await response.json();
+
+        // Only update if version changed
+        if (data.version && data.version !== storedVersion) {
+          localStorage.setItem(VOCABULARY_VERSION_KEY, data.version);
+          localStorage.setItem(VOCABULARY_CACHE_KEY, JSON.stringify(data));
+          loadVocabulary(data);
+        }
+      } catch (error) {
+        // Fall back to local version if no cache and GitHub fails
+        if (import.meta.env.DEV) {
+          console.warn('GitHub fetch failed, falling back to local:', error);
+        }
+        if (!cachedData) {
+          fetchLocalVocabulary();
+        }
+      }
+    };
+
+    // Function to fetch vocabulary from local bundle
+    const fetchLocalVocabulary = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.BASE_URL}vocabulary.json`);
         if (!response.ok) {
           throw new Error('Failed to load vocabulary data');
         }
-        return response.json();
-      })
-      .then(data => {
-        // Filter out known words from the vocabulary
-        const filteredWords = data.words.filter(
-          word => !knownWords.includes(word.id)
-        );
-        setVocabulary(filteredWords);
-        setLoading(false);
-      })
-      .catch(err => {
+        const data = await response.json();
+        
+        // Check if we should cache this
+        const storedVersion = localStorage.getItem(VOCABULARY_VERSION_KEY);
+        if (!storedVersion && data.version) {
+          localStorage.setItem(VOCABULARY_VERSION_KEY, data.version);
+          localStorage.setItem(VOCABULARY_CACHE_KEY, JSON.stringify(data));
+        }
+        
+        loadVocabulary(data);
+      } catch (err) {
         setError(err.message);
         setLoading(false);
-      });
+      }
+    };
+
+    // Try GitHub first, fall back to local
+    fetchFromGitHub();
   }, [knownWords]);
 
   const handleKnown = (wordId) => {
