@@ -6,6 +6,9 @@ on:
   push:
     branches: ['dev', 'qa', 'main']
 
+permissions:
+  contents: read
+
 jobs:
   ci:
     runs-on: ubuntu-latest
