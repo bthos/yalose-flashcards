@@ -5,6 +5,8 @@ name: Deploy to Production
 # combining them into a single deployment with production at root and QA at /qa.
 
 on:
+  push:
+    branches: ['main']
   workflow_dispatch:
 
 permissions:
