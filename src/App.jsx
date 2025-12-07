@@ -42,42 +42,36 @@ function App() {
 
     // Function to fetch vocabulary from GitHub
     const fetchFromGitHub = async () => {
+      const storedVersion = localStorage.getItem(VOCABULARY_VERSION_KEY);
+      const cachedData = localStorage.getItem(VOCABULARY_CACHE_KEY);
+
+      // If we have a cached version, use it while checking for updates in background
+      if (storedVersion && cachedData) {
+        try {
+          loadVocabulary(JSON.parse(cachedData));
+        } catch {
+          // Cache corrupted, continue with fetch
+        }
+      }
+
       try {
         const response = await fetch(GITHUB_RAW_URL);
         if (!response.ok) {
           throw new Error('Failed to fetch from GitHub');
         }
         const data = await response.json();
-        
-        // Get stored version
-        const storedVersion = localStorage.getItem(VOCABULARY_VERSION_KEY);
-        
-        // Check if we have a new version
+
+        // Only update if version changed
         if (data.version && data.version !== storedVersion) {
-          // Store the new version and data
           localStorage.setItem(VOCABULARY_VERSION_KEY, data.version);
           localStorage.setItem(VOCABULARY_CACHE_KEY, JSON.stringify(data));
           loadVocabulary(data);
-        } else if (storedVersion && data.version === storedVersion) {
-          // Load from cache if available
-          const cachedData = localStorage.getItem(VOCABULARY_CACHE_KEY);
-          if (cachedData) {
-            try {
-              loadVocabulary(JSON.parse(cachedData));
-            } catch {
-              // Cache corrupted, fetch fresh data
-              loadVocabulary(data);
-            }
-          } else {
-            loadVocabulary(data);
-          }
-        } else {
-          // No version info, just load the data
-          loadVocabulary(data);
         }
       } catch {
-        // Fall back to local version
-        fetchLocalVocabulary();
+        // Fall back to local version if no cache and GitHub fails
+        if (!cachedData) {
+          fetchLocalVocabulary();
+        }
       }
     };
 
