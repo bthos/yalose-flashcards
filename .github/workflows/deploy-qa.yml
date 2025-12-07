@@ -9,7 +9,7 @@ name: Deploy to QA
 
 on:
   push:
-    branches: ['main']
+    branches: ['qa']
   workflow_dispatch:
 
 permissions:
@@ -71,6 +71,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./deploy-root
+      
+      - name: Add job summary
+        run: |
+          echo "## QA Deployment Build Complete :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** qa" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Type:** QA Environment" >> $GITHUB_STEP_SUMMARY
+          echo "- **Base Path:** /yalose-flashcards/qa/" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** Artifact uploaded successfully" >> $GITHUB_STEP_SUMMARY
 
   deploy:
     environment:
