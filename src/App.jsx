@@ -49,8 +49,11 @@ function App() {
       if (storedVersion && cachedData) {
         try {
           loadVocabulary(JSON.parse(cachedData));
-        } catch {
+        } catch (error) {
           // Cache corrupted, continue with fetch
+          if (import.meta.env.DEV) {
+            console.warn('Cache corrupted, using fresh data:', error);
+          }
         }
       }
 
@@ -67,8 +70,11 @@ function App() {
           localStorage.setItem(VOCABULARY_CACHE_KEY, JSON.stringify(data));
           loadVocabulary(data);
         }
-      } catch {
+      } catch (error) {
         // Fall back to local version if no cache and GitHub fails
+        if (import.meta.env.DEV) {
+          console.warn('GitHub fetch failed, falling back to local:', error);
+        }
         if (!cachedData) {
           fetchLocalVocabulary();
         }
