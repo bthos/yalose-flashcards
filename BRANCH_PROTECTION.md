@@ -100,7 +100,7 @@ The following GitHub Actions workflows enforce the branch strategy:
 
 - **Production Deployment** (`.github/workflows/deploy-prod.yml`)
   - Triggers on: Push to `main` branch
-  - Deploys: Production build to GitHub Pages root
+  - Deploys: Production build to GitHub Pages at `/yalose-flashcards/`
   - Includes: QA build at `/qa` for continued access
 
 ## Notes
