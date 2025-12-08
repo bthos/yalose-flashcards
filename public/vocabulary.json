@@ -1,5 +1,5 @@
 {
-  "version": "c1469a0e74e5e8be052d14b4acb9ea8f",
+  "version": "35eb5b722f76c898cc31a0f4d4856404",
   "words": [
     {
       "id": "5f02f0889301fd7b",
@@ -7,7 +7,11 @@
       "frequency_rank": 1,
       "rae_link": "https://dle.rae.es/de",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Letra d y sonido que representa.",
+        "preposición Denota posesión o pertenencia. La casa de mi padre. La paciencia de Job.",
+        "preposición Usada para crear diversas locuciones adverbiales de modo. Almorzó de pie. Le dieron de puñaladas. Se viste de prestado. Lo conozco de vista.",
+        "preposición Denota de dónde es, viene o sale alguien o algo. La piedra es de Colmenar. Vengo de Aranjuez. No sale de casa.",
+        "preposición Denota la materia de que está hecho algo. El vaso de plata. El vestido de seda."
       ],
       "translations": {
         "en": "of, from"
@@ -22,7 +26,7 @@
       "frequency_rank": 2,
       "rae_link": "https://dle.rae.es/ella",
       "definitions": [
-        "Definition pending..."
+        "pronombre personal tercera persona masculino, femenino y neutro Forma que, en nominativo o precedida de preposición, designa a la persona, el animal o la cosa de los que se habla, por oposición a quien enuncia el mensaje y a su destinatario. Ellos son los culpables. Le llevé el informe, pero no se refirió a él en ningún momento."
       ],
       "translations": {
         "en": "she"
@@ -37,7 +41,11 @@
       "frequency_rank": 3,
       "rae_link": "https://dle.rae.es/que",
       "definitions": [
-        "Definition pending..."
+        "pronombre relativo masculino, femenino y neutro Introduce una oración relativa y refiere a un antecedente expreso, generalmente nominal. Se pondrá los vestidos que tú elijas. Ella, que finalmente no vino, tenía un compromiso.",
+        "pronombre relativo masculino, femenino y neutro Introduce una oración relativa sin antecedente expreso. Usado, usada, usados o usadas precedido del artículo determinado. Visitamos las que recomendaban en la guía. Se fijaron en el que estaba en el escaparate. Eso es lo que no entiendo.",
+        "pronombre relativo neutro Algo que o nada que. Usado, usada, usados o usadas sin antecedente expreso, generalmente con los verbos tener y haber. Siempre hay qué comer en esta casa. No tiene qué leer.",
+        "conjunción Introduce una oración subordinada sustantiva. Quiero que estudies. El miedo a que salga mal. Es imposible que lo olvide.",
+        "conjunción Introduce el segundo término en las comparativas de desigualdad, normalmente en correlación con más o menos. Más quiero perder la vida que perder la honra."
       ],
       "translations": {
         "en": "that, which"

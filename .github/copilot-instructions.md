@@ -10,6 +10,7 @@ globs: *
 *   Vite
 *   GitHub Pages
 *   Vercel
+*   Puppeteer
 
 ## PROJECT DOCUMENTATION & CONTEXT SYSTEM
 
@@ -64,10 +65,26 @@ globs: *
     *   Preview URLs are unique for every push to `dev` or `qa`.
     *   Every PR automatically gets a preview deployment for review.
     *   Optional: Assign a custom domain to the `qa` branch in Vercel Project Settings → Domains → add `qa.yalose-flashcards.vercel.app` or similar. Or use branch aliases: Vercel auto-creates `yalose-flashcards-git-qa-bthos.vercel.app` for the `qa` branch
+*   Branch Strategy with Vercel (Simplified):
+    *   `dev`: Active development -> Preview (unique URL per commit)
+    *   `qa`: Pre-production testing -> Preview (unique URL per commit)
+    *   `main`: Production -> **Production** (stable URL)
+*   Vercel CI/CD Workflows:
+    *   CI Workflow (`.github/workflows/ci.yml`):
+        *   Triggers on: PRs and pushes to `dev`, `qa`, `main`
+        *   Runs: Linting, build verification
+    *   Vercel Deployments (automatic):
+        *   `main` branch → **Production** (`yalose-flashcards.vercel.app`)
+        *   `dev`, `qa` branches → **Preview** (auto-generated URLs)
+        *   Pull Requests → **Preview** (auto-generated per PR)
 
 ## DEBUGGING
 
 *   If Vercel builds a project and publishes a blank page (whereas GitHub Pages worked correctly), troubleshoot configuration and potential issues.
+    *   **Check Vercel Build Logs**: Go to your Vercel Dashboard → Project → Deployments → Click on the deployment. Look at the "Build Logs" tab for any errors.
+    *   **Check Browser Console**: Open the Vercel URL. Press F12 → Console tab. Look for JavaScript errors (e.g., 404s for assets, CORS errors).
+    *   **Check Network Tab**: F12 → Network tab. Reload the page. Are the JS/CSS files loading? (Look for red 404 errors).
+    *   **Verify Vercel detected it as Vite**: In Vercel Dashboard → Project → Settings → General. Framework Preset should show "Vite".
 
 ## CODING STANDARDS
 

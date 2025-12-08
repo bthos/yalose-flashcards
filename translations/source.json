@@ -1,0 +1,27 @@
+{
+  "ui": {
+    "app_title": "Yalosé - Spanish Flashcards",
+    "loading": "Loading vocabulary...",
+    "error_loading": "Failed to load vocabulary",
+    "no_words": "No words to study",
+    "all_known": "Congratulations! You know all the words!",
+    "click_to_flip": "Click to flip",
+    "button_review": "Repasar",
+    "button_known": "Ya lo sé",
+    "progress_label": "Progress",
+    "words_remaining": "words remaining",
+    "reset_progress": "Reset Progress",
+    "settings": "Settings",
+    "mode_translation": "Translation",
+    "mode_definition": "Definition",
+    "mode_mixed": "Mixed",
+    "difficulty_top100": "Top 100 words",
+    "difficulty_top500": "Top 500 words",
+    "difficulty_top1000": "Top 1000 words",
+    "difficulty_top5000": "Top 5000 words"
+  },
+  "meta": {
+    "description": "Yalosé - Spanish Flashcards PWA for mastering vocabulary",
+    "language_name": "English"
+  }
+}

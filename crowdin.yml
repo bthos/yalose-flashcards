@@ -1,0 +1,18 @@
+# Crowdin Configuration
+# Documentation: https://developer.crowdin.com/configuration-file/
+
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_PERSONAL_TOKEN
+base_path: "."
+
+# Preserve the hierarchy of files/folders in Crowdin
+preserve_hierarchy: true
+
+files:
+  # Source translations file (English as base)
+  - source: /translations/source.json
+    translation: /translations/%locale%/translations.json
+    # Use JSON format for translations
+    type: json
+    # Update option: keep existing translations when source changes
+    update_option: update_as_unapproved
