@@ -4,6 +4,8 @@
 # SpecStory configuration files
 /.project.json
 
+# SpecStory history files
 /history
+
 # SpecStory copilot-instructions.md backup files
-/ai_rules_backups/*
+/ai_rules_backups
