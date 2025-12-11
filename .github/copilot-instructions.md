@@ -15,6 +15,7 @@ globs: *
 ## PROJECT DOCUMENTATION & CONTEXT SYSTEM
 
 *   `BRANCH_PROTECTION.md`
+*   `.github/on-demand-rae-definition-loading.md`
 
 ## WORKFLOW & RELEASE RULES
 
@@ -89,3 +90,12 @@ globs: *
 ## CODING STANDARDS
 
 ## STYLE GUIDES
+
+*   For local development with Crowdin CLI, use a `.env` file. Create it by copying `.env.example` and filling in the Crowdin project ID and personal access token. Ensure `.env` is added to `.gitignore`.
+
+*   Vocabulary file is too large to be used in application, plan an approach that will allow scraping individual pages on a fly one use requests them - please note that we do not necessarily need to show a description to the user when the word card is loaded - only when the card is rotated we understand that the user want to learn more. At this stage we can start scrapping. But the description itself may still be hidden under "See definitions" link on the card.
+
+## ON-DEMAND RAE DEFINITION LOADING PLAN
+
+*   Create detailed implementation plan in `.github/on-demand-rae-definition-loading.md`
+Consider: option B for full vocabulary, UX require extra click to see definition, offline support

@@ -1,6 +1,2557 @@
 {
-  "lastProcessedIndex": 3,
-  "failedWords": [],
-  "completedCount": 3,
-  "lastRun": "2025-12-08T23:22:53.130Z"
+  "lastProcessedIndex": 5000,
+  "failedWords": [
+    {
+      "word": "sr.",
+      "rae_link": "https://dle.rae.es/sr.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "OK",
+      "rae_link": "https://dle.rae.es/OK",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "España",
+      "rae_link": "https://dle.rae.es/España",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sra.",
+      "rae_link": "https://dle.rae.es/sra.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Madrid",
+      "rae_link": "https://dle.rae.es/Madrid",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dr.",
+      "rae_link": "https://dle.rae.es/dr.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "john",
+      "rae_link": "https://dle.rae.es/john",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ud.",
+      "rae_link": "https://dle.rae.es/ud.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "José",
+      "rae_link": "https://dle.rae.es/José",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "the",
+      "rae_link": "https://dle.rae.es/the",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jack",
+      "rae_link": "https://dle.rae.es/jack",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "York",
+      "rae_link": "https://dle.rae.es/York",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "srta.",
+      "rae_link": "https://dle.rae.es/srta.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "debido",
+      "rae_link": "https://dle.rae.es/debido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Carlos",
+      "rae_link": "https://dle.rae.es/Carlos",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sam",
+      "rae_link": "https://dle.rae.es/sam",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "David",
+      "rae_link": "https://dle.rae.es/David",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "michael",
+      "rae_link": "https://dle.rae.es/michael",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "joe",
+      "rae_link": "https://dle.rae.es/joe",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "frank",
+      "rae_link": "https://dle.rae.es/frank",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "george",
+      "rae_link": "https://dle.rae.es/george",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "charlie",
+      "rae_link": "https://dle.rae.es/charlie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tom",
+      "rae_link": "https://dle.rae.es/tom",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "México",
+      "rae_link": "https://dle.rae.es/México",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Europa",
+      "rae_link": "https://dle.rae.es/Europa",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "América",
+      "rae_link": "https://dle.rae.es/América",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mike",
+      "rae_link": "https://dle.rae.es/mike",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Antonio",
+      "rae_link": "https://dle.rae.es/Antonio",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Francia",
+      "rae_link": "https://dle.rae.es/Francia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "peter",
+      "rae_link": "https://dle.rae.es/peter",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "paul",
+      "rae_link": "https://dle.rae.es/paul",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Papa",
+      "rae_link": "https://dle.rae.es/Papa",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Londres",
+      "rae_link": "https://dle.rae.es/Londres",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "max",
+      "rae_link": "https://dle.rae.es/max",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mary",
+      "rae_link": "https://dle.rae.es/mary",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dormido",
+      "rae_link": "https://dle.rae.es/dormido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Barcelona",
+      "rae_link": "https://dle.rae.es/Barcelona",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "bill",
+      "rae_link": "https://dle.rae.es/bill",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "harry",
+      "rae_link": "https://dle.rae.es/harry",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Rosa",
+      "rae_link": "https://dle.rae.es/Rosa",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "you",
+      "rae_link": "https://dle.rae.es/you",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Miguel",
+      "rae_link": "https://dle.rae.es/Miguel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jimmy",
+      "rae_link": "https://dle.rae.es/jimmy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "alex",
+      "rae_link": "https://dle.rae.es/alex",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "etc",
+      "rae_link": "https://dle.rae.es/etc",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "IA",
+      "rae_link": "https://dle.rae.es/IA",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jim",
+      "rae_link": "https://dle.rae.es/jim",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tony",
+      "rae_link": "https://dle.rae.es/tony",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "China",
+      "rae_link": "https://dle.rae.es/China",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Daniel",
+      "rae_link": "https://dle.rae.es/Daniel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "danny",
+      "rae_link": "https://dle.rae.es/danny",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nick",
+      "rae_link": "https://dle.rae.es/nick",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "steve",
+      "rae_link": "https://dle.rae.es/steve",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sr.",
+      "rae_link": "https://dle.rae.es/Sr.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "González",
+      "rae_link": "https://dle.rae.es/González",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Washington",
+      "rae_link": "https://dle.rae.es/Washington",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sarah",
+      "rae_link": "https://dle.rae.es/sarah",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Richard",
+      "rae_link": "https://dle.rae.es/Richard",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Inglaterra",
+      "rae_link": "https://dle.rae.es/Inglaterra",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Manuel",
+      "rae_link": "https://dle.rae.es/Manuel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "robert",
+      "rae_link": "https://dle.rae.es/robert",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "FBI",
+      "rae_link": "https://dle.rae.es/FBI",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jane",
+      "rae_link": "https://dle.rae.es/jane",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "johnny",
+      "rae_link": "https://dle.rae.es/johnny",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "um",
+      "rae_link": "https://dle.rae.es/um",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tommy",
+      "rae_link": "https://dle.rae.es/tommy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ray",
+      "rae_link": "https://dle.rae.es/ray",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "billy",
+      "rae_link": "https://dle.rae.es/billy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alemania",
+      "rae_link": "https://dle.rae.es/Alemania",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mark",
+      "rae_link": "https://dle.rae.es/mark",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "and",
+      "rae_link": "https://dle.rae.es/and",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "eddie",
+      "rae_link": "https://dle.rae.es/eddie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "chris",
+      "rae_link": "https://dle.rae.es/chris",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "will",
+      "rae_link": "https://dle.rae.es/will",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "martin",
+      "rae_link": "https://dle.rae.es/martin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ryan",
+      "rae_link": "https://dle.rae.es/ryan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Fernando",
+      "rae_link": "https://dle.rae.es/Fernando",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Italia",
+      "rae_link": "https://dle.rae.es/Italia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "uds.",
+      "rae_link": "https://dle.rae.es/uds.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "bobby",
+      "rae_link": "https://dle.rae.es/bobby",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Pablo",
+      "rae_link": "https://dle.rae.es/Pablo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jake",
+      "rae_link": "https://dle.rae.es/jake",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "EI",
+      "rae_link": "https://dle.rae.es/EI",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "amy",
+      "rae_link": "https://dle.rae.es/amy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "of",
+      "rae_link": "https://dle.rae.es/of",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dra.",
+      "rae_link": "https://dle.rae.es/dra.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "India",
+      "rae_link": "https://dle.rae.es/India",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ii",
+      "rae_link": "https://dle.rae.es/ii",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Adam",
+      "rae_link": "https://dle.rae.es/Adam",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "thomas",
+      "rae_link": "https://dle.rae.es/thomas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Kevin",
+      "rae_link": "https://dle.rae.es/Kevin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "brian",
+      "rae_link": "https://dle.rae.es/brian",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "eric",
+      "rae_link": "https://dle.rae.es/eric",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mr",
+      "rae_link": "https://dle.rae.es/mr",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "anna",
+      "rae_link": "https://dle.rae.es/anna",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Gutierre",
+      "rae_link": "https://dle.rae.es/Gutierre",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Laura",
+      "rae_link": "https://dle.rae.es/Laura",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "William",
+      "rae_link": "https://dle.rae.es/William",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kate",
+      "rae_link": "https://dle.rae.es/kate",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "new",
+      "rae_link": "https://dle.rae.es/new",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jerry",
+      "rae_link": "https://dle.rae.es/jerry",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "andy",
+      "rae_link": "https://dle.rae.es/andy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "PSOE",
+      "rae_link": "https://dle.rae.es/PSOE",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "scott",
+      "rae_link": "https://dle.rae.es/scott",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "obstante",
+      "rae_link": "https://dle.rae.es/obstante",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "López",
+      "rae_link": "https://dle.rae.es/López",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "rachel",
+      "rae_link": "https://dle.rae.es/rachel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kim",
+      "rae_link": "https://dle.rae.es/kim",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Larry",
+      "rae_link": "https://dle.rae.es/Larry",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Chicago",
+      "rae_link": "https://dle.rae.es/Chicago",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "wow",
+      "rae_link": "https://dle.rae.es/wow",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "establecido",
+      "rae_link": "https://dle.rae.es/establecido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "poquito",
+      "rae_link": "https://dle.rae.es/poquito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "prohibido",
+      "rae_link": "https://dle.rae.es/prohibido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alberto",
+      "rae_link": "https://dle.rae.es/Alberto",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kelly",
+      "rae_link": "https://dle.rae.es/kelly",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Rafael",
+      "rae_link": "https://dle.rae.es/Rafael",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "muchísimo",
+      "rae_link": "https://dle.rae.es/muchísimo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jeff",
+      "rae_link": "https://dle.rae.es/jeff",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "emily",
+      "rae_link": "https://dle.rae.es/emily",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jason",
+      "rae_link": "https://dle.rae.es/jason",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sir",
+      "rae_link": "https://dle.rae.es/sir",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "carter",
+      "rae_link": "https://dle.rae.es/carter",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "matt",
+      "rae_link": "https://dle.rae.es/matt",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Javier",
+      "rae_link": "https://dle.rae.es/Javier",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "it",
+      "rae_link": "https://dle.rae.es/it",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "PP",
+      "rae_link": "https://dle.rae.es/PP",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "alan",
+      "rae_link": "https://dle.rae.es/alan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "smith",
+      "rae_link": "https://dle.rae.es/smith",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Mario",
+      "rae_link": "https://dle.rae.es/Mario",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dave",
+      "rae_link": "https://dle.rae.es/dave",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Emma",
+      "rae_link": "https://dle.rae.es/Emma",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "clark",
+      "rae_link": "https://dle.rae.es/clark",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "carl",
+      "rae_link": "https://dle.rae.es/carl",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Pérez",
+      "rae_link": "https://dle.rae.es/Pérez",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ed",
+      "rae_link": "https://dle.rae.es/ed",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "grace",
+      "rae_link": "https://dle.rae.es/grace",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sara",
+      "rae_link": "https://dle.rae.es/Sara",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "roger",
+      "rae_link": "https://dle.rae.es/roger",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Miami",
+      "rae_link": "https://dle.rae.es/Miami",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "annie",
+      "rae_link": "https://dle.rae.es/annie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "km",
+      "rae_link": "https://dle.rae.es/km",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "simon",
+      "rae_link": "https://dle.rae.es/simon",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "claire",
+      "rae_link": "https://dle.rae.es/claire",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ee",
+      "rae_link": "https://dle.rae.es/ee",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Fernández",
+      "rae_link": "https://dle.rae.es/Fernández",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kyle",
+      "rae_link": "https://dle.rae.es/kyle",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gary",
+      "rae_link": "https://dle.rae.es/gary",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ted",
+      "rae_link": "https://dle.rae.es/ted",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sánchez",
+      "rae_link": "https://dle.rae.es/Sánchez",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "susan",
+      "rae_link": "https://dle.rae.es/susan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Colombia",
+      "rae_link": "https://dle.rae.es/Colombia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jackson",
+      "rae_link": "https://dle.rae.es/jackson",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "informado",
+      "rae_link": "https://dle.rae.es/informado",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "alice",
+      "rae_link": "https://dle.rae.es/alice",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Isabel",
+      "rae_link": "https://dle.rae.es/Isabel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "luke",
+      "rae_link": "https://dle.rae.es/luke",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lucy",
+      "rae_link": "https://dle.rae.es/lucy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "oscar",
+      "rae_link": "https://dle.rae.es/oscar",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "park",
+      "rae_link": "https://dle.rae.es/park",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Eduardo",
+      "rae_link": "https://dle.rae.es/Eduardo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "guión",
+      "rae_link": "https://dle.rae.es/guión",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jones",
+      "rae_link": "https://dle.rae.es/jones",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "phil",
+      "rae_link": "https://dle.rae.es/phil",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "uu",
+      "rae_link": "https://dle.rae.es/uu",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "okay",
+      "rae_link": "https://dle.rae.es/okay",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Martínez",
+      "rae_link": "https://dle.rae.es/Martínez",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "josh",
+      "rae_link": "https://dle.rae.es/josh",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Eva",
+      "rae_link": "https://dle.rae.es/Eva",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "morgan",
+      "rae_link": "https://dle.rae.es/morgan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Elena",
+      "rae_link": "https://dle.rae.es/Elena",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "taylor",
+      "rae_link": "https://dle.rae.es/taylor",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jenny",
+      "rae_link": "https://dle.rae.es/jenny",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tim",
+      "rae_link": "https://dle.rae.es/tim",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "louis",
+      "rae_link": "https://dle.rae.es/louis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "arthur",
+      "rae_link": "https://dle.rae.es/arthur",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "karen",
+      "rae_link": "https://dle.rae.es/karen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "doc",
+      "rae_link": "https://dle.rae.es/doc",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Hollywood",
+      "rae_link": "https://dle.rae.es/Hollywood",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jovencito",
+      "rae_link": "https://dle.rae.es/jovencito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "joey",
+      "rae_link": "https://dle.rae.es/joey",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "fred",
+      "rae_link": "https://dle.rae.es/fred",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "angel",
+      "rae_link": "https://dle.rae.es/angel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "chuck",
+      "rae_link": "https://dle.rae.es/chuck",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "madame",
+      "rae_link": "https://dle.rae.es/madame",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hank",
+      "rae_link": "https://dle.rae.es/hank",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "julie",
+      "rae_link": "https://dle.rae.es/julie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alfonso",
+      "rae_link": "https://dle.rae.es/Alfonso",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "vd.",
+      "rae_link": "https://dle.rae.es/vd.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "maggie",
+      "rae_link": "https://dle.rae.es/maggie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Gómez",
+      "rae_link": "https://dle.rae.es/Gómez",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Hitler",
+      "rae_link": "https://dle.rae.es/Hitler",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "brown",
+      "rae_link": "https://dle.rae.es/brown",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "howard",
+      "rae_link": "https://dle.rae.es/howard",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jackie",
+      "rae_link": "https://dle.rae.es/jackie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Venezuela",
+      "rae_link": "https://dle.rae.es/Venezuela",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Torres",
+      "rae_link": "https://dle.rae.es/Torres",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Florida",
+      "rae_link": "https://dle.rae.es/Florida",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Johnson",
+      "rae_link": "https://dle.rae.es/Johnson",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Elizabeth",
+      "rae_link": "https://dle.rae.es/Elizabeth",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Gabriel",
+      "rae_link": "https://dle.rae.es/Gabriel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "king",
+      "rae_link": "https://dle.rae.es/king",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "patrick",
+      "rae_link": "https://dle.rae.es/patrick",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "helen",
+      "rae_link": "https://dle.rae.es/helen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Texas",
+      "rae_link": "https://dle.rae.es/Texas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alicia",
+      "rae_link": "https://dle.rae.es/Alicia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "donna",
+      "rae_link": "https://dle.rae.es/donna",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "barry",
+      "rae_link": "https://dle.rae.es/barry",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Israel",
+      "rae_link": "https://dle.rae.es/Israel",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "andrew",
+      "rae_link": "https://dle.rae.es/andrew",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Ricardo",
+      "rae_link": "https://dle.rae.es/Ricardo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Amanda",
+      "rae_link": "https://dle.rae.es/Amanda",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hmm",
+      "rae_link": "https://dle.rae.es/hmm",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "rick",
+      "rae_link": "https://dle.rae.es/rick",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "wilson",
+      "rae_link": "https://dle.rae.es/wilson",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dean",
+      "rae_link": "https://dle.rae.es/dean",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "city",
+      "rae_link": "https://dle.rae.es/city",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lily",
+      "rae_link": "https://dle.rae.es/lily",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Moscú",
+      "rae_link": "https://dle.rae.es/Moscú",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Roberto",
+      "rae_link": "https://dle.rae.es/Roberto",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gene",
+      "rae_link": "https://dle.rae.es/gene",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "terry",
+      "rae_link": "https://dle.rae.es/terry",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Andrés",
+      "rae_link": "https://dle.rae.es/Andrés",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "abby",
+      "rae_link": "https://dle.rae.es/abby",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jaime",
+      "rae_link": "https://dle.rae.es/Jaime",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "oud",
+      "rae_link": "https://dle.rae.es/oud",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mac",
+      "rae_link": "https://dle.rae.es/mac",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jamie",
+      "rae_link": "https://dle.rae.es/jamie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "robin",
+      "rae_link": "https://dle.rae.es/robin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "stan",
+      "rae_link": "https://dle.rae.es/stan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "st",
+      "rae_link": "https://dle.rae.es/st",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Granada",
+      "rae_link": "https://dle.rae.es/Granada",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gafas",
+      "rae_link": "https://dle.rae.es/gafas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "marie",
+      "rae_link": "https://dle.rae.es/marie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "on",
+      "rae_link": "https://dle.rae.es/on",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sevilla",
+      "rae_link": "https://dle.rae.es/Sevilla",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "greg",
+      "rae_link": "https://dle.rae.es/greg",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Cortes",
+      "rae_link": "https://dle.rae.es/Cortes",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "oliver",
+      "rae_link": "https://dle.rae.es/oliver",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Boston",
+      "rae_link": "https://dle.rae.es/Boston",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Canadá",
+      "rae_link": "https://dle.rae.es/Canadá",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sally",
+      "rae_link": "https://dle.rae.es/sally",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ó",
+      "rae_link": "https://dle.rae.es/ó",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "adios",
+      "rae_link": "https://dle.rae.es/adios",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ricky",
+      "rae_link": "https://dle.rae.es/ricky",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ross",
+      "rae_link": "https://dle.rae.es/ross",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "roy",
+      "rae_link": "https://dle.rae.es/roy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lewis",
+      "rae_link": "https://dle.rae.es/lewis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tyler",
+      "rae_link": "https://dle.rae.es/tyler",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "albert",
+      "rae_link": "https://dle.rae.es/albert",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "anne",
+      "rae_link": "https://dle.rae.es/anne",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gordon",
+      "rae_link": "https://dle.rae.es/gordon",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "s.",
+      "rae_link": "https://dle.rae.es/s.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "vincent",
+      "rae_link": "https://dle.rae.es/vincent",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jesse",
+      "rae_link": "https://dle.rae.es/jesse",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "betty",
+      "rae_link": "https://dle.rae.es/betty",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dylan",
+      "rae_link": "https://dle.rae.es/dylan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "parker",
+      "rae_link": "https://dle.rae.es/parker",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "joan",
+      "rae_link": "https://dle.rae.es/joan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jordan",
+      "rae_link": "https://dle.rae.es/jordan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "davis",
+      "rae_link": "https://dle.rae.es/davis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "marty",
+      "rae_link": "https://dle.rae.es/marty",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "huh",
+      "rae_link": "https://dle.rae.es/huh",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "muebles",
+      "rae_link": "https://dle.rae.es/muebles",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Cataluña",
+      "rae_link": "https://dle.rae.es/Cataluña",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "molly",
+      "rae_link": "https://dle.rae.es/molly",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Rosas",
+      "rae_link": "https://dle.rae.es/Rosas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "charlotte",
+      "rae_link": "https://dle.rae.es/charlotte",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "miller",
+      "rae_link": "https://dle.rae.es/miller",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "my",
+      "rae_link": "https://dle.rae.es/my",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "fig",
+      "rae_link": "https://dle.rae.es/fig",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Díaz",
+      "rae_link": "https://dle.rae.es/Díaz",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nina",
+      "rae_link": "https://dle.rae.es/nina",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mmm",
+      "rae_link": "https://dle.rae.es/mmm",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "street",
+      "rae_link": "https://dle.rae.es/street",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "iii",
+      "rae_link": "https://dle.rae.es/iii",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "big",
+      "rae_link": "https://dle.rae.es/big",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nathan",
+      "rae_link": "https://dle.rae.es/nathan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "diamantes",
+      "rae_link": "https://dle.rae.es/diamantes",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "katie",
+      "rae_link": "https://dle.rae.es/katie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "frankie",
+      "rae_link": "https://dle.rae.es/frankie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "cooper",
+      "rae_link": "https://dle.rae.es/cooper",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "monsieur",
+      "rae_link": "https://dle.rae.es/monsieur",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jeremy",
+      "rae_link": "https://dle.rae.es/jeremy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "justin",
+      "rae_link": "https://dle.rae.es/justin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "doug",
+      "rae_link": "https://dle.rae.es/doug",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "chloe",
+      "rae_link": "https://dle.rae.es/chloe",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "margaret",
+      "rae_link": "https://dle.rae.es/margaret",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "carol",
+      "rae_link": "https://dle.rae.es/carol",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "russell",
+      "rae_link": "https://dle.rae.es/russell",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tio",
+      "rae_link": "https://dle.rae.es/tio",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ponerle",
+      "rae_link": "https://dle.rae.es/ponerle",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "clinton",
+      "rae_link": "https://dle.rae.es/clinton",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Ruiz",
+      "rae_link": "https://dle.rae.es/Ruiz",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dick",
+      "rae_link": "https://dle.rae.es/dick",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "muchísimo",
+      "rae_link": "https://dle.rae.es/muchísimo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ee.uu.",
+      "rae_link": "https://dle.rae.es/ee.uu.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Raúl",
+      "rae_link": "https://dle.rae.es/Raúl",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "williams",
+      "rae_link": "https://dle.rae.es/williams",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jessica",
+      "rae_link": "https://dle.rae.es/Jessica",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "rebecca",
+      "rae_link": "https://dle.rae.es/rebecca",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dr",
+      "rae_link": "https://dle.rae.es/dr",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ooh",
+      "rae_link": "https://dle.rae.es/ooh",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "todd",
+      "rae_link": "https://dle.rae.es/todd",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Suiza",
+      "rae_link": "https://dle.rae.es/Suiza",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "maria",
+      "rae_link": "https://dle.rae.es/maria",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "holmes",
+      "rae_link": "https://dle.rae.es/holmes",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ética",
+      "rae_link": "https://dle.rae.es/ética",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "podria",
+      "rae_link": "https://dle.rae.es/podria",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ian",
+      "rae_link": "https://dle.rae.es/ian",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kenny",
+      "rae_link": "https://dle.rae.es/kenny",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "catherine",
+      "rae_link": "https://dle.rae.es/catherine",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Guatemala",
+      "rae_link": "https://dle.rae.es/Guatemala",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "edward",
+      "rae_link": "https://dle.rae.es/edward",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jesucristo",
+      "rae_link": "https://dle.rae.es/Jesucristo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Harvey",
+      "rae_link": "https://dle.rae.es/Harvey",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "joseph",
+      "rae_link": "https://dle.rae.es/joseph",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "angeles",
+      "rae_link": "https://dle.rae.es/angeles",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hermanito",
+      "rae_link": "https://dle.rae.es/hermanito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hannah",
+      "rae_link": "https://dle.rae.es/hannah",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "marcus",
+      "rae_link": "https://dle.rae.es/marcus",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "martha",
+      "rae_link": "https://dle.rae.es/martha",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "blake",
+      "rae_link": "https://dle.rae.es/blake",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nancy",
+      "rae_link": "https://dle.rae.es/nancy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sebastián",
+      "rae_link": "https://dle.rae.es/Sebastián",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Vicente",
+      "rae_link": "https://dle.rae.es/Vicente",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "west",
+      "rae_link": "https://dle.rae.es/west",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "stephen",
+      "rae_link": "https://dle.rae.es/stephen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "steven",
+      "rae_link": "https://dle.rae.es/steven",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "von",
+      "rae_link": "https://dle.rae.es/von",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "wayne",
+      "rae_link": "https://dle.rae.es/wayne",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "whoa",
+      "rae_link": "https://dle.rae.es/whoa",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "randy",
+      "rae_link": "https://dle.rae.es/randy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sophie",
+      "rae_link": "https://dle.rae.es/sophie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "victor",
+      "rae_link": "https://dle.rae.es/victor",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "olivia",
+      "rae_link": "https://dle.rae.es/olivia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "toby",
+      "rae_link": "https://dle.rae.es/toby",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ford",
+      "rae_link": "https://dle.rae.es/ford",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "derek",
+      "rae_link": "https://dle.rae.es/derek",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Irene",
+      "rae_link": "https://dle.rae.es/Irene",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Aznar",
+      "rae_link": "https://dle.rae.es/Aznar",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ios",
+      "rae_link": "https://dle.rae.es/ios",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lou",
+      "rae_link": "https://dle.rae.es/lou",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "brad",
+      "rae_link": "https://dle.rae.es/brad",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "that",
+      "rae_link": "https://dle.rae.es/that",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Young",
+      "rae_link": "https://dle.rae.es/Young",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "casey",
+      "rae_link": "https://dle.rae.es/casey",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "xix",
+      "rae_link": "https://dle.rae.es/xix",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nate",
+      "rae_link": "https://dle.rae.es/nate",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ann",
+      "rae_link": "https://dle.rae.es/ann",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Hugo",
+      "rae_link": "https://dle.rae.es/Hugo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "marshall",
+      "rae_link": "https://dle.rae.es/marshall",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "vince",
+      "rae_link": "https://dle.rae.es/vince",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "is",
+      "rae_link": "https://dle.rae.es/is",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "michelle",
+      "rae_link": "https://dle.rae.es/michelle",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "beth",
+      "rae_link": "https://dle.rae.es/beth",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jacob",
+      "rae_link": "https://dle.rae.es/Jacob",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lois",
+      "rae_link": "https://dle.rae.es/lois",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "zoe",
+      "rae_link": "https://dle.rae.es/zoe",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "angela",
+      "rae_link": "https://dle.rae.es/angela",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jess",
+      "rae_link": "https://dle.rae.es/jess",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Australia",
+      "rae_link": "https://dle.rae.es/Australia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "policia",
+      "rae_link": "https://dle.rae.es/policia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "EE. UU.",
+      "rae_link": "https://dle.rae.es/EE. UU.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jonathan",
+      "rae_link": "https://dle.rae.es/Jonathan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "algun",
+      "rae_link": "https://dle.rae.es/algun",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "francis",
+      "rae_link": "https://dle.rae.es/francis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "díselo",
+      "rae_link": "https://dle.rae.es/díselo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Keith",
+      "rae_link": "https://dle.rae.es/Keith",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gatito",
+      "rae_link": "https://dle.rae.es/gatito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Joaquín",
+      "rae_link": "https://dle.rae.es/Joaquín",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "brandon",
+      "rae_link": "https://dle.rae.es/brandon",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ethan",
+      "rae_link": "https://dle.rae.es/ethan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ellen",
+      "rae_link": "https://dle.rae.es/ellen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Nelson",
+      "rae_link": "https://dle.rae.es/Nelson",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mickey",
+      "rae_link": "https://dle.rae.es/mickey",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Ignacio",
+      "rae_link": "https://dle.rae.es/Ignacio",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "shawn",
+      "rae_link": "https://dle.rae.es/shawn",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Ruth",
+      "rae_link": "https://dle.rae.es/Ruth",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "spencer",
+      "rae_link": "https://dle.rae.es/spencer",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dennis",
+      "rae_link": "https://dle.rae.es/dennis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "teddy",
+      "rae_link": "https://dle.rae.es/teddy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Vietnam",
+      "rae_link": "https://dle.rae.es/Vietnam",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "perrito",
+      "rae_link": "https://dle.rae.es/perrito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sue",
+      "rae_link": "https://dle.rae.es/sue",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hong",
+      "rae_link": "https://dle.rae.es/hong",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "white",
+      "rae_link": "https://dle.rae.es/white",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "walker",
+      "rae_link": "https://dle.rae.es/walker",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Paris",
+      "rae_link": "https://dle.rae.es/Paris",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "éi",
+      "rae_link": "https://dle.rae.es/éi",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "alterado",
+      "rae_link": "https://dle.rae.es/alterado",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "liz",
+      "rae_link": "https://dle.rae.es/liz",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "La Habana",
+      "rae_link": "https://dle.rae.es/La Habana",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "caroline",
+      "rae_link": "https://dle.rae.es/caroline",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Jennifer",
+      "rae_link": "https://dle.rae.es/Jennifer",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kong",
+      "rae_link": "https://dle.rae.es/kong",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "malcolm",
+      "rae_link": "https://dle.rae.es/malcolm",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Owen",
+      "rae_link": "https://dle.rae.es/Owen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ho",
+      "rae_link": "https://dle.rae.es/ho",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "hill",
+      "rae_link": "https://dle.rae.es/hill",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "pierre",
+      "rae_link": "https://dle.rae.es/pierre",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alejandro",
+      "rae_link": "https://dle.rae.es/Alejandro",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alfredo",
+      "rae_link": "https://dle.rae.es/Alfredo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "karl",
+      "rae_link": "https://dle.rae.es/karl",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Salas",
+      "rae_link": "https://dle.rae.es/Salas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Egipto",
+      "rae_link": "https://dle.rae.es/Egipto",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "harold",
+      "rae_link": "https://dle.rae.es/harold",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "min",
+      "rae_link": "https://dle.rae.es/min",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alonso",
+      "rae_link": "https://dle.rae.es/Alonso",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "anthony",
+      "rae_link": "https://dle.rae.es/anthony",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "bush",
+      "rae_link": "https://dle.rae.es/bush",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Emilio",
+      "rae_link": "https://dle.rae.es/Emilio",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Hernández",
+      "rae_link": "https://dle.rae.es/Hernández",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "julian",
+      "rae_link": "https://dle.rae.es/julian",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "xx",
+      "rae_link": "https://dle.rae.es/xx",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "compartido",
+      "rae_link": "https://dle.rae.es/compartido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "art",
+      "rae_link": "https://dle.rae.es/art",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "queria",
+      "rae_link": "https://dle.rae.es/queria",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Irak",
+      "rae_link": "https://dle.rae.es/Irak",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ken",
+      "rae_link": "https://dle.rae.es/ken",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "harris",
+      "rae_link": "https://dle.rae.es/harris",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "stanley",
+      "rae_link": "https://dle.rae.es/stanley",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "louise",
+      "rae_link": "https://dle.rae.es/louise",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "iv",
+      "rae_link": "https://dle.rae.es/iv",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "watson",
+      "rae_link": "https://dle.rae.es/watson",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "willie",
+      "rae_link": "https://dle.rae.es/willie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Lorenzo",
+      "rae_link": "https://dle.rae.es/Lorenzo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "holly",
+      "rae_link": "https://dle.rae.es/holly",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Suárez",
+      "rae_link": "https://dle.rae.es/Suárez",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lincoln",
+      "rae_link": "https://dle.rae.es/lincoln",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "matthew",
+      "rae_link": "https://dle.rae.es/matthew",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Ernesto",
+      "rae_link": "https://dle.rae.es/Ernesto",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Gonzalo",
+      "rae_link": "https://dle.rae.es/Gonzalo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "quinn",
+      "rae_link": "https://dle.rae.es/quinn",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ví",
+      "rae_link": "https://dle.rae.es/ví",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "neil",
+      "rae_link": "https://dle.rae.es/neil",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "elliot",
+      "rae_link": "https://dle.rae.es/elliot",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ashley",
+      "rae_link": "https://dle.rae.es/ashley",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "raymond",
+      "rae_link": "https://dle.rae.es/raymond",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Arturo",
+      "rae_link": "https://dle.rae.es/Arturo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Rita",
+      "rae_link": "https://dle.rae.es/Rita",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "yeah",
+      "rae_link": "https://dle.rae.es/yeah",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "carrie",
+      "rae_link": "https://dle.rae.es/carrie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Andrea",
+      "rae_link": "https://dle.rae.es/Andrea",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "for",
+      "rae_link": "https://dle.rae.es/for",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "lane",
+      "rae_link": "https://dle.rae.es/lane",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "diane",
+      "rae_link": "https://dle.rae.es/diane",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "house",
+      "rae_link": "https://dle.rae.es/house",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "all",
+      "rae_link": "https://dle.rae.es/all",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "janet",
+      "rae_link": "https://dle.rae.es/janet",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "shane",
+      "rae_link": "https://dle.rae.es/shane",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "black",
+      "rae_link": "https://dle.rae.es/black",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Guillermo",
+      "rae_link": "https://dle.rae.es/Guillermo",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "natalie",
+      "rae_link": "https://dle.rae.es/natalie",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "we",
+      "rae_link": "https://dle.rae.es/we",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Claudia",
+      "rae_link": "https://dle.rae.es/Claudia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "christine",
+      "rae_link": "https://dle.rae.es/christine",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jin",
+      "rae_link": "https://dle.rae.es/jin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kennedy",
+      "rae_link": "https://dle.rae.es/kennedy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ONU",
+      "rae_link": "https://dle.rae.es/ONU",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "gibbs",
+      "rae_link": "https://dle.rae.es/gibbs",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Correos",
+      "rae_link": "https://dle.rae.es/Correos",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "baby",
+      "rae_link": "https://dle.rae.es/baby",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Héctor",
+      "rae_link": "https://dle.rae.es/Héctor",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Tokio",
+      "rae_link": "https://dle.rae.es/Tokio",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "niñito",
+      "rae_link": "https://dle.rae.es/niñito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "b.",
+      "rae_link": "https://dle.rae.es/b.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "leonard",
+      "rae_link": "https://dle.rae.es/leonard",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "reagan",
+      "rae_link": "https://dle.rae.es/reagan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "connor",
+      "rae_link": "https://dle.rae.es/connor",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "riley",
+      "rae_link": "https://dle.rae.es/riley",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sofía",
+      "rae_link": "https://dle.rae.es/Sofía",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "mason",
+      "rae_link": "https://dle.rae.es/mason",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "quizas",
+      "rae_link": "https://dle.rae.es/quizas",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "liam",
+      "rae_link": "https://dle.rae.es/liam",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "colin",
+      "rae_link": "https://dle.rae.es/colin",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "amiguito",
+      "rae_link": "https://dle.rae.es/amiguito",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Wendy",
+      "rae_link": "https://dle.rae.es/Wendy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Sandra",
+      "rae_link": "https://dle.rae.es/Sandra",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "travis",
+      "rae_link": "https://dle.rae.es/travis",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Alexander",
+      "rae_link": "https://dle.rae.es/Alexander",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ralph",
+      "rae_link": "https://dle.rae.es/ralph",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "star",
+      "rae_link": "https://dle.rae.es/star",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Bilbao",
+      "rae_link": "https://dle.rae.es/Bilbao",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "audrey",
+      "rae_link": "https://dle.rae.es/audrey",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Bolivia",
+      "rae_link": "https://dle.rae.es/Bolivia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "warren",
+      "rae_link": "https://dle.rae.es/warren",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Félix",
+      "rae_link": "https://dle.rae.es/Félix",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kurt",
+      "rae_link": "https://dle.rae.es/kurt",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Carolina",
+      "rae_link": "https://dle.rae.es/Carolina",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "a.",
+      "rae_link": "https://dle.rae.es/a.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Batman",
+      "rae_link": "https://dle.rae.es/Batman",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "tracy",
+      "rae_link": "https://dle.rae.es/tracy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Asia",
+      "rae_link": "https://dle.rae.es/Asia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "penny",
+      "rae_link": "https://dle.rae.es/penny",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "OTAN",
+      "rae_link": "https://dle.rae.es/OTAN",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Nora",
+      "rae_link": "https://dle.rae.es/Nora",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "graham",
+      "rae_link": "https://dle.rae.es/graham",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "kent",
+      "rae_link": "https://dle.rae.es/kent",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "evan",
+      "rae_link": "https://dle.rae.es/evan",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "love",
+      "rae_link": "https://dle.rae.es/love",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Grecia",
+      "rae_link": "https://dle.rae.es/Grecia",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "allen",
+      "rae_link": "https://dle.rae.es/allen",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "seth",
+      "rae_link": "https://dle.rae.es/seth",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Andalucía",
+      "rae_link": "https://dle.rae.es/Andalucía",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Portugal",
+      "rae_link": "https://dle.rae.es/Portugal",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "craig",
+      "rae_link": "https://dle.rae.es/craig",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "allison",
+      "rae_link": "https://dle.rae.es/allison",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sammy",
+      "rae_link": "https://dle.rae.es/sammy",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "nicole",
+      "rae_link": "https://dle.rae.es/nicole",
+      "reason": "No definitions found"
+    }
+  ],
+  "completedCount": 4490,
+  "lastRun": "2025-12-09T05:54:47.930Z"
 }
