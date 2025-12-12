@@ -7,14 +7,14 @@ const VOCABULARY_VERSION_KEY = 'yalose-vocabulary-version';
 const VOCABULARY_CACHE_KEY = 'yalose-vocabulary-cache';
 const SLIDE_ANIMATION_DURATION = 500; // milliseconds
 
-// GitHub repository configuration
+// GitHub repository configuration - uses full vocabulary.json for version checking
 const GITHUB_REPO_OWNER = 'bthos';
 const GITHUB_REPO_NAME = 'yalose-flashcards';
 const GITHUB_BRANCH = 'main';
-const VOCABULARY_FILE_PATH = 'public/vocabulary.json';
+const GITHUB_VOCABULARY_PATH = 'public/vocabulary.json';
 
-// Construct the GitHub raw URL
-const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${VOCABULARY_FILE_PATH}`;
+// Construct the GitHub raw URL (points to committed vocabulary.json)
+const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${GITHUB_VOCABULARY_PATH}`;
 
 function App() {
   const [vocabulary, setVocabulary] = useState(null);
@@ -84,7 +84,7 @@ function App() {
     // Function to fetch vocabulary from local bundle
     const fetchLocalVocabulary = async () => {
       try {
-        const response = await fetch(`${import.meta.env.BASE_URL}vocabulary.json`);
+        const response = await fetch(`${import.meta.env.BASE_URL}vocabulary-slim.json`);
         if (!response.ok) {
           throw new Error('Failed to load vocabulary data');
         }

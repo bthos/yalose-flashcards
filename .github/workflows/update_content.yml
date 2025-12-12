@@ -59,12 +59,16 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
       
+      - name: Build slim vocabulary
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: npm run build:vocabulary
+      
       - name: Commit vocabulary updates
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/vocabulary.json .rae-scraper-state.json
+          git add public/vocabulary.json public/vocabulary-slim.json api/data/definitions.json .rae-scraper-state.json
           git commit -m "chore: update RAE definitions [automated]"
           git push
 

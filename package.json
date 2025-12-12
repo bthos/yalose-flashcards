@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:vocabulary": "node scripts/build_slim_vocabulary.js",
+    "prebuild": "npm run build:vocabulary",
     "lint": "eslint .",
     "preview": "vite preview"
   },
