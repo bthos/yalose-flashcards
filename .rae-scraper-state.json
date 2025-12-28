@@ -1,5 +1,5 @@
 {
-  "lastProcessedIndex": 5100,
+  "lastProcessedIndex": 5150,
   "failedWords": [
     {
       "word": "sr.",
@@ -2552,6 +2552,6 @@
       "reason": "No definitions found"
     }
   ],
-  "completedCount": 4590,
-  "lastRun": "2025-12-21T00:04:18.676Z"
+  "completedCount": 4640,
+  "lastRun": "2025-12-28T00:04:25.381Z"
 }
