@@ -1,5 +1,5 @@
 {
-  "lastProcessedIndex": 5150,
+  "lastProcessedIndex": 5200,
   "failedWords": [
     {
       "word": "sr.",
@@ -2550,8 +2550,13 @@
       "word": "nicole",
       "rae_link": "https://dle.rae.es/nicole",
       "reason": "No definitions found"
+    },
+    {
+      "word": "sr.",
+      "rae_link": "https://dle.rae.es/sr.",
+      "reason": "No definitions found"
     }
   ],
-  "completedCount": 4640,
-  "lastRun": "2025-12-28T00:04:25.381Z"
+  "completedCount": 4689,
+  "lastRun": "2026-01-04T00:04:34.861Z"
 }

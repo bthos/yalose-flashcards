@@ -1,5 +1,5 @@
 {
-  "version": "118a3a197f2b7c9c5993a7af1f06b1e6",
+  "version": "bd45e8908103a09b2f1bb69f84104a3d",
   "words": [
     {
       "id": "5f02f0889301fd7b",
@@ -2834,7 +2834,11 @@
       "frequency_rank": 154,
       "rae_link": "https://dle.rae.es/lugar",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Porción de espacio.Sinónimos o afines sitio, paraje, emplazamiento1, parte, punto, lado, espacio, zona, rincón, área, sector, banda2.",
+        "nombre masculino Sitio o paraje.Sinónimos o afines sitio, paraje, emplazamiento1, parte, punto, lado, espacio, zona, rincón, área, sector, banda2.",
+        "nombre masculino Ciudad, villa o aldea.Sinónimos o afines población, pueblo, aldea, localidad, villa, poblado.",
+        "nombre masculino Población pequeña, menor que villa y mayor que aldea.",
+        "nombre masculino Pasaje, texto, autoridad o sentencia de un autor o de un escrito."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2849,7 +2853,9 @@
       "frequency_rank": 155,
       "rae_link": "https://dle.rae.es/nadie",
       "definitions": [
-        "Definition pending..."
+        "pronombre indefinido masculino singular Ninguna persona. Nadie lo vio. No habló con nadie.Sinónimo o afín ninguno.Antónimo u opuesto alguien.",
+        "pronombre indefinido masculino singular Ninguna persona importante o con autoridad para algo. Él no es nadie en esa empresa.Antónimo u opuesto alguien.",
+        "nombre masculino y femenino don nadie. Ahora es una nadie sin futuro.Sinónimos o afines pelagatos, pelafustán, mindundi."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2864,7 +2870,11 @@
       "frequency_rank": 156,
       "rae_link": "https://dle.rae.es/tal",
       "definitions": [
-        "Definition pending..."
+        "adjetivo demostrativo Ese, dicho o que se acaba de mencionar. Profirió insultos y amenazas, y tal comportamiento provocó su inmediata expulsión. Usado raramente con artículo antepuesto. Hicieron el pedido de las armas y esperaron con paciencia las tales armas.",
+        "adjetivo demostrativo De estas o esas características o clase. Usado más pospuesto Las temibles tormentas de octubre arrasaron la isla. Nadie se esperaba tormentas tales.",
+        "adjetivo indefinido Tanto o tan grande. Usado en construcciones consecutivas. La novela desató tal polémica que al final fue retirada. Esta soprano despierta un entusiasmo tal que no hay entradas desde mayo.",
+        "adjetivo indefinido coloquial Aplicado a un nombre propio, da a entender que la persona a la que se alude es poco conocida para el hablante o sus interlocutores. Estaba allí una tal Ana. El tal Alberto nos había mentido.",
+        "pronombre demostrativo masculino y femenino culto El que se acaba de mencionar. Usado, usada, usados o usadas como atributo o complemento predicativo. Sus amigas dejaron pronto de ser tales."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2879,7 +2889,10 @@
       "frequency_rank": 157,
       "rae_link": "https://dle.rae.es/ayudar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Prestar cooperación.Sinónimos o afines cooperar, colaborar, contribuir, apoyar2, secundar, asistir, favorecer, coadyuvar, influir, subvenir, sostener.Antónimos u opuestos entorpecer, obstaculizar.",
+        "verbo transitivo Auxiliar, socorrer.Sinónimos o afines auxiliar2, socorrer, amparar, asistir, proteger, defender, subvenir, patrocinar, remediar.Antónimos u opuestos dañar, perjudicar, desamparar, abandonar, desasistir.",
+        "verbo pronominal Hacer un esfuerzo, poner los medios para el logro de algo.",
+        "verbo pronominal Valerse de la cooperación o ayuda de alguien.Sinónimos o afines servirse, valerse, recurrir, acudir."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2894,7 +2907,11 @@
       "frequency_rank": 158,
       "rae_link": "https://dle.rae.es/perder",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dicho de una persona: Dejar de tener, o no hallar, aquello que poseía, sea por culpa o descuido del poseedor, sea por contingencia o desgracia.Sinónimos o afines extraviar, traspapelar, refundir.Antónimos u opuestos encontrar, recuperar.",
+        "verbo transitivo Dejar de tener, a causa de su muerte, a un ser relevante, al que se está unido especialmente por lazos de afecto o de parentesco. La leona perdió una de sus crías en el ataque de las hienas. Hollywood perdió ayer a uno de sus más grandes cineastas.",
+        "verbo transitivo Desperdiciar, disipar o malgastar algo.Sinónimos o afines desperdiciar, malgastar, derrochar, disipar, pulir, prodigar, dilapidar, despalillar.Antónimo u opuesto aprovechar.",
+        "verbo transitivo No conseguir lo que se espera, desea o ama.",
+        "verbo transitivo Ocasionar un daño a las cosas, desmejorándolas o desluciéndolas.Antónimos u opuestos mejorar, beneficiar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2909,7 +2926,9 @@
       "frequency_rank": 159,
       "rae_link": "https://dle.rae.es/ustedes",
       "definitions": [
-        "Definition pending..."
+        "pronombre personal tercera persona masculino y femenino Forma que, en nominativo, en vocativo o precedida de preposición, designa a la persona a la que se dirige quien habla o escribe. Usado, usada, usados o usadas generalmente como tratamiento de cortesía, respeto o distanciamiento. Son ustedes muy amables.",
+        "pronombre personal tercera persona masculino y femenino plural Forma que, en nominativo, en vocativo o precedida de preposición, designa a los miembros de un grupo que incluye al destinatario o los destinatarios de lo que se enuncia. Ustedes los artistas.",
+        "pronombre personal tercera persona masculino y femenino plural Forma que, en nominativo, en vocativo o precedida de preposición, designa, en Canarias, en parte de Andalucía y en América, a las personas a las que se dirige quien habla o escribe, sin hacer distinción de familiaridad, respeto o cortesía. Niños, hay merienda para ustedes en la cocina."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2924,7 +2943,11 @@
       "frequency_rank": 160,
       "rae_link": "https://dle.rae.es/persona",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Individuo de la especie humana.Sinónimos o afines humano, ser2, hombre, criatura, mortal, alma1, individuo, cabeza, gente, bicho.",
+        "nombre femenino Hombre o mujer cuyo nombre se ignora o se omite.Sinónimos o afines sujeto, individuo, fulano, menda, tío, tipo, cristiano.",
+        "nombre femenino Hombre o mujer distinguidos en la vida pública.",
+        "nombre femenino Hombre o mujer prudente y cabal. Usado también como adjetivo Es muy persona.",
+        "nombre femenino Personaje que toma parte en la acción de una obra literaria."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2939,7 +2962,11 @@
       "frequency_rank": 161,
       "rae_link": "https://dle.rae.es/tipo",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Modelo, ejemplar.Sinónimos o afines arquetipo, modelo, ejemplo, ejemplar1, espécimen, prototipo, muestra, patrón, pauta.",
+        "nombre masculino Símbolo representativo de algo figurado.",
+        "nombre masculino Clase, índole, naturaleza de las cosas.Sinónimos o afines categoría, clase, especie, género, carácter.",
+        "nombre masculino Ejemplo característico de una especie, de un género, etcétera Sinónimo o afín prototipo.",
+        "nombre masculino Figura o porte de una persona. De tanto andar se te está poniendo buen tipo.Sinónimos o afines figura, porte, silueta, perfil, talle, traza."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2954,7 +2981,11 @@
       "frequency_rank": 162,
       "rae_link": "https://dle.rae.es/claro",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Que tiene abundante luz. Una clara mañana.Sinónimos o afines luminoso, brillante, iluminado, vivo, resplandeciente.Antónimos u opuestos oscuro, sombrío.",
+        "adjetivo Dicho del cielo, del tiempo, del día o de la noche: Despejado y sin nubes.Sinónimos o afines despejado, sereno, raso.Antónimo u opuesto nublado.",
+        "adjetivo Dicho de un color o de un tono: Que tiende al blanco, o se le acerca más que otro de su misma clase. Azul claro.Sinónimos o afines pálido, blanquecino.Antónimo u opuesto oscuro.",
+        "adjetivo De color claro. Ropa clara.Sinónimos o afines pálido, blanquecino.Antónimo u opuesto oscuro.",
+        "adjetivo Transparente y limpio. Agua clara. Cristal claro.Sinónimos o afines transparente, limpio, límpido, cristalino, diáfano, nítido.Antónimos u opuestos turbio, sucio."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2969,7 +3000,11 @@
       "frequency_rank": 163,
       "rae_link": "https://dle.rae.es/entender",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Tener idea clara de las cosas.Sinónimos o afines comprender, ver1, asimilar, alcanzar, discernir, descifrar, captar, coger, pescar, deducir, inferir, interpretar, intuir.",
+        "verbo transitivo Saber con perfección algo.Antónimos u opuestos ignorar, desconocer.",
+        "verbo transitivo Conocer, penetrar.Sinónimos o afines comprender, ver1, asimilar, alcanzar, discernir, descifrar, captar, coger, pescar, deducir, inferir, interpretar, intuir.",
+        "verbo transitivo Conocer el ánimo o la intención de alguien. Ya te entiendo.Sinónimo o afín comprender.",
+        "verbo transitivo Discurrir, inferir, deducir."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2984,7 +3019,11 @@
       "frequency_rank": 164,
       "rae_link": "https://dle.rae.es/menos",
       "definitions": [
-        "Definition pending..."
+        "adverbio comparativo Ante adjetivos o adverbios, indica que el grado de la propiedad que expresan es bajo en comparación con otro explícito o sobrentendido. El sabor del té verde es menos intenso. Usado también con un complemento introducido por la preposición de. Estaba menos lejos de lo que creíamos. Usado también con el artículo determinado cuando precede a adjetivos, formando el superlativo relativo de inferioridad. Estas peras son las menos sabrosas que he probado nunca.Antónimo u opuesto más.",
+        "adverbio comparativo Pospuesto a verbos, indica que la situación descrita tiene lugar con menor frecuencia, intensidad o duración que otra explícita o sobrentendida. Va menos al gimnasio de lo que se había propuesto. Se esforzó menos que otras veces. La representación duró menos.Antónimo u opuesto más.",
+        "adverbio Usado entre pausas para reforzar o matizar una enunciación negativa previa disminuyendo el número de las opciones posibles. No volveré a ese hotel; menos aún, en verano.Antónimo u opuesto más.",
+        "adjetivo comparativo Ante sustantivos contables en plural, indica que un determinado número de entidades es bajo en comparación con otro sobrentendido o explícito. Compró menos tornillos que tuercas. Usado también con un complemento introducido por la preposición de. Compró menos tornillos de los necesarios. Usado también pospuesto cuando va precedido de una expresión cuantificativa. Compró algunos tornillos menos.Antónimo u opuesto más.",
+        "adjetivo comparativo Ante sustantivos no contables en singular, expresa que una determinada cantidad es menor que otra sobrentendida o explícita. Tiene menos interés que al principio. Usado también con un complemento preposicional encabezado por de. Tiene menos interés de lo que parece. Usado ocasionalmente pospuesto cuando va precedido de una expresión cuantificativa. Había bastante gente menos de la esperada.Antónimo u opuesto más."
       ],
       "translations": {
         "en": "Translation pending"
@@ -2999,7 +3038,9 @@
       "frequency_rank": 165,
       "rae_link": "https://dle.rae.es/fuera",
       "definitions": [
-        "Definition pending..."
+        "adverbio A la parte o en la parte exterior de algo. Está fuera. Me voy fuera.Antónimo u opuesto dentro.",
+        "interjección afuera. Usado, usada, usados o usadas más para denotar desaprobación. Usada también repetida Sinónimo o afín afuera.",
+        "interjección Usado, usada, usados o usadas para exhortar o invitar a quitar algo o a alguien de donde está. ¡Fuera gorros! ¡Fuera libros! ¡Fuera corruptos!"
       ],
       "translations": {
         "en": "Translation pending"
@@ -3014,7 +3055,11 @@
       "frequency_rank": 166,
       "rae_link": "https://dle.rae.es/acabar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Poner o dar fin a algo. Usado también como pronominal Sinónimos o afines terminar, concluir, finalizar, finiquitar, rematar, ultimar, culminar, liquidar, consumar.Antónimos u opuestos empezar, iniciar, principiar, comenzar, emprender.",
+        "verbo transitivo Apurar, consumir.Sinónimos o afines apurar, gastar, agotar, consumir.",
+        "verbo transitivo Poner mucho esmero en la conclusión de una obra.",
+        "verbo transitivo matar (‖ quitar la vida).Sinónimos o afines matar, asesinar, eliminar, deshacerse, victimar, pasaportar, cargarse, cepillarse, despachar, ventilarse, liquidar, tumbar, apiolar, escabechar, ultimar, difuntear, quebrar, limpiar, ñampiar, tistear, apear.",
+        "verbo transitivo coloquial Ec. insultar (‖ ofender).Sinónimos o afines insultar, tapear, trapear, tratar, turquear."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3029,7 +3074,11 @@
       "frequency_rank": 167,
       "rae_link": "https://dle.rae.es/tratar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Manejar algo y usarlo materialmente.Sinónimos o afines manejar, manipular.",
+        "verbo transitivo Manejar, gestionar o disponer algún negocio.Sinónimos o afines gestionar, diligenciar, tramitar.",
+        "verbo transitivo Comunicarse o relacionarse con alguien. Usado también como intransitivo y como pronominal Tratarse con los vecinos.Sinónimos o afines relacionarse, comunicarse, codearse, frecuentar, alternar.",
+        "verbo transitivo Tener relaciones amorosas con alguien. Usado más como intransitivo",
+        "verbo transitivo Proceder con una persona de determinada manera, de obra o de palabra.Sinónimo o afín llamar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3044,7 +3093,11 @@
       "frequency_rank": 168,
       "rae_link": "https://dle.rae.es/tres",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Dos más uno. Usado también como pronombre —¿Cuántos alumnos tiene? —Tres.",
+        "adjetivo tercero (‖ que ocupa en una serie el lugar número tres). Año tres. Aplicado a los días del mes, usado también como sustantivo masculino El tres de julio.Sinónimos o afines tercero, tercio.",
+        "nombre masculino Número natural que sigue al dos. El número complementario es el tres.",
+        "nombre masculino Signo o conjunto de signos con que se representa el número tres.",
+        "nombre masculino En la baraja, el dado, el dominó, etcétera elemento marcado con tres señales."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3059,7 +3112,11 @@
       "frequency_rank": 169,
       "rae_link": "https://dle.rae.es/último",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Que está al final de una línea, de una serie o de una sucesión. Don Rodrigo fue el último rey de los godos.Sinónimos o afines final, postrero, supremo.Antónimo u opuesto primero.",
+        "adjetivo Que se sitúa en lo más remoto, retirado o escondido.",
+        "adjetivo Final, definitivo.Sinónimos o afines definitivo, final.Antónimo u opuesto primero.",
+        "adjetivo Extremado en su línea. La última miseria.",
+        "adjetivo Dicho de una cosa: Que representa el fin o término a que deben dirigirse todas las acciones y designios de alguien."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3074,7 +3131,11 @@
       "frequency_rank": 170,
       "rae_link": "https://dle.rae.es/trabajar",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Ocuparse en cualquier actividad física o intelectual. Trabajar en la tesis doctoral. Trabaja poco y mal.Sinónimos o afines trajinar, obrar, cultivar, bregar, talonear, desempeñarse, currar, currelar.Antónimos u opuestos descansar, vaguear1, holgar, holgazanear.",
+        "verbo intransitivo Tener una ocupación remunerada en una empresa, una institución, etcétera ¿Trabajas o estudias?Sinónimos o afines emplearse, ocuparse, laburar, bretear, currar, currelar, labrar.",
+        "verbo intransitivo Ejercer determinada profesión u oficio. Trabaja como periodista. Trabaja de jardinero.Sinónimos o afines dedicarse, ejercer, currar, currelar.",
+        "verbo intransitivo Dicho de una máquina: funcionar. La computadora trabaja según un programa determinado.Sinónimo o afín funcionar.",
+        "verbo intransitivo Dicho de un establecimiento o de un organismo: Desarrollar su actividad."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3089,7 +3150,11 @@
       "frequency_rank": 171,
       "rae_link": "https://dle.rae.es/morir",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Llegar al término de la vida. Usado también como pronominal Sinónimos o afines fallecer, expirar, perecer, fenecer, sucumbir, finar, quedarse, apagarse, irse, acabar, pasar, palmar1, cascar, espichar, despichar, caer, pelarse, petatearse, sonar1, ñampiarse, jetearse, marchar, piantarse, descoñetar.Antónimos u opuestos nacer, vivir1, existir.",
+        "verbo intransitivo Dicho de una cosa: Llegar a su término. Usado también como pronominal expresivo Sinónimos o afines terminar, concluir, finalizar, consumirse, agotarse, extinguirse.Antónimos u opuestos surgir, comenzar, nacer.",
+        "verbo intransitivo coloquial Sentir muy intensamente algún deseo, afecto, pasión, etcétera Morir de hambre, de risa, de frío. Usado también como pronominal expresivo",
+        "verbo intransitivo Dicho de una cosa que luce o arde: Apagarse o dejar de arder o lucir. Usado también como pronominal expresivo Sinónimos o afines extinguirse, apagarse, consumirse.",
+        "verbo intransitivo coloquial Sentir un impulso muy poderoso hacia el logro de una cosa o hacia una persona. Usado también como pronominal expresivo Se muere por ese cuadro. Se muere por ella.Sinónimos o afines ansiar, anhelar, desvivirse, pirrarse."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3104,7 +3169,11 @@
       "frequency_rank": 172,
       "rae_link": "https://dle.rae.es/cada",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino enebro (‖ arbusto).",
+        "adjetivo indefinido Indica que el sustantivo al que modifica denota un conjunto cuyos miembros se consideran individualmente y entran en una relación distributiva con algún otro elemento. Usado ante sustantivos contables. Entregaron dos libros a cada alumno.",
+        "adjetivo indefinido Seguido de un numeral cardinal y un sustantivo en plural, indica que lo denotado por el nombre se agrupa en conjuntos del tamaño indicado por el numeral. Viene cada tres meses.",
+        "adjetivo indefinido Indica la totalidad del conjunto denotado por el sustantivo al que modifica, individualizándolo en la serie a la que pertenece. Usado ante sustantivos contables. Repasó cada respuesta antes de contestar.",
+        "adjetivo indefinido En construcciones consecutivas, aporta valor intensivo o ponderativo. Dice cada disparate que la gente se queda de piedra. Usado a veces sin la oración con que. Tiene cada ocurrencia..."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3119,7 +3188,11 @@
       "frequency_rank": 173,
       "rae_link": "https://dle.rae.es/dinero",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Moneda corriente.Sinónimos o afines moneda, efectivo, numerario, pasta, cuartos, guita, moni, tela1, lana, parné, perras, plata, billete, morlacos, feria, reales, pisto, bolas, mango3, guano2, maracandacas, marmaja, piscolabis, tlaco, fierros, churupos, piticlín, merusa, astilla, pastora, gallo, tuza1, malanga, papa2, chenchén, chavos, pastizara, mosca, din1, trigo, luz1.",
+        "nombre masculino Hacienda, fortuna. María es una persona de dinero.Sinónimos o afines fortuna, hacienda, riqueza, bienes, haberes, medios, posibles, caudal1, bolsa1, peculio, patrimonio, plata, pasta, cuartos, perras, guita, parné, din1.",
+        "nombre masculino Moneda de plata y cobre usada en Castilla en el siglo XIV y que equivalía a dos cornados.",
+        "nombre masculino Antigua moneda de plata del Perú.",
+        "nombre masculino penique (‖ moneda británica que vale la centésima parte de la libra esterlina).Sinónimo o afín penique."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3134,7 +3207,11 @@
       "frequency_rank": 174,
       "rae_link": "https://dle.rae.es/mañana",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Parte del día comprendida entre el amanecer y el mediodía, o la hora de comer o almorzar. Las mañanas de trabajo cunden mucho.",
+        "nombre femenino Parte del día comprendida entre la medianoche y el mediodía. Me acosté a las dos de la mañana.",
+        "nombre femenino Estado atmosférico que hay durante la mañana o gran parte de ella. Hace una mañana muy buena.",
+        "nombre masculino Tiempo venidero. Nadie conoce el mañana.Sinónimos o afines futuro, porvenir.Antónimos u opuestos ayer, hoy, antaño.",
+        "adverbio demostrativo En el día que sigue inmediatamente al de hoy. Llegan mañana.Antónimos u opuestos ayer, hoy."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3149,7 +3226,11 @@
       "frequency_rank": 175,
       "rae_link": "https://dle.rae.es/hermano",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino y femenino Persona o animal que tiene en común con otra u otro el mismo padre y la misma madre, o solo uno de ellos.Sinónimos o afines tato1, hermanastro, ñaño, pipe.",
+        "nombre masculino y femenino Tratamiento que mutuamente se dan los cuñados.",
+        "nombre masculino y femenino Lego o donado de una comunidad regular.",
+        "nombre masculino y femenino Persona que tiene el mismo padre espiritual que otra; por ejemplo un religioso respecto de otros de su misma orden.Sinónimos o afines fraile, sor1, congregante, madre, padre, monje, religioso.",
+        "nombre masculino y femenino Persona admitida por una comunidad religiosa a participar de ciertas gracias y privilegios."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3164,7 +3245,9 @@
       "frequency_rank": 176,
       "rae_link": "https://dle.rae.es/quien",
       "definitions": [
-        "Definition pending..."
+        "pronombre relativo masculino y femenino El que, el cual o que. Usado, usada, usados o usadas con antecedente referido a personas. Este es el escritor de quien te hablé. Usado, usada, usados o usadas sin preposición solo encabeza oraciones explicativas. El escritor invitado, quien trató ampliamente esa cuestión, es un especialista en la materia.",
+        "pronombre relativo masculino y femenino El que o aquel que. Usado, usada, usados o usadas sin antecedente expreso referido a personas. No dejes entrar a quienes lleguen tarde.",
+        "pronombre relativo masculino y femenino Alguien que o nadie que. Usado, usada, usados o usadas sin antecedente expreso generalmente con los verbos tener y haber. ¿Hay quien dé más? No hay quien pueda con él. Usado más en singular"
       ],
       "translations": {
         "en": "who"
@@ -3179,7 +3262,11 @@
       "frequency_rank": 177,
       "rae_link": "https://dle.rae.es/vivir",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Tener vida.Sinónimo o afín existir.Antónimos u opuestos morir, fallecer.",
+        "verbo intransitivo Durar con vida.Sinónimos o afines pervivir, sobrevivir, subsistir.",
+        "verbo intransitivo Dicho de una cosa: durar (‖ continuar sirviendo).Sinónimos o afines durar, perdurar, permanecer, pervivir, subsistir, mantenerse.",
+        "verbo intransitivo Pasar y mantener la vida. Francisco tiene con qué vivir. Vivo de mi trabajo.Sinónimos o afines mantenerse, subsistir.",
+        "verbo intransitivo Habitar o morar en un lugar o país. Usado también como transitivo Sinónimos o afines habitar, residir, morar, parar1."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3194,7 +3281,11 @@
       "frequency_rank": 178,
       "rae_link": "https://dle.rae.es/valer",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Amparar, proteger, patrocinar.Sinónimos o afines amparar, auxiliar2, socorrer, apoyar2, patrocinar, ayudar, acuerpar, bancar.",
+        "verbo transitivo Producir, dar ganancias o interés. Usado también en sentido figurado La tardanza me valió un gran disgusto.",
+        "verbo transitivo En números y cuentas, montar, sumar o importar.Sinónimos o afines importar, montar, sumar, ascender, representar.",
+        "verbo transitivo Dicho de una cosa: Tener un precio determinado para la compra o la venta.Sinónimo o afín costar.",
+        "verbo transitivo Dicho de una cosa: Equivaler a otra en número, significación o aprecio. Una nota blanca vale dos negras. Usado también como intransitivo Sinónimos o afines equivaler, contar, corresponder, identificarse, igualarse, asimilarse."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3224,7 +3315,10 @@
       "frequency_rank": 180,
       "rae_link": "https://dle.rae.es/allí",
       "definitions": [
-        "Definition pending..."
+        "adverbio demostrativo En aquel lugar. Pedro vivía allí.Sinónimos o afines allá, acullá, ahí, lejos.",
+        "adverbio demostrativo A aquel lugar. Iremos allí este verano.",
+        "adverbio demostrativo Aquel lugar. Usado precedido de preposición Salieron de allí al amanecer. Los corredores llegaron hasta allí.",
+        "adverbio demostrativo entonces. Usado más frecuentemente precedido de preposición. De allí en adelante, no volvieron a verse. Hasta allí no había habido ningún problema entre ellos.Sinónimo o afín entonces."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3239,7 +3333,11 @@
       "frequency_rank": 181,
       "rae_link": "https://dle.rae.es/hoy",
       "definitions": [
-        "Definition pending..."
+        "adverbio demostrativo En este día. Hoy lloverá.Antónimos u opuestos ayer, mañana.",
+        "adverbio demostrativo Este día. Usado normalmente precedido de preposición. El pan es de hoy.Antónimos u opuestos ayer, mañana.",
+        "adverbio demostrativo En el tiempo presente. Hoy las ciencias adelantan cada vez más.Sinónimos o afines actualmente, hogaño.Antónimos u opuestos ayer, antaño, mañana.",
+        "adverbio demostrativo El tiempo presente. Usado precedido de preposición La sociedad de hoy.Antónimos u opuestos ayer, antaño, mañana.",
+        "nombre masculino Tiempo presente. Vive el hoy, no esperes al mañana.Antónimos u opuestos ayer, antaño, mañana."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3254,7 +3352,11 @@
       "frequency_rank": 182,
       "rae_link": "https://dle.rae.es/luego",
       "definitions": [
-        "Definition pending..."
+        "adverbio Después, más tarde. Anoche fuimos al teatro, y luego a una sala de fiestas. Estudió derecho, y luego medicina.Sinónimos o afines después, posteriormente, seguidamente.",
+        "adverbio El Salv. temprano (‖ en las primeras horas del día).",
+        "adverbio El Salv. rápidamente (‖ con celeridad).Sinónimos o afines rápidamente, ya, enseguida.",
+        "adverbio desusado Prontamente, sin dilación. Usado en América",
+        "conjunción ilativa Por consiguiente, por lo tanto. Pienso, luego existo. ¿Luego era fundado mi temor?Sinónimos o afines ergo, pues."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3269,7 +3371,11 @@
       "frequency_rank": 183,
       "rae_link": "https://dle.rae.es/mano",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Parte del cuerpo humano unida a la extremidad del antebrazo y que comprende desde la muñeca inclusive hasta la punta de los dedos.Sinónimo o afín manopla.",
+        "nombre femenino En algunos animales, extremidad cuyo dedo pulgar puede oponerse a los otros.",
+        "nombre femenino En los animales cuadrúpedos, cualquiera de los dos pies delanteros.Sinónimos o afines zarpa1, garra, pezuña.",
+        "nombre femenino En las reses de carnicería, cualquiera de los cuatro pies o extremos después de cortados.",
+        "nombre femenino Tipo de extremidad par cuyo esqueleto está dispuesto siempre de la misma manera, terminado generalmente en cinco dedos, y que constituye el llamado quiridio, característico de los vertebrados tetrápodos."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3284,7 +3390,11 @@
       "frequency_rank": 184,
       "rae_link": "https://dle.rae.es/tanto",
       "definitions": [
-        "Definition pending..."
+        "adjetivo comparativo Ante sustantivos, indica que la cantidad, magnitud o intensidad de lo designado es semejante a otra mencionada o consabida. Usado en correlación con como o, menos a menudo, cuanto. Hay tanta gente aquí como en la playa. Hizo tanto ruido como una bomba.",
+        "adjetivo comparativo Intensifica la cantidad, magnitud o intensidad de lo designado por el sustantivo al que precede. Usado normalmente ante una oración consecutiva. Hace tanto calor que no se puede dormir. ¡Hacía tanto calor…!",
+        "adjetivo demostrativo Señala una cantidad, magnitud o intensidad a la que se equipara otra que expresa lo designado por el sustantivo que introduce. Su hija ganó 15 a 7; él no hizo tantos puntos.",
+        "adjetivo Con determinados numerales, múltiplos de diez, indica cantidad imprecisa. Usado solo en plural Tiene treinta y tantos años.",
+        "adjetivo coloquial Ante nombres contables en singular usados como no contables, denota pluralidad. Usado a menudo con connotaciones negativas. Con tanto periodista en la sala, no quedaba sitio para el público."
       ],
       "translations": {
         "en": "so much"
@@ -3299,7 +3409,11 @@
       "frequency_rank": 185,
       "rae_link": "https://dle.rae.es/caso",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Suceso, acontecimiento.Sinónimos o afines acontecimiento, suceso, incidente, hecho.",
+        "nombre masculino Casualidad, acaso.",
+        "nombre masculino Lance, ocasión o coyuntura.Sinónimos o afines ocasión, coyuntura, circunstancia, lance.",
+        "nombre masculino Asunto de que se trata o que se propone para consultar a alguien y pedirle su dictamen.Sinónimos o afines asunto, tema, cuestión.",
+        "nombre masculino Cada una de las invasiones individuales de una enfermedad, principalmente si es epidémica."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3314,7 +3428,11 @@
       "frequency_rank": 186,
       "rae_link": "https://dle.rae.es/nombre",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Palabra que designa o identifica seres animados o inanimados; por ejemplo hombre, casa, virtud, Caracas.Sinónimos o afines denominación, designación.",
+        "nombre masculino nombre propio.Sinónimos o afines sobrenombre, mote1, apodo, alias, apelativo, seudónimo, apellido.",
+        "nombre masculino Fama, opinión, reputación o crédito.Sinónimos o afines renombre, fama, reputación, prestigio, nombradía, notoriedad.",
+        "nombre masculino Gram. Clase de palabras cuyos elementos poseen género y número, forman sintagmas nominales con diversas funciones sintácticas y designan entidades de diferente naturaleza.Sinónimo o afín sustantivo.",
+        "nombre masculino Gram. Cada uno de los elementos que integran el paradigma del nombre.Sinónimo o afín sustantivo."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3329,7 +3447,11 @@
       "frequency_rank": 187,
       "rae_link": "https://dle.rae.es/entrar",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Ir o pasar de fuera adentro. Usado también como pronominal Usado también en sentido figurado Sinónimos o afines acceder, pasar, introducirse, meterse, adentrarse, penetrar, internarse, irrumpir, colarse, recalar.Antónimo u opuesto salir.",
+        "verbo intransitivo Pasar por una parte para introducirse en otra. Entrar por la puerta, por la ventana.Antónimo u opuesto salir.",
+        "verbo intransitivo Dicho de una cosa: Encajar o poderse meter en otra, o dentro de otra. El libro no entra en el cajón del estante. El sombrero entra o no entra en la cabeza.Sinónimos o afines caber, encajar.",
+        "verbo intransitivo Dicho de un río: Desaguar, desembocar en otro o en el mar.",
+        "verbo intransitivo Penetrar o introducirse. El clavo entra en la pared."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3344,7 +3466,11 @@
       "frequency_rank": 188,
       "rae_link": "https://dle.rae.es/forma",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Configuración externa de algo.Sinónimos o afines formación, aspecto, figura, apariencia, imagen, configuración, estructura.",
+        "nombre femenino Modo o manera en que se hace o en que ocurre algo. Llueve de forma intermitente. Mi forma de vivir.Sinónimos o afines modo, manera, estilo, proceder2.",
+        "nombre femenino Modo o manera de estar organizado algo. Forma de gobierno.",
+        "nombre femenino En un texto literario, estilo o modo de expresar las ideas.",
+        "nombre femenino Condición física o anímica para realizar una determinada actividad. Estar en buena forma, en baja forma."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3359,7 +3485,10 @@
       "frequency_rank": 189,
       "rae_link": "https://dle.rae.es/empezar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dar principio a algo.Sinónimos o afines iniciar, comenzar, emprender, principiar, originar.Antónimos u opuestos acabar, terminar, finalizar.",
+        "verbo transitivo Iniciar el uso o consumo de algo.Antónimos u opuestos acabar, terminar, finalizar.",
+        "verbo intransitivo Dicho de algo: Tener principio en un lugar. La línea férrea empieza en la capital. Diga nombres de peces que empiecen por/con la letra s.Sinónimos o afines aparecer, arrancar, asomar, nacer, surgir.Antónimos u opuestos acabar, terminar, finalizar.",
+        "verbo intransitivo Dicho de algo: Dar comienzo en el tiempo. Empezó el concierto.Antónimos u opuestos acabar, terminar, finalizar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3374,7 +3503,7 @@
       "frequency_rank": 190,
       "rae_link": "https://dle.rae.es/conseguir",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Alcanzar, obtener o lograr lo que se pretende o desea.Sinónimos o afines lograr, alcanzar, obtener, ganar, sacar, adquirir, cosechar, recabar, agenciar, atrapar, captar, apoderarse, cazar, recibir, coger.Antónimo u opuesto perder."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3389,7 +3518,11 @@
       "frequency_rank": 191,
       "rae_link": "https://dle.rae.es/pedir",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Expresar a alguien la necesidad o el deseo de algo para que lo satisfaga.Sinónimos o afines solicitar, demandar, requerir, rogar, suplicar, implorar, postular, pretender.Antónimos u opuestos dar, conceder, negar.",
+        "verbo transitivo por antonomasia pedir limosna.Sinónimos o afines mendigar, pordiosear, limosnear.",
+        "verbo transitivo Dicho del vendedor: Poner precio a su mercancía.",
+        "verbo transitivo Requerir algo, exigirlo como necesario o conveniente.Sinónimos o afines exigir, reclamar1, reivindicar, requerir.Antónimos u opuestos dar, conceder, negar.",
+        "verbo transitivo Querer, desear o apetecer."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3404,7 +3537,9 @@
       "frequency_rank": 192,
       "rae_link": "https://dle.rae.es/intentar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Tener ánimo de hacer algo.Sinónimos o afines pretender, proyectar, querer1, desear, procurar, aspirar.",
+        "verbo transitivo Preparar, iniciar la ejecución de algo.Sinónimos o afines tantear, tratar, tentar, probar, ensayar.Antónimo u opuesto desistir.",
+        "verbo transitivo Procurar o pretender.Sinónimos o afines pretender, proyectar, querer1, desear, procurar, aspirar.Antónimo u opuesto renunciar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3419,7 +3554,11 @@
       "frequency_rank": 193,
       "rae_link": "https://dle.rae.es/ninguno",
       "definitions": [
-        "Definition pending..."
+        "adjetivo indefinido Expresa la inexistencia de aquello denotado por el nombre al que modifica. Usado solo en singular Ningún día es igual al anterior. No he tenido ningún problema. Usado también pospuesto al sustantivo precedido de un elemento negativo. No he tenido problema ninguno. Sin amigo ninguno.Antónimo u opuesto alguno.",
+        "adjetivo indefinido Nada de. Usado solo en singular con nombres abstractos. No siente ninguna lástima. No tiene ninguna gracia. Usado también pospuesto al sustantivo precedido de un elemento negativo. No tiene interés ninguno.Antónimo u opuesto alguno.",
+        "adjetivo indefinido Con ciertos nombres de contenido valorativo añade énfasis a la negación y equivale a un. No es ningún monstruo. Usado también en plural No son ningunos monstruos.",
+        "adjetivo indefinido Con ciertos nombres abstractos forma plurales enfáticos o estilísticos. No tenía ningunas ganas de ir.",
+        "pronombre indefinido masculino y femenino singular Denota la inexistencia de una entidad. Usado, usada, usados o usadas referido a un sintagma nominal mencionado o sobrentendido, o bien para aludir a uno pospuesto e introducido por la preposición de. Ayer compré bombones, pero no queda ninguno. Ninguna de tus amigas estaba de acuerdo.Antónimo u opuesto alguno."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3434,7 +3573,11 @@
       "frequency_rank": 194,
       "rae_link": "https://dle.rae.es/traer",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Conducir o trasladar algo al lugar en donde se habla o de que se habla. Traer una carta, una noticia.Sinónimos o afines acercar, aproximar, trasladar, transportar, acarrear, portear1.Antónimo u opuesto llevar.",
+        "verbo transitivo Atraer o tirar hacia sí.",
+        "verbo transitivo Causar, ocasionar, producir. La exposición excesiva al sol trae consecuencias negativas.Sinónimos o afines producir, causar, conllevar, entrañar.",
+        "verbo transitivo Tener a alguien en el estado o situación que se indican. Traer a alguien azacanado, inquieto, convencido.",
+        "verbo transitivo Tener puesto algo. Traía un vestido muy rico.Sinónimos o afines vestir, llevar, usar, ponerse, lucir."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3449,7 +3592,11 @@
       "frequency_rank": 195,
       "rae_link": "https://dle.rae.es/pequeño",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Que tiene poco tamaño o un tamaño inferior a otros de su misma clase.Sinónimos o afines chico, diminuto, minúsculo, insignificante, sardesco, párvulo, pichingo, gurrumino.Antónimo u opuesto grande.",
+        "adjetivo Dicho de una persona: Baja, de poca estatura.Sinónimos o afines bajo, canijo, enano, gurrumino.Antónimo u opuesto alto1.",
+        "adjetivo Breve, poco extenso. Una pequeña siesta. Un pequeño discurso.Sinónimos o afines corto1, reducido.Antónimo u opuesto largo.",
+        "adjetivo Poco importante o poco intenso. Un pequeño sueldo, dolor de cabeza.Antónimo u opuesto importante.",
+        "adjetivo Modesto, de escasos recursos o influencia. Un comercio pequeño."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3464,7 +3611,11 @@
       "frequency_rank": 196,
       "rae_link": "https://dle.rae.es/importar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dicho de una cosa: Valer o costar cierta cantidad.Sinónimos o afines costar, valer1, ascender.",
+        "verbo transitivo Introducir en un país géneros, artículos o costumbres extranjeros.Sinónimos o afines introducir, meter, comprar, entrar, naturalizar.Antónimo u opuesto exportar.",
+        "verbo transitivo Inform. Obtener información, generalmente en forma de archivo, de otro programa o de un periférico de una computadora u otro dispositivo electrónico.Antónimo u opuesto exportar.",
+        "verbo transitivo poco usado Traer consigo, comportar.Sinónimos o afines significar, suponer, implicar, entrañar, conllevar.",
+        "verbo transitivo desusado Contener, ocasionar, causar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3479,7 +3630,11 @@
       "frequency_rank": 197,
       "rae_link": "https://dle.rae.es/aún",
       "definitions": [
-        "Definition pending..."
+        "adverbio todavía (‖ hasta un momento determinado). Aún estás a tiempo.Sinónimo o afín todavía.",
+        "adverbio todavía (‖ no obstante, sin embargo). Era quien más espacio tenía y aún protestó.Sinónimo o afín todavía.",
+        "adverbio todavía (‖ denota encarecimiento o ponderación). Alcanzó más prestigio aún que su padre. Sus palabras introdujeron aún más confusión.Sinónimo o afín todavía.",
+        "adverbio Hasta o incluso. Te daré 100 dólares, y aun 200, si los necesitas. Aun estando casados, dormían en habitaciones separadas.Sinónimos o afines incluso, hasta.",
+        "adverbio siquiera (‖ tan solo). No tengo yo tanto, ni aun la mitad.Sinónimo o afín siquiera."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3494,7 +3649,11 @@
       "frequency_rank": 198,
       "rae_link": "https://dle.rae.es/cuenta",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Acción y efecto de contar.Sinónimos o afines conteo, numeración, recuento, enumeración.",
+        "nombre femenino Cálculo u operación aritmética. Cuenta de multiplicar.Sinónimos o afines operación, cómputo, cálculo, balance1.",
+        "nombre femenino Pliego o papel en que está escrita alguna razón compuesta de varias partidas, que al fin se suman o restan.Sinónimos o afines importe, factura, nota, recibo, minuta, montante, monto, total, suma.",
+        "nombre femenino Depósito de dinero en una entidad financiera.",
+        "nombre femenino Cierto número de hilos que deben tener los tejidos según sus calidades; como en el paño el ser dieciocheno, treintaidoseno, etcétera"
       ],
       "translations": {
         "en": "Translation pending"
@@ -3509,7 +3668,11 @@
       "frequency_rank": 199,
       "rae_link": "https://dle.rae.es/razón",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Facultad de discurrir.Sinónimos o afines entendimiento, raciocinio, intelecto, inteligencia1, perspicacia, sagacidad, racionalidad, juicio.",
+        "nombre femenino Acto de discurrir el entendimiento.",
+        "nombre femenino Palabras o frases con que se expresa el discurso.",
+        "nombre femenino Argumento o demostración que se aduce en apoyo de algo.Sinónimos o afines argumento, explicación, prueba, justificación, testimonio.",
+        "nombre femenino motivo (‖ causa).Sinónimos o afines motivación, motivante, motivo, fundamento, causa1, móvil, origen, base, raíz."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3524,7 +3687,8 @@
       "frequency_rank": 200,
       "rae_link": "https://dle.rae.es/preguntar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Interrogar o hacer preguntas a alguien para que diga y responda lo que sabe sobre un asunto. Usado también como pronominal Sinónimos o afines interrogar, consultar, demandar, interpelar, encuestar, curiosear, inquirir, averiguar.Antónimo u opuesto responder.",
+        "verbo transitivo Exponer en forma de interrogación un asunto, bien para indicar duda o bien para vigorizar la expresión, cuando se reputa imposible o absurda la respuesta en determinado sentido. Usado también como pronominal Sinónimos o afines dudar, cuestionar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3539,7 +3703,11 @@
       "frequency_rank": 201,
       "rae_link": "https://dle.rae.es/terminar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Poner término a algo.Sinónimos o afines acabar, finalizar, concluir, rematar, ultimar, finiquitar, liquidar, agotar.Antónimos u opuestos empezar, iniciar.",
+        "verbo transitivo acabar (‖ poner esmero en la conclusión de una obra).Sinónimos o afines acabar, rematar, completar, consumar.",
+        "verbo intransitivo Dicho de una cosa: cesar (‖ interrumpirse o acabarse). Usado también como pronominal Sinónimos o afines acabar, cesar, concluir, expirar, finalizar, pasar, agotarse, interrumpirse.Antónimo u opuesto continuar.",
+        "verbo intransitivo Dicho de una enfermedad: Entrar en su último período.",
+        "verbo intransitivo Aniquilar o destruir enteramente algo o alguien. Hay que terminar con la injusticia y con los explotadores.Sinónimo o afín acabar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3554,7 +3722,11 @@
       "frequency_rank": 202,
       "rae_link": "https://dle.rae.es/idea",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Primero y más obvio de los actos del entendimiento, que se limita al simple conocimiento de algo.Sinónimos o afines conocimiento, noción, comprensión, concepción, pensamiento, sensación, imaginación, concepto1, reflexión, designio.",
+        "nombre femenino Imagen o representación que del objeto percibido queda en la mente. Su idea no se borra jamás de mi mente.Sinónimos o afines imagen, representación, modelo, arquetipo, percepción.",
+        "nombre femenino Conocimiento puro, racional, debido a las naturales condiciones del entendimiento humano. La justicia es idea innata.Sinónimos o afines plan, planteamiento, concepción, proyecto, bosquejo, esbozo, boceto, diseño.",
+        "nombre femenino Plan y disposición que se ordena en la imaginación para la formación de una obra. La idea de una novela. La idea de un palacio.Sinónimos o afines asunto, materia, fondo2, tema, trama.esquema, plan.",
+        "nombre femenino Intención de hacer algo. Tiene idea de casarse. Llevaban idea de huir. Usado frecuentemente en la construcción con idea de. Vino con idea de hacer daño.Sinónimos o afines intención, propósito, decisión, convicción, resolución, empeño."
       ],
       "translations": {
         "en": "Translation pending"
@@ -3569,7 +3741,8 @@
       "frequency_rank": 203,
       "rae_link": "https://dle.rae.es/mamá",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino madre (‖ mujer). Usado frecuentemente como coloquial Sinónimos o afines madre, amá, ma, vientre, nana1, mama, mami.",
+        "nombre femenino madre (‖ animal hembra). Usado frecuentemente como coloquial Sinónimo o afín madre."
       ],
       "translations": {
         "en": "Translation pending"
