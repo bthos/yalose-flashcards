@@ -1,5 +1,5 @@
 {
-  "lastProcessedIndex": 5350,
+  "lastProcessedIndex": 5400,
   "failedWords": [
     {
       "word": "sr.",
@@ -2570,8 +2570,13 @@
       "word": "sr.",
       "rae_link": "https://dle.rae.es/sr.",
       "reason": "No definitions found"
+    },
+    {
+      "word": "sr.",
+      "rae_link": "https://dle.rae.es/sr.",
+      "reason": "No definitions found"
     }
   ],
-  "completedCount": 4836,
-  "lastRun": "2026-01-25T00:04:37.377Z"
+  "completedCount": 4885,
+  "lastRun": "2026-02-01T00:04:40.502Z"
 }
