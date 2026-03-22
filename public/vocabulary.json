@@ -1,5 +1,5 @@
 {
-  "version": "d5a7424128791da974d371a263ca1148",
+  "version": "6da72a658066053570796d9604528460",
   "words": [
     {
       "id": "5f02f0889301fd7b",
@@ -12512,7 +12512,11 @@
       "frequency_rank": 682,
       "rae_link": "https://dle.rae.es/crecer",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Dicho de un ser orgánico: Ir en aumento. Aplicado a persona se refiere principalmente a la estatura.Sinónimos o afines estirar, espigarse, criarse, medrar.Antónimos u opuestos decrecer, menguar.",
+        "verbo intransitivo Dicho de una cosa: Recibir aumento por añadírsele nueva materia. Crecer el río, el montón.Sinónimos o afines aumentar, incrementarse, agrandarse, acrecentarse, agigantarse.Antónimos u opuestos decrecer, menguar.mermar, disminuir.",
+        "verbo intransitivo Adquirir aumento. Crecer el tumulto.Sinónimos o afines aumentar, incrementarse, agrandarse, acrecentarse, agigantarse.Antónimos u opuestos decrecer, menguar.mermar, disminuir.",
+        "verbo intransitivo En las labores de punto, ir añadiendo puntos regularmente a los que están prendidos en la aguja, para que resulte aumentado su número en la vuelta siguiente. Usado más como transitivo",
+        "verbo intransitivo Dicho de la Luna: Aumentar la parte iluminada del astro visible desde la Tierra."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12527,7 +12531,11 @@
       "frequency_rank": 683,
       "rae_link": "https://dle.rae.es/alcanzar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Llegar a juntarse con alguien o algo que va delante.Sinónimos o afines coger, atrapar, agarrar, cazar.",
+        "verbo transitivo Llegar a tocar, golpear o herir a alguien o algo. El disparo lo alcanzó en el pecho. Usado también en sentido figurado La epidemia alcanzó a todo el país.Sinónimos o afines golpear, afectar.",
+        "verbo transitivo Coger algo alargando la mano para tomarlo y, a veces, para dárselo a alguien. Me pidió que le alcanzara la sal.Sinónimos o afines alargar, acercar, tender, dar.",
+        "verbo transitivo Llegar a percibir algo con la vista, el oído o el olfato.",
+        "verbo transitivo Llegar a vivir o haber vivido en el tiempo de una persona o suceso, teniendo ocasión de conocerlos."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12542,7 +12550,11 @@
       "frequency_rank": 684,
       "rae_link": "https://dle.rae.es/devolver",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Volver algo a su estado anterior. El aire sano le devolvió el color al rostro.Sinónimos o afines reponer, restituir, reincorporar.",
+        "verbo transitivo Restituir algo a quien lo tenía antes.Sinónimos o afines restituir, retornar, reintegrar, reembolsar, tornar, volver, regresar, retachar.Antónimo u opuesto quedarse.",
+        "verbo transitivo Corresponder a un favor, un agravio, una visita, etcétera",
+        "verbo transitivo Entregar al vendedor una compra por no estar conforme con ella, obteniendo el reintegro del dinero.",
+        "verbo transitivo Rechazar un encargo realizado, un proyecto, una factura, etcétera por no responder a lo que se esperaba.Sinónimo o afín rechazar.Antónimo u opuesto admitir."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12557,7 +12569,11 @@
       "frequency_rank": 685,
       "rae_link": "https://dle.rae.es/interés",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Provecho, utilidad, ganancia.Sinónimos o afines importancia, valor, utilidad, provecho, conveniencia, atractivo.Antónimo u opuesto desinterés.",
+        "nombre masculino Valor de algo.Sinónimos o afines importancia, valor, utilidad, provecho, conveniencia, atractivo.",
+        "nombre masculino Lucro producido por el capital.Sinónimos o afines lucro, ganancia, rédito, rendimiento, renta, negocio.",
+        "nombre masculino Inclinación del ánimo hacia un objeto, una persona, una narración, etcétera Sinónimos o afines inclinación, atención, apego, predilección, propensión, atracción.Antónimos u opuestos desinterés, apatía.",
+        "nombre masculino plural bienes."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12572,7 +12588,11 @@
       "frequency_rank": 686,
       "rae_link": "https://dle.rae.es/joder",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo malsonante Practicar el coito.Sinónimos o afines copular, fornicar, yacer, aparearse, follar4, coger.",
+        "verbo pronominal malsonante Aguantarse o fastidiarse.Sinónimos o afines aguantarse, fastidiarse, jorobarse, chincharse.",
+        "verbo pronominal malsonante Estropearse o dañarse.Sinónimos o afines estropearse, dañarse, deteriorarse.",
+        "verbo transitivo malsonante Poseer sexualmente a alguien.",
+        "verbo transitivo malsonante Molestar o fastidiar a alguien. Usado también como intransitivo Sinónimos o afines molestar, fastidiar, jorobar, chinchar, jeringar, putear."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12587,7 +12607,11 @@
       "frequency_rank": 687,
       "rae_link": "https://dle.rae.es/animal",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Ser orgánico que vive, siente y se mueve por propio impulso. Usado también en plural como taxón Sinónimos o afines alimaña, bestia, bruto, fiera, animalia, bicho.",
+        "nombre masculino animal irracional.Sinónimos o afines alimaña, bestia, bruto, fiera, animalia, bicho.",
+        "nombre masculino Persona de comportamiento instintivo, ignorante y grosera. Usado también como adjetivo Sinónimos o afines ignorante, grosero, bestia, bruto, zopenco, zote.",
+        "nombre masculino coloquial Persona que destaca extraordinariamente por su saber, inteligencia o esfuerzo. Es un animal estudiando. Usado también como adjetivo",
+        "nombre masculino Méx. y Perú. Bicho, sabandija."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12602,7 +12626,11 @@
       "frequency_rank": 688,
       "rae_link": "https://dle.rae.es/destruir",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Reducir a pedazos o a cenizas algo material, u ocasionarle un grave daño. Usado también como pronominal Sinónimos o afines destrozar, romper1, arruinar, arrasar, asolar1, arrollar1, desintegrar, estragar, pulverizar, devastar, ruinar.Ámbito del sentido demoler, derribar, derruir, hundir, desmantelar, desmoronar, abatir.Ámbito del sentido aniquilar, exterminar, extinguir, fulminar, deshacer, desolar, derrotar, matar, desbaratar.Antónimos u opuestos crear, construir.",
+        "verbo transitivo Deshacer o inutilizar algo no material. Destruir un argumento, un proyecto.",
+        "verbo transitivo Afectar profundamente el ánimo de alguien. Me destruyeron, pero no me vencieron.Sinónimos o afines destrozar, hundir, derrumbar, abatir, desolar.",
+        "verbo transitivo Malgastar o malbaratar algo.",
+        "verbo transitivo poco usado Quitar a alguien los medios con que se mantenía, o estorbarle que los adquiera."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12632,7 +12660,11 @@
       "frequency_rank": 690,
       "rae_link": "https://dle.rae.es/sol",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Estrella luminosa, centro del sistema planetario en que está situada la Tierra. El solsticio es la época en que el Sol se halla en uno de los trópicos.",
+        "nombre masculino Cualquier estrella luminosa que es centro de un sistema planetario.Sinónimos o afines astro, estrella.",
+        "nombre masculino Luz, calor o influjo del sol. Sentarse al sol. Tomar el sol. Entrar el sol en una habitación. Sufrir soles y nieves.Sinónimos o afines luz1, radiación.",
+        "nombre masculino Tiempo que el Sol emplea en dar aparentemente una vuelta alrededor de la Tierra.Sinónimo o afín día.",
+        "nombre masculino Unidad monetaria del Perú.Sinónimo o afín moneda."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12647,7 +12679,11 @@
       "frequency_rank": 691,
       "rae_link": "https://dle.rae.es/entregar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dar algo a alguien, o hacer que pase a tenerlo. Entregar los trofeos.Sinónimos o afines dar, proporcionar, otorgar, ofrecer, donar, prestar, ceder, conceder, adjudicar, confiar, traspasar, transferir, transmitir, suministrar, distribuir, repartir, impartir.Antónimos u opuestos quitar, recibir.",
+        "verbo transitivo Poner algo o a alguien bajo la responsabilidad o autoridad de otro. Le entregaron el niño en adopción.Sinónimos o afines dar, dejar, confiar.",
+        "verbo transitivo Arq. y Constr. Introducir el extremo de una pieza de construcción en el asiento donde ha de fijarse.",
+        "verbo pronominal Ponerse en manos de aquel de quien se huye o a quien se combate. Se entregaron a la policía.",
+        "verbo pronominal Declararse vencido o sin fuerzas para continuar un empeño o trabajo.Antónimos u opuestos resistir, aguantar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12662,7 +12698,11 @@
       "frequency_rank": 692,
       "rae_link": "https://dle.rae.es/color",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Sensación producida por los rayos luminosos que impresionan los órganos visuales y que depende de la longitud de onda. Usado también como femenino",
+        "nombre masculino color natural de la tez humana. Usado también como femenino Sinónimos o afines aspecto, semblante, viso.",
+        "nombre masculino Sustancia preparada para pintar o teñir.Sinónimos o afines pintura, pigmento, tinte, tintura, colorante, maquillaje.",
+        "nombre masculino colorido (‖ colores de algo).Sinónimos o afines coloración, colorido, tonalidad, tono, gama2, matiz.",
+        "nombre masculino Carácter peculiar de algunas cosas.Sinónimos o afines interés, carácter, gracia, animación, viveza, alegría."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12677,7 +12717,11 @@
       "frequency_rank": 693,
       "rae_link": "https://dle.rae.es/caja",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Recipiente que, cubierto con una tapa suelta o unida a la parte principal, sirve para guardar o transportar en él algo.Sinónimos o afines cofre, maleta1, maletín, baúl, cajón, arca1, arcón, arqueta, urna, estuche, hucha, joyero, bombonera, tabaquera, cepillo, jaula.",
+        "nombre femenino caja, por lo común de hierro o acero, para guardar con seguridad dinero, alhajas y otros objetos de valor.Sinónimos o afines cofre, maleta1, maletín, baúl, cajón, arca1, arcón, arqueta, urna, estuche, hucha, joyero, bombonera, tabaquera, cepillo, jaula.",
+        "nombre femenino ataúd.Sinónimos o afines ataúd, cajón, urna, féretro.",
+        "nombre femenino Parte del coche de caballos destinada para las personas que se sirven de él, y en la cual van sentadas.",
+        "nombre femenino Espacio destinado a la carga en un vehículo de transporte de mercancías.Sinónimos o afines paila, tina."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12692,7 +12736,9 @@
       "frequency_rank": 694,
       "rae_link": "https://dle.rae.es/cliente",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino y femenino Persona que compra en una tienda, o que utiliza los servicios de un profesional o empresa.Sinónimos o afines usuario, consumidor, comprador, parroquiano, marchante2.",
+        "nombre masculino y femenino Persona que está bajo la protección o tutela de otra.",
+        "nombre masculino Inform. Programa o dispositivo que solicita determinados servicios a un servidor del que depende."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12707,7 +12753,10 @@
       "frequency_rank": 695,
       "rae_link": "https://dle.rae.es/distinto",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Que no es lo mismo, que tiene realidad o existencia diferente de aquello otro de que se trata.Sinónimos o afines diferente, desigual, contrario, opuesto, otro.Antónimos u opuestos igual, idéntico, exacto, indistinto.",
+        "adjetivo Que no es parecido, que tiene diferentes cualidades.Sinónimos o afines diferente, desemejante, peculiar, diverso, vario.Antónimos u opuestos igual, idéntico, exacto, indistinto.",
+        "adjetivo Inteligible, claro, sin confusión.Antónimos u opuestos confuso, indistinto.",
+        "nombre masculino vulgar desusado instinto."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12722,7 +12771,11 @@
       "frequency_rank": 696,
       "rae_link": "https://dle.rae.es/víctima",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Persona o animal sacrificado o destinado al sacrificio.",
+        "nombre femenino Persona que se expone u ofrece a un grave riesgo en obsequio de otra.",
+        "nombre femenino Persona que padece daño por culpa ajena o por causa fortuita.Sinónimos o afines dañado, perjudicado, damnificado, afectado, accidentado, herido.",
+        "nombre femenino Persona que muere por culpa ajena o por accidente fortuito.Sinónimos o afines muerto, difunto, occiso, finado.Antónimo u opuesto victimario.",
+        "nombre femenino Der. Persona que padece las consecuencias dañosas de un delito."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12737,7 +12790,10 @@
       "frequency_rank": 697,
       "rae_link": "https://dle.rae.es/deseo",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Movimiento afectivo hacia algo que se apetece.Sinónimos o afines apetencia, apetito, aspiración, ansia, afán, anhelo, pretensión, capricho, empeño, antojo, pasión, ambición, interés, berretín.Antónimos u opuestos desinterés, inapetencia.",
+        "nombre masculino Acción y efecto de desear.",
+        "nombre masculino Objeto de deseo.",
+        "nombre masculino Impulso, excitación venérea.Sinónimos o afines libido, apetito, sexualidad, celo1."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12752,7 +12808,11 @@
       "frequency_rank": 698,
       "rae_link": "https://dle.rae.es/arte",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino o femenino Capacidad, habilidad para hacer algo.Sinónimos o afines talento, genio, facultad, aptitud, condición, disposición, inspiración, destreza1, habilidad, práctica, experiencia, maestría, primor, industria, artificio.",
+        "nombre masculino o femenino Actividad consistente en crear obras que, mediante recursos principalmente plásticos, visuales, sonoros o literarios, produzcan estimulación estética o intelectual.",
+        "nombre masculino o femenino Conjunto de obras de arte, especialmente de un país, una época, un movimiento, etcétera Colección de arte. Exposición de arte impresionista, de arte guatemalteco contemporáneo, de arte cristiano medieval.",
+        "nombre masculino o femenino Conjunto de preceptos y reglas necesarios para hacer algo.Sinónimos o afines disciplina, técnica, oficio, ciencia, sistema, orden, norma, regla.",
+        "nombre masculino o femenino Maña, astucia.Sinónimos o afines astucia, maña, artimaña, cautela, disimulo, artería."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12767,7 +12827,11 @@
       "frequency_rank": 699,
       "rae_link": "https://dle.rae.es/rojo",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Dicho de un color: Semejante al de la sangre o al del tomate maduro, y que ocupa el primer lugar en el espectro luminoso. Usado también como sustantivo masculino Sinónimos o afines colorado, bermejo, escarlata, carmesí, encarnado, rubro, granate, grana2, roso2.",
+        "adjetivo De color rojo.Sinónimos o afines colorado, bermejo, escarlata, carmesí, encarnado, rubro, granate, grana2, roso2.",
+        "adjetivo rubio (‖ de color parecido al del oro).Sinónimos o afines rubio, blondo, mono1, royo.",
+        "adjetivo Dicho del pelo: De un rubio muy vivo.",
+        "adjetivo Izquierdista, especialmente comunista. Usado más como sustantivo"
       ],
       "translations": {
         "en": "Translation pending"
@@ -12782,7 +12846,11 @@
       "frequency_rank": 700,
       "rae_link": "https://dle.rae.es/acompañar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Estar o ir en compañía de otra u otras personas. Usado también como pronominal Sinónimos o afines unirse, juntarse, seguir, escoltar, convoyar.Antónimo u opuesto abandonar.",
+        "verbo transitivo Juntar o agregar algo a otra cosa.",
+        "verbo transitivo Dicho de una cosa: Existir junto a otra o simultáneamente con ella. Usado también como pronominal Sinónimo o afín complementar.",
+        "verbo transitivo Dicho especialmente de la fortuna, de un estado, de una cualidad o de una pasión: Existir o hallarse en una persona.",
+        "verbo transitivo Participar en los sentimientos de alguien."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12797,7 +12865,11 @@
       "frequency_rank": 701,
       "rae_link": "https://dle.rae.es/causa",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Aquello que se considera como fundamento u origen de algo.Sinónimos o afines origen, fuente, principio, germen, fundamento, causalidad.Antónimo u opuesto consecuencia.",
+        "nombre femenino Motivo o razón para obrar.Sinónimos o afines motivo, móvil, razón, justificación.Antónimo u opuesto consecuencia.",
+        "nombre femenino Empresa o doctrina en que se toma interés o partido.Sinónimos o afines empresa, empeño, proyecto, doctrina.",
+        "nombre femenino litigio (‖ pleito judicial).Sinónimos o afines litigio, pleito.",
+        "nombre femenino Der. Proceso criminal que se instruye de oficio o a instancia de parte.Sinónimos o afines proceso, sumario1, caso, juicio."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12812,7 +12884,10 @@
       "frequency_rank": 702,
       "rae_link": "https://dle.rae.es/cita",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Señalamiento, asignación de día, hora y lugar para verse y hablarse dos o más personas. La enfermera me ha dado cita para mañana.Sinónimos o afines citación, convocatoria, llamamiento, llamada, señalamiento, aviso, notificación.",
+        "nombre femenino Reunión o encuentro entre dos o más personas, previamente acordado. Trabajaron mucho en su primera cita.Sinónimos o afines encuentro, reunión, entrevista.",
+        "nombre femenino Nota de ley, doctrina, autoridad o cualquier otro texto que se alega para prueba de lo que se dice o refiere.",
+        "nombre femenino mención.Sinónimos o afines mención, alusión, nota, testimonio, referencia."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12827,7 +12902,11 @@
       "frequency_rank": 703,
       "rae_link": "https://dle.rae.es/trato",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Acción y efecto de tratar.Sinónimos o afines cortesía, tratamiento, título, dignidad.relación, roce.",
+        "nombre masculino Tratado, convenio, especialmente el que se hacía entre distintos Estados o Gobiernos.Sinónimos o afines acuerdo, pacto, convenio, compromiso.",
+        "nombre masculino tratamiento (‖ título).Sinónimo o afín tratamiento.",
+        "nombre masculino Ocupación u oficio de tratante.",
+        "nombre masculino coloquial Contrato, especialmente el relativo a ganados, y más aún el celebrado en feria o mercado."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12842,7 +12921,10 @@
       "frequency_rank": 704,
       "rae_link": "https://dle.rae.es/demostrar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Manifestar, declarar.Sinónimos o afines declarar, explicar, indicar, manifestar, revelar.",
+        "verbo transitivo Probar, sirviéndose de cualquier género de demostración.Sinónimos o afines probar, razonar, argumentar, evidenciar, justificar, defender, testimoniar, testificar, corroborar.",
+        "verbo transitivo enseñar (‖ mostrar o exponer algo).Sinónimos o afines enseñar, mostrar, exhibir, exponer.",
+        "verbo transitivo Fil. Mostrar, hacer ver que una verdad particular está comprendida en otra universal de la que se tiene entera certeza."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12857,7 +12939,11 @@
       "frequency_rank": 705,
       "rae_link": "https://dle.rae.es/aforar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dar o tomar a foro alguna heredad.",
+        "verbo transitivo Determinar la cantidad y valor de los géneros o mercancías que haya en algún lugar, generalmente a fin de establecer el pago de derechos.Sinónimos o afines evaluar, tasar, estimar, valorar, calcular, medir, valuar.",
+        "verbo transitivo Medir la cantidad de agua que lleva una corriente en una unidad de tiempo.",
+        "verbo transitivo Calcular la capacidad de un receptáculo.",
+        "verbo transitivo Fís. calibrar (‖ ajustar un instrumento de medida).Sinónimos o afines calibrar, ajustar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12872,7 +12958,9 @@
       "frequency_rank": 706,
       "rae_link": "https://dle.rae.es/jamás",
       "definitions": [
-        "Definition pending..."
+        "adverbio nunca.Sinónimo o afín nunca.Antónimo u opuesto siempre.",
+        "adverbio desusado siempre.",
+        "adverbio desusado Alguna vez."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12887,7 +12975,11 @@
       "frequency_rank": 707,
       "rae_link": "https://dle.rae.es/recuperar",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Volver a tomar o adquirir lo que antes se tenía.Sinónimos o afines recobrar, reconquistar, retomar, rescatar.Antónimo u opuesto perder.",
+        "verbo transitivo Volver a poner en servicio lo que ya estaba inservible.Sinónimos o afines reparar, restablecer, restaurar.",
+        "verbo transitivo Trabajar un determinado tiempo para compensar lo que no se había hecho por algún motivo.",
+        "verbo transitivo Aprobar una materia o parte de ella después de no haberla aprobado en una convocatoria anterior.Sinónimo o afín aprobar.",
+        "verbo pronominal Volver en sí."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12902,7 +12994,10 @@
       "frequency_rank": 708,
       "rae_link": "https://dle.rae.es/merecer",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Dicho de una persona: Hacerse digna de premio o de castigo. Usado también como pronominal Te mereces un premio.Sinónimos o afines ganarse, meritar, ameritar.",
+        "verbo transitivo Dicho de una cosa: Tener cierto grado o estimación. Eso no merece tanto dinero.Sinónimos o afines valer1, ameritar.",
+        "verbo transitivo desusado Conseguir o alcanzar algo que se intenta o desea, lograr.",
+        "verbo intransitivo Hacer méritos, buenas obras, ser digno de premio."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12917,7 +13012,8 @@
       "frequency_rank": 709,
       "rae_link": "https://dle.rae.es/hotel",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Establecimiento de hostelería capaz de alojar con comodidad a huéspedes o viajeros.Sinónimos o afines alojamiento, hospedaje, hostal, hostería, hospedería, parador, albergue, pensión, posada, fonda1.",
+        "nombre masculino Vivienda con jardín, más o menos aislada de las colindantes y habitada por una sola familia.Sinónimos o afines chalé, chalet."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12932,7 +13028,11 @@
       "frequency_rank": 710,
       "rae_link": "https://dle.rae.es/estrella",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Cada uno de los cuerpos celestes que brillan en la noche con luz propia.Sinónimos o afines astro, lucero, cometa.",
+        "nombre femenino Figura de estrella, ya con rayos que parten de un centro común, ya con un círculo rodeado de puntas.",
+        "nombre femenino Objeto en forma de estrella.",
+        "nombre femenino Signo en forma de estrella, que indica la graduación de jefes y oficiales de las fuerzas armadas.Sinónimos o afines insignia, condecoración.",
+        "nombre femenino Signo en forma de estrella, que sirve para indicar la categoría de los establecimientos hoteleros. Hotel de tres estrellas."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12947,7 +13047,10 @@
       "frequency_rank": 711,
       "rae_link": "https://dle.rae.es/sexo",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Condición orgánica, masculina o femenina, de los animales y las plantas.Sinónimo o afín naturaleza.",
+        "nombre masculino Conjunto de seres pertenecientes a un mismo sexo. Sexo masculino, femenino.",
+        "nombre masculino Órganos sexuales.Sinónimos o afines genitales, vergüenzas, partes.",
+        "nombre masculino Actividad sexual. Está obsesionado con el sexo.Sinónimo o afín sexualidad."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12962,7 +13065,11 @@
       "frequency_rank": 712,
       "rae_link": "https://dle.rae.es/normal",
       "definitions": [
-        "Definition pending..."
+        "adjetivo Dicho de una cosa: Que se halla en su estado natural.Antónimo u opuesto anormal.",
+        "adjetivo Habitual u ordinario.Sinónimos o afines habitual, ordinario, corriente, común, usual, frecuente, acostumbrado.Antónimos u opuestos anormal, raro, infrecuente, insólito, inusual.",
+        "adjetivo Que sirve de norma o regla.",
+        "adjetivo Dicho de una cosa: Que, por su naturaleza, forma o magnitud, se ajusta a ciertas normas fijadas de antemano.Sinónimos o afines lógico, natural, razonable.",
+        "adjetivo Geom. Dicho de una línea recta o de un plano: Perpendicular a otra recta o a otro plano. Aplicado a línea, usado también como sustantivo femenino"
       ],
       "translations": {
         "en": "Translation pending"
@@ -12977,7 +13084,11 @@
       "frequency_rank": 713,
       "rae_link": "https://dle.rae.es/bailar",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Ejecutar movimientos acompasados con el cuerpo, brazos y pies. Usado también como transitivo Bailar una polca.Sinónimos o afines danzar, valsar, trenzar, bailotear, pachuquear.",
+        "verbo intransitivo Dicho de una cosa: Moverse sin salir de un espacio determinado. Le baila un diente. El vaso baila en la vitrina.",
+        "verbo intransitivo Dicho de una cosa: Girar rápidamente en torno de su eje manteniéndose en equilibrio sobre un extremo de él, como hacen la peonza, la perinola, etcétera Usado también como transitivo",
+        "verbo intransitivo Retozar de gozo.",
+        "verbo intransitivo Dicho de la vista: Adquirir o tener viveza."
       ],
       "translations": {
         "en": "Translation pending"
@@ -12992,7 +13103,9 @@
       "frequency_rank": 714,
       "rae_link": "https://dle.rae.es/incluir",
       "definitions": [
-        "Definition pending..."
+        "verbo transitivo Poner algo o a alguien dentro de una cosa o de un conjunto, o dentro de sus límites.Sinónimos o afines meter, introducir, insertar, encuadrar1, englobar, encartar.Antónimos u opuestos excluir, sacar.",
+        "verbo transitivo Dicho de una cosa: Contener a otra, o llevarla implícita.Sinónimos o afines contener, comprender, encerrar, abarcar, englobar, integrar, envolver, implicar.Antónimo u opuesto excluir.",
+        "verbo transitivo Biol. Someter un tejido a un tratamiento mediante el cual se sustituye el agua por otra sustancia líquida que luego se solidifica y permite cortarlo en secciones delgadas."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13007,7 +13120,8 @@
       "frequency_rank": 715,
       "rae_link": "https://dle.rae.es/dolor",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Sensación molesta y aflictiva de una parte del cuerpo por causa interior o exterior.Sinónimos o afines molestia, mal1, aflicción, daño, tormento, suplicio, tortura.",
+        "nombre masculino Sentimiento de pena y congoja.Sinónimos o afines desconsuelo, tristeza, pena1, aflicción, sufrimiento, padecimiento, desolación, pesar2, mal1, tormento, tortura, suplicio, daño, angustia, congoja, calvario.Antónimos u opuestos gozo, alegría."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13022,7 +13136,9 @@
       "frequency_rank": 716,
       "rae_link": "https://dle.rae.es/mitad",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Cada una de las dos partes iguales en que se divide un todo.Sinónimos o afines parte, fracción, porción.Antónimo u opuesto doble.",
+        "nombre femenino Parte que en una cosa equidista de sus extremos.Sinónimos o afines centro1, medio.",
+        "adverbio Aproximadamente en la misma proporción, a partes iguales. Mitad en serio, mitad en broma.Sinónimo o afín medio."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13037,7 +13153,8 @@
       "frequency_rank": 717,
       "rae_link": "https://dle.rae.es/s",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Vigésima letra del abecedario español, que representa el fonema consonántico fricativo dentoalveolar sordo, el cual, entre muchas variedades de articulación, tiene dos principales: la apical y la predorsal.",
+        "nombre femenino Sonido que representa la letra s."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13052,7 +13169,11 @@
       "frequency_rank": 718,
       "rae_link": "https://dle.rae.es/gusto",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Sentido corporal con el que se perciben sustancias químicas disueltas, como las de los alimentos.Sinónimo o afín paladar.",
+        "nombre masculino Sabor que tienen las cosas.Sinónimos o afines sabor, regusto, gustillo, dejo.",
+        "nombre masculino Placer o deleite que se experimenta con algún motivo, o se recibe de cualquier cosa.Sinónimos o afines placer2, gozo, satisfacción, deleite, deleitación.Antónimos u opuestos disgusto, desagrado.",
+        "nombre masculino Propia voluntad, determinación o arbitrio.Sinónimos o afines voluntad, deseo, decisión.",
+        "nombre masculino Facultad de sentir o apreciar lo bello o lo feo. Diego tiene buen gusto.Sinónimos o afines sensibilidad, criterio, estilo, paladar."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13067,7 +13188,11 @@
       "frequency_rank": 719,
       "rae_link": "https://dle.rae.es/canción",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Composición que se canta o hecha a propósito para que se le pueda poner música.Sinónimos o afines canto1, cantar2, balada, tonada, copla, melodía, tonadilla, aria, romanza, cantilena, cantinela, letrilla.",
+        "nombre femenino Música con que se canta una canción.Sinónimos o afines canto1, cantar2, balada, tonada, copla, melodía, tonadilla, aria, romanza, cantilena, cantinela, letrilla.",
+        "nombre femenino Cosa dicha con repetición insistente o pesada. Venir, volver con la misma canción. Ya estás con esa canción.Sinónimos o afines monserga, tabarra, lata, rollo, cantinela, cantilena.",
+        "nombre femenino Noticia o pretexto sin fundamento. Usado más en plural No me vengas con canciones.",
+        "nombre femenino Métr. Composición lírica a la manera italiana, dividida casi siempre en estancias largas, todas de igual número de versos endecasílabos y heptasílabos, menos la última, que es más breve."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13082,7 +13207,8 @@
       "frequency_rank": 720,
       "rae_link": "https://dle.rae.es/alrededor",
       "definitions": [
-        "Definition pending..."
+        "adverbio Denota la situación de personas o cosas que circundan a otras, o la dirección en que se mueven para circundarlas.",
+        "nombre masculino contorno (‖ territorio de que está rodeado un lugar). Usado más en plural Sinónimos o afines inmediaciones, proximidades, cercanía, contorno, extrarradio, periferia, afueras, aledaños, arrabal."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13097,7 +13223,11 @@
       "frequency_rank": 721,
       "rae_link": "https://dle.rae.es/militar",
       "definitions": [
-        "Definition pending..."
+        "verbo intransitivo Servir en la guerra.Sinónimos o afines servir, enrolarse, alistarse, cumplir.",
+        "verbo intransitivo Profesar la milicia.",
+        "verbo intransitivo Figurar en un partido o en una colectividad.Sinónimos o afines afiliarse, inscribirse, participar, asociarse.",
+        "verbo intransitivo Haber o concurrir en una cosa alguna razón o circunstancia particular que favorece o apoya cierta pretensión o determinado proyecto.",
+        "adjetivo Perteneciente o relativo a la milicia o a la guerra, por contraposición a civil.Sinónimos o afines castrense, guerrero, bélico, marcial1, miliciano.Antónimo u opuesto civil."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13112,7 +13242,11 @@
       "frequency_rank": 722,
       "rae_link": "https://dle.rae.es/baño",
       "definitions": [
-        "Definition pending..."
+        "nombre masculino Acción y efecto de bañar.Sinónimos o afines chapuzón, remojón, zambullida.",
+        "nombre masculino Acción y efecto de someter el cuerpo o parte de él al influjo intenso o prolongado de un agente físico, ya sea calor, frío, vapor, sol, lodo, etcétera",
+        "nombre masculino Agua o líquido para bañarse.",
+        "nombre masculino bañera (‖ recipiente).Sinónimos o afines bañera, tina, bañadera.",
+        "nombre masculino cuarto de baño.Sinónimos o afines servicio, retrete, lavabo, tocador1, aseo, váter, privada, común, lavatorio."
       ],
       "translations": {
         "en": "Translation pending"
@@ -13127,7 +13261,10 @@
       "frequency_rank": 723,
       "rae_link": "https://dle.rae.es/i",
       "definitions": [
-        "Definition pending..."
+        "nombre femenino Novena letra del abecedario español, que representa el fonema vocálico cerrado anterior.",
+        "nombre femenino Sonido que representa la letra i.",
+        "nombre femenino En la numeración romana, uno.",
+        "nombre femenino Fil. En la lógica escolástica, letra que representa la proposición particular afirmativa."
       ],
       "translations": {
         "en": "Translation pending"
