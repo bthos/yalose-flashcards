@@ -1,5 +1,5 @@
 {
-  "lastProcessedIndex": 6000,
+  "lastProcessedIndex": 6050,
   "failedWords": [
     {
       "word": "sr.",
@@ -3105,8 +3105,93 @@
       "word": "David",
       "rae_link": "https://dle.rae.es/David",
       "reason": "No definitions found"
+    },
+    {
+      "word": "sr.",
+      "rae_link": "https://dle.rae.es/sr.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "OK",
+      "rae_link": "https://dle.rae.es/OK",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "España",
+      "rae_link": "https://dle.rae.es/España",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sra.",
+      "rae_link": "https://dle.rae.es/sra.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Madrid",
+      "rae_link": "https://dle.rae.es/Madrid",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "dr.",
+      "rae_link": "https://dle.rae.es/dr.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "john",
+      "rae_link": "https://dle.rae.es/john",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "ud.",
+      "rae_link": "https://dle.rae.es/ud.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "José",
+      "rae_link": "https://dle.rae.es/José",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "the",
+      "rae_link": "https://dle.rae.es/the",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "jack",
+      "rae_link": "https://dle.rae.es/jack",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "York",
+      "rae_link": "https://dle.rae.es/York",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "srta.",
+      "rae_link": "https://dle.rae.es/srta.",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "debido",
+      "rae_link": "https://dle.rae.es/debido",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "Carlos",
+      "rae_link": "https://dle.rae.es/Carlos",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "sam",
+      "rae_link": "https://dle.rae.es/sam",
+      "reason": "No definitions found"
+    },
+    {
+      "word": "David",
+      "rae_link": "https://dle.rae.es/David",
+      "reason": "No definitions found"
     }
   ],
-  "completedCount": 5379,
-  "lastRun": "2026-04-26T00:14:43.852Z"
+  "completedCount": 5412,
+  "lastRun": "2026-05-03T00:18:15.393Z"
 }
