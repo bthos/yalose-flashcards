@@ -15,35 +15,36 @@ import './OfflineIndicator.css';
  */
 export default function OfflineIndicator() {
   const isOnline = useOnlineStatus();
-  // Track whether we were previously offline so we can animate the exit
-  const [wasOffline, setWasOffline] = useState(false);
-  const [isHiding, setIsHiding] = useState(false);
+  // 'hidden' | 'offline' | 'hiding'
+  const [displayState, setDisplayState] = useState(isOnline ? 'hidden' : 'offline');
+  const [prevIsOnline, setPrevIsOnline] = useState(isOnline);
 
-  useEffect(() => {
+  // React-recommended pattern: derive state from prop changes during render, not in an effect
+  if (prevIsOnline !== isOnline) {
+    setPrevIsOnline(isOnline);
     if (!isOnline) {
-      // Just went offline (or already was)
-      setWasOffline(true);
-      setIsHiding(false);
-    } else if (wasOffline) {
-      // Regained connection — animate out then remove
-      setIsHiding(true);
-      const timer = setTimeout(() => {
-        setWasOffline(false);
-        setIsHiding(false);
-      }, 300); // matches CSS animation duration
+      setDisplayState('offline');
+    } else if (displayState === 'offline') {
+      setDisplayState('hiding');
+    }
+  }
+
+  // Effect only manages the async timer — no synchronous setState calls here
+  useEffect(() => {
+    if (displayState === 'hiding') {
+      const timer = setTimeout(() => setDisplayState('hidden'), 300); // matches CSS animation duration
       return () => clearTimeout(timer);
     }
-  }, [isOnline, wasOffline]);
+  }, [displayState]);
 
-  // Only render when offline or fading out after reconnection
-  if (isOnline && !wasOffline) return null;
+  if (displayState === 'hidden') return null;
 
   return (
     <div
       role="status"
       aria-live="polite"
       aria-atomic="true"
-      className={`offline-indicator${isHiding ? ' offline-indicator--hiding' : ''}`}
+      className={`offline-indicator${displayState === 'hiding' ? ' offline-indicator--hiding' : ''}`}
     >
       <span className="offline-indicator__icon" aria-hidden="true">◎</span>
       <span className="offline-indicator__text">
