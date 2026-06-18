@@ -71,6 +71,6 @@ export default defineConfig({
   // Vercel serves from root, no base path needed
   test: {
     environment: 'node',
-    include: ['src/**/*.test.js'],
+    include: ['src/**/*.test.js', 'scripts/**/*.test.js'],
   },
 })

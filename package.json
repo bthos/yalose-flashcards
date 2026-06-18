@@ -1,13 +1,15 @@
 {
   "name": "yalose-flashcards",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:vocabulary-source": "node scripts/build_vocabulary_source.js",
     "build:vocabulary": "node scripts/build_slim_vocabulary.js",
-    "prebuild": "npm run build:vocabulary",
+    "build:translations": "node scripts/build_translations.js",
+    "prebuild": "npm run build:vocabulary-source && npm run build:vocabulary",
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview"

@@ -16,3 +16,9 @@ files:
     type: json
     # Update option: keep existing translations when source changes
     update_option: update_as_unapproved
+
+  # Vocabulary word-level translations (Feature 1 — Crowdin vocabulary)
+  - source: /translations/vocabulary/source.json
+    translation: /translations/vocabulary/%locale%/source.json
+    type: json
+    update_option: update_as_unapproved

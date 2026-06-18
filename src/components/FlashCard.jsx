@@ -13,7 +13,7 @@ import './FlashCard.css';
 // Match the CSS transition duration (0.6s)
 const FLIP_TRANSITION_DURATION = 600;
 
-function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned, boxNumber = 0 }) {
+function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTransitioned, boxNumber = 0 }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef(null);
@@ -392,7 +392,7 @@ function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned, bo
               )}
             </div>
             <div className="flashcard-back">
-              <h2>{word.translations.en}</h2>
+              <h2>{translation ?? word.translations.en}</h2>
               {word.tags && word.tags.length > 0 && (
                 <div className="tags">
                   {word.tags.map((tag, index) => (
