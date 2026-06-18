@@ -20,6 +20,9 @@ AGENTS.md
 CLAUDE.md
 PIPELINE.md
 
+# RAE scraper state (local only)
+.rae-scraper-state.json
+
 # Editor directories and files
 .claude
 .specstory
