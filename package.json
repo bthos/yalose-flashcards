@@ -1,7 +1,7 @@
 {
   "name": "yalose-flashcards",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
     "build:vocabulary": "node scripts/build_slim_vocabulary.js",
     "prebuild": "npm run build:vocabulary",
     "lint": "eslint .",
+    "test": "vitest run",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
     "puppeteer": "^24.32.1",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vitest": "^4.1.9"
   }
 }

@@ -135,6 +135,22 @@
   font-weight: 600;
 }
 
+/* Box badge — OQ3: box visible to user */
+.box-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--color-deep-purple);
+  color: var(--color-electric-yellow);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
 .flashcard-back .tags {
   margin-top: 24px;
   display: flex;
