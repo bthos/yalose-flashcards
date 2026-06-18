@@ -17,22 +17,25 @@ The app relies on a specific file structure hosted in the repository.
 ### 3.1. `vocabulary.json`
 This is the master file.
 ```json
-[
-  {
-    "id": "unique_hash_001",
-    "word": "correr",
-    "frequency_rank": 450,
-    "rae_link": "https://dle.rae.es/correr",
-    "definitions": [
-      "Desplazarse rápidamente con pasos largos."
-    ],
-    "translations": {
-      "en": "to run",
-      "fr": "courir"
-    },
-    "tags": ["verb", "movement"]
-  }
-]
+{
+  "version": "hash",
+  "words": [
+    {
+      "id": "unique_hash_001",
+      "word": "correr",
+      "frequency_rank": 450,
+      "rae_link": "https://dle.rae.es/correr",
+      "definitions": [
+        "Desplazarse rápidamente con pasos largos."
+      ],
+      "translations": {
+        "en": "to run",
+        "fr": "courir"
+      },
+      "tags": ["verb", "movement"]
+    }
+  ]
+}
 ```
 
 ## 4. Functional Requirements

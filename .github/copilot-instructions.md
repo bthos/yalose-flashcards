@@ -14,7 +14,6 @@ globs: *
 
 ## PROJECT DOCUMENTATION & CONTEXT SYSTEM
 
-*   `BRANCH_PROTECTION.md`
 *   `.github/on-demand-rae-definition-loading.md`
 
 ## WORKFLOW & RELEASE RULES
@@ -55,7 +54,6 @@ globs: *
             ```
         *   Update `vite.config.ts` to remove GitHub Pages base path logic.
         *   Delete GitHub Pages workflows (`deploy-qa.yml`, `deploy-prod.yml`).
-        *   Update `BRANCH_PROTECTION.md` to remove `gh-pages` references.
         *   Update `package.json` to simplify build scripts.
     4.  **Rollback Plan**: Keep GitHub Pages workflows in a separate branch until Vercel is verified. Maintain the ability to redeploy to GitHub Pages if needed.
 *   Branch Strategy with Vercel:

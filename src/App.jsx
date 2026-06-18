@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
 import FlashCard from './components/FlashCard'
+import { clearOldEntries } from './utils/definitionsCache'
 import './App.css'
 
 const KNOWN_WORDS_KEY = 'yalose-known-words';
 const VOCABULARY_VERSION_KEY = 'yalose-vocabulary-version';
-const VOCABULARY_CACHE_KEY = 'yalose-vocabulary-cache';
+const VOCABULARY_CACHE_KEY = 'yalose-vocabulary-slim-cache';
 const SLIDE_ANIMATION_DURATION = 500; // milliseconds
 
 // GitHub repository configuration - uses full vocabulary.json for version checking
 const GITHUB_REPO_OWNER = 'bthos';
 const GITHUB_REPO_NAME = 'yalose-flashcards';
 const GITHUB_BRANCH = 'main';
-const GITHUB_VOCABULARY_PATH = 'public/vocabulary.json';
+const GITHUB_VOCABULARY_PATH = 'public/vocabulary-slim.json';
 
 // Construct the GitHub raw URL (points to committed vocabulary.json)
 const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${GITHUB_VOCABULARY_PATH}`;
@@ -103,6 +105,9 @@ function App() {
         setLoading(false);
       }
     };
+
+    // Clear stale IndexedDB entries (fire-and-forget)
+    clearOldEntries();
 
     // Try GitHub first, fall back to local
     fetchFromGitHub();

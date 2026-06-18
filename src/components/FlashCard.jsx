@@ -5,9 +5,6 @@ import './FlashCard.css';
 // Match the CSS transition duration (0.6s)
 const FLIP_TRANSITION_DURATION = 600;
 
-// API endpoint for fetching definitions
-const API_BASE_URL = import.meta.env.PROD ? '' : '';
-
 function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -97,7 +94,7 @@ function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned }) 
       }
 
       // Cache miss - fetch from API
-      const response = await fetch(`${API_BASE_URL}/api/definition?wordId=${encodeURIComponent(requestedWordId)}`);
+      const response = await fetch(`/api/definition?wordId=${encodeURIComponent(requestedWordId)}`);
       
       // Check if word changed during await - abort if stale
       if (currentWordIdRef.current !== requestedWordId) {

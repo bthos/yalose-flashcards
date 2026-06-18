@@ -3,6 +3,17 @@ import react from '@vitejs/plugin-react'
 import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 
+// Load definitions file once at module level (not on every request)
+const definitionsPath = join(process.cwd(), 'api', 'data', 'definitions.json')
+let definitionsData = null
+if (existsSync(definitionsPath)) {
+  try {
+    definitionsData = JSON.parse(readFileSync(definitionsPath, 'utf-8'))
+  } catch {
+    // will be caught per-request when definitionsData is null
+  }
+}
+
 // Development API mock plugin
 function devApiMock() {
   return {
@@ -19,9 +30,7 @@ function devApiMock() {
           return
         }
 
-        const definitionsPath = join(process.cwd(), 'api', 'data', 'definitions.json')
-        
-        if (!existsSync(definitionsPath)) {
+        if (!definitionsData) {
           res.statusCode = 500
           res.setHeader('Content-Type', 'application/json')
           res.end(JSON.stringify({ error: 'Definitions file not found. Run npm run build:vocabulary first.', definitions: [] }))
@@ -29,8 +38,7 @@ function devApiMock() {
         }
 
         try {
-          const definitions = JSON.parse(readFileSync(definitionsPath, 'utf-8'))
-          const wordData = definitions[wordId]
+          const wordData = definitionsData[wordId]
 
           if (!wordData) {
             res.statusCode = 404
