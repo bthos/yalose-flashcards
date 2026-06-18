@@ -12,9 +12,9 @@ Yalosé ("I already know it") is a lightweight, offline-first Flashcards Word Me
 ### Phase 2: The Content ✅
 - **5000 Spanish words** populated in vocabulary.json, including the top 100 most frequent words
 - **GitHub vocabulary fetching** with automatic update detection:
-  - Fetches vocabulary from GitHub repository on app launch
+  - Fetches `vocabulary-slim.json` (~200 KB) from GitHub on app launch
   - Compares version hashes to detect updates
-  - Caches vocabulary in localStorage for offline use
+  - Caches vocabulary in localStorage for offline use (key: `yalose-vocabulary-slim-cache`)
   - Falls back to bundled version if GitHub is unavailable
 - **Smart caching**: Only updates when a new version is detected
 
@@ -42,7 +42,7 @@ npm run lint
 
 ## Data Structure
 
-The vocabulary data is stored in `public/vocabulary.json` with the following structure:
+The vocabulary data follows an envelope format used in both `public/vocabulary.json` (full, build-time source) and `public/vocabulary-slim.json` (runtime-fetched, ~200 KB subset without definitions):
 
 ```json
 {
