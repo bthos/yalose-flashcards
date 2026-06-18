@@ -69,6 +69,47 @@ describe('buildTranslationFile (AC4)', () => {
 });
 
 // ---------------------------------------------------------------------------
+// chrome_json format support (vocabulary source uses { message } objects)
+// ---------------------------------------------------------------------------
+describe('computeCoverage — chrome_json format', () => {
+  it('counts chrome_json entries with non-empty message as translated', () => {
+    const map = { id1: { message: 'a' }, id2: { message: 'b' }, id3: { message: '' } };
+    expect(computeCoverage(WORD_IDS, map)).toBe(0.5);
+  });
+
+  it('ignores chrome_json entries with empty message', () => {
+    const map = { id1: { message: '' } };
+    expect(computeCoverage(WORD_IDS, map)).toBe(0);
+  });
+});
+
+describe('buildTranslationFile — chrome_json format', () => {
+  it('extracts message from chrome_json entries', () => {
+    const map = {
+      id1: { message: 'of, from' },
+      id2: { message: 'she' },
+    };
+    const result = buildTranslationFile(WORD_IDS, map);
+    expect(result.id1).toBe('of, from');
+    expect(result.id2).toBe('she');
+  });
+
+  it('omits chrome_json entries with empty message', () => {
+    const map = { id1: { message: 'a' }, id2: { message: '' } };
+    const result = buildTranslationFile(WORD_IDS, map);
+    expect(result).toHaveProperty('id1', 'a');
+    expect(result).not.toHaveProperty('id2');
+  });
+
+  it('handles mixed plain-string and chrome_json values', () => {
+    const map = { id1: 'plain', id2: { message: 'structured' } };
+    const result = buildTranslationFile(WORD_IDS, map);
+    expect(result.id1).toBe('plain');
+    expect(result.id2).toBe('structured');
+  });
+});
+
+// ---------------------------------------------------------------------------
 // buildManifest — AC4 manifest, AC5 empty manifest
 // ---------------------------------------------------------------------------
 describe('buildManifest (AC4, AC5)', () => {

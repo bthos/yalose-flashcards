@@ -301,8 +301,9 @@ function App() {
 
       setActiveLocale(locale);
 
-      // AC9 — eager-fetch translation file for non-English locale
-      if (locale !== 'en') {
+      // AC9 — eager-fetch translation file; for 'en' only when Crowdin has it in the manifest
+      // (falls back to word.translations.en via resolveTranslation when no file exists)
+      if (locale !== 'en' || manifest.locales['en']) {
         await loadTranslationFile(locale, manifest.locales[locale]?.version ?? manifest.version);
       }
     };
@@ -360,14 +361,15 @@ function App() {
     localStorage.setItem(LOCALE_KEY, locale);
     setActiveLocale(locale);
 
-    if (locale === 'en') {
-      setTranslationMap(null);
-    } else {
-      // Load translation file (uses cache when available)
+    // Load from Crowdin for any locale; for 'en' only when the manifest lists it
+    // (word.translations.en is the fallback via resolveTranslation when no Crowdin file exists)
+    if (locale !== 'en' || translationsManifest?.locales?.['en']) {
       const manifestVersion = translationsManifest?.locales?.[locale]?.version
         ?? translationsManifest?.version
         ?? 'unknown';
       await loadTranslationFile(locale, manifestVersion);
+    } else {
+      setTranslationMap(null);
     }
   }, [activeLocale, translationsManifest, loadTranslationFile]);
 

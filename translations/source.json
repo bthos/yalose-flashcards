@@ -1,27 +1,27 @@
 {
   "ui": {
-    "app_title": "Yalosé - Spanish Flashcards",
-    "loading": "Loading vocabulary...",
-    "error_loading": "Failed to load vocabulary",
-    "no_words": "No words to study",
-    "all_known": "Congratulations! You know all the words!",
-    "click_to_flip": "Click to flip",
+    "app_title": "Yalosé - Tarjetas de vocabulario español",
+    "loading": "Cargando vocabulario...",
+    "error_loading": "Error al cargar el vocabulario",
+    "no_words": "No hay palabras para estudiar",
+    "all_known": "¡Felicidades! ¡Ya conoces todas las palabras!",
+    "click_to_flip": "Haz clic para voltear",
     "button_review": "Repasar",
     "button_known": "Ya lo sé",
-    "progress_label": "Progress",
-    "words_remaining": "words remaining",
-    "reset_progress": "Reset Progress",
-    "settings": "Settings",
-    "mode_translation": "Translation",
-    "mode_definition": "Definition",
-    "mode_mixed": "Mixed",
-    "difficulty_top100": "Top 100 words",
-    "difficulty_top500": "Top 500 words",
-    "difficulty_top1000": "Top 1000 words",
-    "difficulty_top5000": "Top 5000 words"
+    "progress_label": "Progreso",
+    "words_remaining": "palabras restantes",
+    "reset_progress": "Restablecer progreso",
+    "settings": "Configuración",
+    "mode_translation": "Traducción",
+    "mode_definition": "Definición",
+    "mode_mixed": "Mixto",
+    "difficulty_top100": "Top 100 palabras",
+    "difficulty_top500": "Top 500 palabras",
+    "difficulty_top1000": "Top 1000 palabras",
+    "difficulty_top5000": "Top 5000 palabras"
   },
   "meta": {
-    "description": "Yalosé - Spanish Flashcards PWA for mastering vocabulary",
-    "language_name": "English"
+    "description": "Yalosé - PWA de tarjetas en español para dominar el vocabulario",
+    "language_name": "Español"
   }
 }

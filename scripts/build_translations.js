@@ -29,17 +29,34 @@ const PROJECT_ROOT = join(__dirname, '..');
 // ---------------------------------------------------------------------------
 
 /**
+ * Extract a plain string from a translation map value.
+ * Supports both chrome_json format ({ message: "..." }) and plain strings.
+ *
+ * @param {string | { message: string } | unknown} value
+ * @returns {string}
+ */
+function extractString(value) {
+  if (typeof value === 'string') return value;
+  if (value !== null && typeof value === 'object' && typeof value.message === 'string') {
+    return value.message;
+  }
+  return '';
+}
+
+/**
  * Compute coverage: fraction of wordIds that have a non-empty translation.
+ * Accepts both plain-string and chrome_json ({ message }) map values.
  *
  * @param {string[]} wordIds  — full vocabulary word id list
- * @param {{ [id: string]: string }} map  — translation map for a single locale
+ * @param {{ [id: string]: string | { message: string } }} map  — translation map for a single locale
  * @returns {number}  0–1
  */
 export function computeCoverage(wordIds, map) {
   if (wordIds.length === 0) return 0;
   let count = 0;
   for (const id of wordIds) {
-    if (map[id] && map[id] !== '') count++;
+    const str = extractString(map[id]);
+    if (str !== '') count++;
   }
   return count / wordIds.length;
 }
@@ -47,17 +64,20 @@ export function computeCoverage(wordIds, map) {
 /**
  * Build the per-locale translation file: only entries present in the
  * vocabulary list AND having a non-empty string value are included.
+ * Accepts both plain-string and chrome_json ({ message }) map values.
  *
  * @param {string[]} wordIds  — full vocabulary word id list
- * @param {{ [id: string]: string }} map  — translation map for a single locale
+ * @param {{ [id: string]: string | { message: string } }} map  — translation map for a single locale
  * @returns {{ [id: string]: string }}
  */
 export function buildTranslationFile(wordIds, map) {
   const result = {};
   const wordSet = new Set(wordIds);
   for (const [id, value] of Object.entries(map)) {
-    if (wordSet.has(id) && value && value !== '') {
-      result[id] = value;
+    if (!wordSet.has(id)) continue;
+    const str = extractString(value);
+    if (str !== '') {
+      result[id] = str;
     }
   }
   return result;

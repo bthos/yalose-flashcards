@@ -3,13 +3,18 @@
  *
  * Build-time script (AC1, AC2).
  * Reads public/vocabulary.json and writes translations/vocabulary/source.json
- * as a flat { wordId: "english meaning" } map for Crowdin.
+ * as a Chrome JSON map { wordId: { message, description } } for Crowdin.
+ *
+ * The source language is Spanish (es). Each entry uses:
+ *   message     — the Spanish word (source string for translators)
+ *   description — RAE definitions (first 2) + RAE article URL, shown as
+ *                 context to translators inside Crowdin.
  *
  * Usage:
  *   node scripts/build_vocabulary_source.js
  *
  * Exports:
- *   buildVocabularySource(words) → { [id]: string }
+ *   buildVocabularySource(words) → { [id]: { message: string, description: string } }
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
@@ -19,17 +24,29 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
 
+const PENDING_PATTERN = /definition pending/i;
+
 /**
- * Given an array of vocabulary word objects, return a flat map of
- * { wordId: englishTranslation } for use as a Crowdin source file.
+ * Build the Crowdin chrome_json source map from vocabulary words.
+ * Keys are word ids; values are { message, description } objects.
  *
- * @param {Array<{ id: string, translations: { en: string } }>} words
- * @returns {{ [id: string]: string }}
+ * @param {Array<{ id: string, word: string, definitions: string[], rae_link: string }>} words
+ * @returns {{ [id: string]: { message: string, description: string } }}
  */
 export function buildVocabularySource(words) {
   const result = {};
   for (const word of words) {
-    result[word.id] = word.translations.en;
+    const message = word.word;
+
+    const defs = (word.definitions || []).filter(
+      (d) => d && typeof d === 'string' && !PENDING_PATTERN.test(d),
+    );
+    const defSnippet = defs.slice(0, 2).join(' | ');
+    const description = defSnippet
+      ? `${defSnippet}\n${word.rae_link}`
+      : word.rae_link;
+
+    result[word.id] = { message, description };
   }
   return result;
 }

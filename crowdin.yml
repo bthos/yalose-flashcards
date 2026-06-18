@@ -1,5 +1,8 @@
 # Crowdin Configuration
 # Documentation: https://developer.crowdin.com/configuration-file/
+#
+# Source language: Spanish (es) — set this in your Crowdin project settings.
+# Source strings are original Spanish content extracted from RAE.
 
 project_id_env: CROWDIN_PROJECT_ID
 api_token_env: CROWDIN_PERSONAL_TOKEN
@@ -9,16 +12,16 @@ base_path: "."
 preserve_hierarchy: true
 
 files:
-  # Source translations file (English as base)
+  # UI strings — Spanish source, translated into each target language
   - source: /translations/source.json
     translation: /translations/%locale%/translations.json
-    # Use JSON format for translations
     type: json
-    # Update option: keep existing translations when source changes
     update_option: update_as_unapproved
 
-  # Vocabulary word-level translations (Feature 1 — Crowdin vocabulary)
+  # Vocabulary word translations — Spanish words as source (chrome_json format).
+  # Each entry: { "message": "<spanish word>", "description": "<RAE definition + link>" }
+  # The description field is shown to translators as context.
   - source: /translations/vocabulary/source.json
     translation: /translations/vocabulary/%locale%/source.json
-    type: json
+    type: chrome_json
     update_option: update_as_unapproved
