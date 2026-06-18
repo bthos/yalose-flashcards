@@ -18,10 +18,9 @@ files:
     type: json
     update_option: update_as_unapproved
 
-  # Vocabulary word translations — Spanish words as source (chrome_json format).
-  # Each entry: { "message": "<spanish word>", "description": "<RAE definition + link>" }
-  # The description field is shown to translators as context.
+  # Vocabulary word translations — Spanish words as source.
+  # Each entry: "<wordId>": "<spanish word>"
   - source: /translations/vocabulary/source.json
     translation: /translations/vocabulary/%locale%/source.json
-    type: chrome_json
+    type: json
     update_option: update_as_unapproved

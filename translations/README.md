@@ -16,16 +16,17 @@ extracted from RAE (Real Academia Española).
 
 ## Vocabulary Source Format
 
-`vocabulary/source.json` uses chrome_json format so translators see RAE context:
+`vocabulary/source.json` is a flat key-value JSON where each key is the word's MD5 hash and the value is the Spanish word:
 
 ```json
 {
-  "5f02f0889301fd7b": {
-    "message": "de",
-    "description": "1. prep. Indica procedencia, origen.\nhttps://dle.rae.es/de"
-  }
+  "5f02f0889301fd7b": "de",
+  "ec5e1e94c042dda3": "ella"
 }
 ```
+
+To look up context for a word during translation, use the RAE dictionary:
+`https://dle.rae.es/{word}` (e.g. `https://dle.rae.es/de`).
 
 ## Supported Locales
 
