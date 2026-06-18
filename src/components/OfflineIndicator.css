@@ -1,0 +1,49 @@
+/* OfflineIndicator — fixed top bar shown when offline */
+
+.offline-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(49, 27, 146, 0.92);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 235, 59, 0.3);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #FFEB3B;
+  font-size: 0.85rem;
+  text-align: center;
+  animation: offlineFadeIn 0.3s ease-out;
+}
+
+.offline-indicator--hiding {
+  animation: offlineFadeOut 0.3s ease-in forwards;
+}
+
+.offline-indicator__icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.offline-indicator__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes offlineFadeIn {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes offlineFadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-100%); }
+}

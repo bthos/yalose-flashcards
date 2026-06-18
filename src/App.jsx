@@ -1,6 +1,12 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 // eslint-disable-next-line no-unused-vars -- used as JSX element
 import FlashCard from './components/FlashCard'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import LanguagePicker from './components/LanguagePicker'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import OfflineIndicator from './components/OfflineIndicator'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import InstallBanner from './components/InstallBanner'
 import { clearOldEntries } from './utils/definitionsCache'
 import {
   buildDeck,
@@ -9,6 +15,7 @@ import {
   migrateKnownWords,
   getEarliestNextReview,
 } from './utils/srsEngine'
+import { detectLocale, resolveTranslation } from './utils/translationsLoader'
 import './App.css'
 
 const SRS_STATE_KEY = 'yalose-srs-state';
@@ -17,14 +24,27 @@ const VOCABULARY_VERSION_KEY = 'yalose-vocabulary-version';
 const VOCABULARY_CACHE_KEY = 'yalose-vocabulary-slim-cache';
 const SLIDE_ANIMATION_DURATION = 500; // milliseconds
 
+// Locale / translation storage keys (AC13, AC8, AC9)
+const LOCALE_KEY = 'yalose-locale';
+const MANIFEST_CACHE_KEY = 'yalose-translations-manifest-cache';
+
 // GitHub repository configuration - uses full vocabulary.json for version checking
 const GITHUB_REPO_OWNER = 'bthos';
 const GITHUB_REPO_NAME = 'yalose-flashcards';
 const GITHUB_BRANCH = 'main';
 const GITHUB_VOCABULARY_PATH = 'public/vocabulary-slim.json';
+const GITHUB_MANIFEST_PATH = 'public/vocabulary-translations-manifest.json';
 
-// Construct the GitHub raw URL (points to committed vocabulary.json)
+// Construct the GitHub raw URLs
 const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${GITHUB_VOCABULARY_PATH}`;
+const GITHUB_MANIFEST_URL = `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/${GITHUB_MANIFEST_PATH}`;
+
+/**
+ * Build the translation file URL for a given locale.
+ */
+function translationFileUrl(locale) {
+  return `https://raw.githubusercontent.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/${GITHUB_BRANCH}/public/vocabulary-translations-${locale}.json`;
+}
 
 /**
  * Load and migrate SRS state from localStorage.
@@ -93,6 +113,21 @@ function App() {
   const [error, setError] = useState(null);
   const [exitDirection, setExitDirection] = useState(null);
   const [hasTransitioned, setHasTransitioned] = useState(false);
+
+  // --- Locale / translation state (AC8, AC9, AC12, AC13) ---
+  // manifest: { version, locales: { [code]: { name, coverage } } } | null
+  const [translationsManifest, setTranslationsManifest] = useState(null);
+  // activeLocale: "en" | "<locale-code>"
+  const [activeLocale, setActiveLocale] = useState(() => {
+    return localStorage.getItem(LOCALE_KEY) || null; // null = not yet determined
+  });
+  // translationMap: { [wordId]: string } | null  — null when locale == "en"
+  const [translationMap, setTranslationMap] = useState(null);
+
+  // Stable refs so the keyboard effect (registered once) always calls the latest handlers.
+  const handleKnownRef = useRef(null);
+  const handleReviewRef = useRef(null);
+  const currentWordRef = useRef(null);
 
   // SRS state: { [wordId]: { box, nextReview } }
   const [srsState, setSrsState] = useState(() => loadAndMigrateSrsState());
@@ -214,6 +249,128 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // run once on mount — srsState is read from localStorage directly
 
+  // AC8 — fetch translations manifest on startup; auto-detect locale
+  useEffect(() => {
+    const initTranslations = async () => {
+      let manifest = null;
+
+      // Try localStorage cache first
+      const cached = localStorage.getItem(MANIFEST_CACHE_KEY);
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          manifest = parsed.data;
+        } catch {
+          // corrupt cache — ignore
+        }
+      }
+
+      // Fetch fresh manifest from GitHub
+      try {
+        const res = await fetch(GITHUB_MANIFEST_URL);
+        if (res.ok) {
+          const fresh = await res.json();
+          // Update cache if version changed or no cache existed
+          if (!manifest || fresh.version !== manifest.version) {
+            localStorage.setItem(MANIFEST_CACHE_KEY, JSON.stringify({ version: fresh.version, data: fresh }));
+            manifest = fresh;
+          }
+        }
+      } catch {
+        // Network failure — use cached manifest (may be null)
+      }
+
+      // AC15 — if manifest is empty or fetch failed, hide picker and use en
+      if (!manifest || !manifest.locales || Object.keys(manifest.locales).length === 0) {
+        setTranslationsManifest(null);
+        setActiveLocale('en');
+        return;
+      }
+
+      setTranslationsManifest(manifest);
+
+      // AC12 — determine locale: stored preference > auto-detect > en
+      const storedLocale = localStorage.getItem(LOCALE_KEY);
+      const available = Object.keys(manifest.locales);
+      let locale;
+      if (storedLocale && (storedLocale === 'en' || available.includes(storedLocale))) {
+        locale = storedLocale;
+      } else {
+        locale = detectLocale(Array.from(navigator.languages || []), available);
+      }
+
+      setActiveLocale(locale);
+
+      // AC9 — eager-fetch translation file for non-English locale
+      if (locale !== 'en') {
+        await loadTranslationFile(locale, manifest.locales[locale]?.version ?? manifest.version);
+      }
+    };
+
+    initTranslations();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // run once on mount
+
+  /**
+   * Fetch (or load from localStorage cache) the translation file for a locale.
+   * Sets translationMap state on success; on failure, silently keeps null (fallback to en).
+   *
+   * @param {string} locale
+   * @param {string} manifestVersion — used as cache invalidation key
+   */
+  const loadTranslationFile = useCallback(async (locale, manifestVersion) => {
+    const cacheKey = `yalose-translations-${locale}-cache`;
+
+    // Check localStorage cache
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      try {
+        const parsed = JSON.parse(cached);
+        if (parsed.version === manifestVersion) {
+          setTranslationMap(parsed.data);
+          return;
+        }
+      } catch {
+        // corrupt — re-fetch
+      }
+    }
+
+    // Fetch from GitHub
+    try {
+      const res = await fetch(translationFileUrl(locale));
+      if (res.ok) {
+        const data = await res.json();
+        localStorage.setItem(cacheKey, JSON.stringify({ version: manifestVersion, data }));
+        setTranslationMap(data);
+      }
+      // if not ok — silent fallback, translationMap stays null
+    } catch {
+      // silent fallback
+    }
+  }, []);
+
+  /**
+   * AC16 — Handle locale change from the picker.
+   * Persists to localStorage, clears/loads translationMap, re-renders immediately.
+   */
+  const handleLocaleChange = useCallback(async (locale) => {
+    if (locale === activeLocale) return;
+
+    // AC13 — persist
+    localStorage.setItem(LOCALE_KEY, locale);
+    setActiveLocale(locale);
+
+    if (locale === 'en') {
+      setTranslationMap(null);
+    } else {
+      // Load translation file (uses cache when available)
+      const manifestVersion = translationsManifest?.locales?.[locale]?.version
+        ?? translationsManifest?.version
+        ?? 'unknown';
+      await loadTranslationFile(locale, manifestVersion);
+    }
+  }, [activeLocale, translationsManifest, loadTranslationFile]);
+
   const handleKnown = (wordId) => {
     // Prevent multiple clicks during animation
     if (exitDirection) return;
@@ -301,6 +458,22 @@ function App() {
     setCurrentIndex(0);
   };
 
+  // Sync refs every render so the keyboard effect always sees the latest values.
+  handleKnownRef.current = handleKnown;
+  handleReviewRef.current = handleReview;
+  currentWordRef.current = deck[currentIndex] || deck[0];
+
+  // AC7: keyboard arrow navigation alongside swipe.
+  // Registered once; always reads the latest handler/word via refs.
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'ArrowRight') handleKnownRef.current?.(currentWordRef.current?.id);
+      else if (e.key === 'ArrowLeft') handleReviewRef.current?.(currentWordRef.current?.id);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []); // refs are always current — no deps needed
+
   if (loading) {
     return <div className="app-container"><p className="status">Loading...</p></div>;
   }
@@ -328,9 +501,17 @@ function App() {
 
   return (
     <div className="app-container">
+      <OfflineIndicator />
+      <InstallBanner />
       <header className="app-header">
         <h1>Yalose</h1>
         <p className="tagline">"I already know it!"</p>
+        {/* AC14, AC15 — picker only shown when manifest has locales */}
+        <LanguagePicker
+          manifest={translationsManifest}
+          activeLocale={activeLocale || 'en'}
+          onSelect={handleLocaleChange}
+        />
       </header>
       <main className="app-main">
         {isDeckEmpty && (
@@ -349,6 +530,7 @@ function App() {
           <FlashCard
             key={currentWord.id}
             word={currentWord}
+            translation={resolveTranslation(currentWord, translationMap)}
             onKnown={handleKnown}
             onReview={handleReview}
             exitDirection={exitDirection}

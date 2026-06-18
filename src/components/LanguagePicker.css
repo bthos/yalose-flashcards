@@ -1,0 +1,120 @@
+/* LanguagePicker — language selector button + dropdown */
+
+/* Container — positioned absolutely inside .app-header */
+.lang-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Trigger button */
+.lang-picker-btn {
+  background: transparent;
+  color: rgba(255, 233, 36, 0.7);
+  border: 1px solid rgba(255, 233, 36, 0.3);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.lang-picker-btn:hover,
+.lang-picker-btn:focus-visible {
+  color: rgba(255, 233, 36, 1);
+  border-color: rgba(255, 233, 36, 0.6);
+  outline: none;
+}
+
+.lang-picker-btn[aria-expanded="true"] {
+  color: rgba(255, 233, 36, 1);
+  border-color: rgba(255, 233, 36, 0.6);
+}
+
+.lang-picker-arrow {
+  font-size: 0.7rem;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+/* Backdrop — full-viewport transparent layer for outside-click detection */
+.lang-picker-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* Dropdown panel */
+.lang-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 100;
+  background: #1e1250;
+  border: 1px solid rgba(255, 233, 36, 0.25);
+  border-radius: 8px;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Option row */
+.lang-picker-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  color: rgba(255, 233, 36, 0.85);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: background 0.15s ease;
+  outline: none;
+}
+
+.lang-picker-option:hover,
+.lang-picker-option:focus-visible {
+  background: rgba(255, 233, 36, 0.1);
+}
+
+.lang-picker-option--active {
+  color: #ffeb3b;
+}
+
+/* Check mark / indent spacer */
+.lang-picker-check {
+  width: 1em;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* Locale display name */
+.lang-picker-name {
+  flex: 1;
+}
+
+/* Coverage badge */
+.lang-picker-coverage {
+  font-size: 0.75rem;
+  color: rgba(255, 233, 36, 0.45);
+  white-space: nowrap;
+}
+
+/* Responsive — no layout change needed; button stays 2-letter code at all sizes */
+@media (max-width: 480px) {
+  .lang-picker-btn {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+
+  .lang-picker-dropdown {
+    min-width: 180px;
+  }
+}

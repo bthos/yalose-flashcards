@@ -1,5 +1,5 @@
 {
-  "lastProcessedIndex": 6850,
+  "lastProcessedIndex": 6400,
   "failedWords": [
     {
       "word": "sr.",
@@ -3980,118 +3980,8 @@
       "word": "mike",
       "rae_link": "https://dle.rae.es/mike",
       "reason": "No definitions found"
-    },
-    {
-      "word": "Antonio",
-      "rae_link": "https://dle.rae.es/Antonio",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Francia",
-      "rae_link": "https://dle.rae.es/Francia",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "peter",
-      "rae_link": "https://dle.rae.es/peter",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "paul",
-      "rae_link": "https://dle.rae.es/paul",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Papa",
-      "rae_link": "https://dle.rae.es/Papa",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Londres",
-      "rae_link": "https://dle.rae.es/Londres",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "max",
-      "rae_link": "https://dle.rae.es/max",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "mary",
-      "rae_link": "https://dle.rae.es/mary",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "dormido",
-      "rae_link": "https://dle.rae.es/dormido",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Barcelona",
-      "rae_link": "https://dle.rae.es/Barcelona",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "bill",
-      "rae_link": "https://dle.rae.es/bill",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "harry",
-      "rae_link": "https://dle.rae.es/harry",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Rosa",
-      "rae_link": "https://dle.rae.es/Rosa",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "you",
-      "rae_link": "https://dle.rae.es/you",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "Miguel",
-      "rae_link": "https://dle.rae.es/Miguel",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "jimmy",
-      "rae_link": "https://dle.rae.es/jimmy",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "alex",
-      "rae_link": "https://dle.rae.es/alex",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "etc",
-      "rae_link": "https://dle.rae.es/etc",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "IA",
-      "rae_link": "https://dle.rae.es/IA",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "jim",
-      "rae_link": "https://dle.rae.es/jim",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "tony",
-      "rae_link": "https://dle.rae.es/tony",
-      "reason": "No definitions found"
-    },
-    {
-      "word": "China",
-      "rae_link": "https://dle.rae.es/China",
-      "reason": "No definitions found"
     }
   ],
-  "completedCount": 6032,
-  "lastRun": "2026-06-18T18:38:36.735Z"
+  "completedCount": 5604,
+  "lastRun": "2026-06-18T19:31:47.014Z"
 }

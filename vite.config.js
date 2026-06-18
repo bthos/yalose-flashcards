@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 
@@ -67,10 +68,47 @@ function devApiMock() {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), devApiMock()],
+  plugins: [
+    react(),
+    devApiMock(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['yalose.svg', 'apple-touch-icon.png'],
+      manifest: {
+        name: 'YaLoSé',
+        short_name: 'YaLoSé',
+        theme_color: '#FFEB3B',
+        background_color: '#1a1a2e',
+        display: 'standalone',
+        start_url: '/',
+        icons: [
+          { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+        ],
+      },
+      workbox: {
+        // vocabulary.json is the raw source (2.4 MB); exclude it — the app
+        // uses vocabulary-slim.json at runtime, which is within the 2 MiB limit.
+        globPatterns: ['**/*.{js,css,html,svg,png}', 'vocabulary-slim.json'],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/.*\/api\/definition\/.*/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'rae-definitions',
+              networkTimeoutSeconds: 10,
+              expiration: { maxEntries: 500, maxAgeSeconds: 7 * 24 * 60 * 60 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
+      },
+    }),
+  ],
   // Vercel serves from root, no base path needed
   test: {
     environment: 'node',
-    include: ['src/**/*.test.js'],
+    include: ['src/**/*.test.js', 'scripts/**/*.test.js'],
   },
 })

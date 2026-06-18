@@ -1,0 +1,136 @@
+/* InstallBanner — fixed bottom sheet for PWA install prompt */
+
+.install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background: var(--color-deep-purple, #311B92);
+  border-top: 2px solid var(--color-electric-yellow, #FFEB3B);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 24px 28px;
+  animation: bannerSlideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.install-banner--hiding {
+  animation: bannerSlideDown 0.25s ease-in forwards;
+}
+
+/* On wider screens: constrain width, float above bottom edge */
+@media (min-width: 640px) {
+  .install-banner {
+    max-width: 480px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 16px;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .install-banner--hiding {
+    animation: bannerSlideDownDesktop 0.25s ease-in forwards;
+  }
+}
+
+/* ── Inner layout ── */
+
+.install-banner__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.install-banner__icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.install-banner__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.install-banner__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-electric-yellow, #FFEB3B);
+  margin: 0 0 4px 0;
+}
+
+.install-banner__subtitle {
+  font-size: 0.875rem;
+  color: var(--color-electric-yellow, #FFEB3B);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.install-banner__close {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-electric-yellow, #FFEB3B);
+  border-radius: 8px;
+  color: var(--color-electric-yellow, #FFEB3B);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.install-banner__close:hover,
+.install-banner__close:focus-visible {
+  background: rgba(255, 235, 59, 0.15);
+  outline: 2px solid var(--color-electric-yellow, #FFEB3B);
+  outline-offset: 2px;
+}
+
+.install-banner__install-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background: var(--color-electric-yellow, #FFEB3B);
+  color: var(--color-deep-purple, #311B92);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.install-banner__install-btn:hover,
+.install-banner__install-btn:focus-visible {
+  opacity: 0.9;
+  outline: 2px solid var(--color-electric-yellow, #FFEB3B);
+  outline-offset: 2px;
+}
+
+.install-banner__install-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Animations ── */
+
+@keyframes bannerSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes bannerSlideDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+
+/* Desktop: translate relative to the centered element */
+@keyframes bannerSlideDownDesktop {
+  from { transform: translateX(-50%) translateY(0); }
+  to   { transform: translateX(-50%) translateY(150%); }
+}
