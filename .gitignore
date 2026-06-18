@@ -16,8 +16,13 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+AGENTS.md
+CLAUDE.md
+PIPELINE.md
 
 # Editor directories and files
+.claude
+.specstory
 .vscode/*
 !.vscode/extensions.json
 .cursorindexingignore
@@ -56,3 +61,5 @@ dist-ssr
 # !.akt/PROJECT.md
 #
 # <<< agentic-kit (managed) <<<
+
+.akt/autoresearch/

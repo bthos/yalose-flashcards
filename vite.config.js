@@ -69,4 +69,8 @@ function devApiMock() {
 export default defineConfig({
   plugins: [react(), devApiMock()],
   // Vercel serves from root, no base path needed
+  test: {
+    environment: 'node',
+    include: ['src/**/*.test.js'],
+  },
 })
