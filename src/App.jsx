@@ -3,6 +3,10 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import FlashCard from './components/FlashCard'
 // eslint-disable-next-line no-unused-vars -- used as JSX element
 import LanguagePicker from './components/LanguagePicker'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import OfflineIndicator from './components/OfflineIndicator'
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import InstallBanner from './components/InstallBanner'
 import { clearOldEntries } from './utils/definitionsCache'
 import {
   buildDeck,
@@ -497,6 +501,8 @@ function App() {
 
   return (
     <div className="app-container">
+      <OfflineIndicator />
+      <InstallBanner />
       <header className="app-header">
         <h1>Yalose</h1>
         <p className="tagline">"I already know it!"</p>

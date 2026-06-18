@@ -85,6 +85,50 @@ If the language list is unavailable (for example, you are fully offline with no 
 
 Each community language shows a completion percentage in the picker. This reflects how many of the 5 000 words have a confirmed translation. English is always 100% — it is the authoritative source. Other languages may be partial; the card falls back silently to English for any untranslated word, so you can always study even when a language is incomplete.
 
+## Install as app
+
+Yalosé is a Progressive Web App (PWA). You can add it to your home screen or desktop and use it like a native app — no app store required.
+
+### Android
+
+1. Open Yalosé in Chrome (or any Chromium-based browser).
+2. A banner appears at the bottom of the screen after a moment — tap **Install**.
+3. Alternatively, tap the browser menu (three dots) and select **Add to Home screen**.
+4. Confirm the prompt. The app appears on your home screen and opens in standalone mode (no browser chrome).
+
+### Desktop (Chrome / Edge)
+
+1. Open Yalosé in Chrome or Edge.
+2. Look for the install icon in the address bar (a small screen with a plus sign) and click it.
+3. Click **Install** in the confirmation dialog.
+4. The app opens in its own window and appears in your app launcher.
+
+### iOS (Safari)
+
+1. Open Yalosé in Safari on iPhone or iPad.
+2. Tap the **Share** button (the square with an arrow pointing up).
+3. Scroll down and tap **Add to Home Screen**.
+4. Confirm the name and tap **Add**.
+5. The app icon appears on your home screen and opens without the Safari UI.
+
+> iOS does not support the automatic install prompt. You must use the Share sheet.
+
+### Offline use
+
+Once installed (or after your first visit in a browser), Yalosé works without a network connection.
+
+| Feature | Offline? |
+|---------|---------|
+| All vocabulary cards | Yes — pre-cached |
+| Spaced-repetition progress | Yes — stored locally |
+| Language translations | Yes — cached on first load |
+| RAE definitions (tap-to-reveal) | Cached fallback — last 500 lookups kept for 7 days |
+| Vocabulary updates from GitHub | No — requires network |
+
+### App updates
+
+When a new version of Yalosé is published, the Service Worker downloads it in the background. The update activates the next time you close and reopen the app — there is no forced reload while you are studying.
+
 ## Contributing translations
 
 Yalosé relies on volunteer translators to make the vocabulary available in languages other than English.
@@ -204,6 +248,8 @@ See [PRD.md](.github/PRD.md) for the full product requirements document.
 - GitHub Action to scrape RAE definitions
 - Crowdin integration for community vocabulary translations (shipped in v0.3.1)
 
-### Phase 4: PWA Polish (Planned)
-- manifest.json for PWA installation
-- Service Worker for offline caching
+### Phase 4: PWA Polish
+- App is installable on Android, desktop, and iOS as a standalone PWA
+- Service Worker (Workbox, via vite-plugin-pwa) pre-caches all app assets
+- Offline indicator shown when network is unavailable
+- Install prompt surfaced automatically on supported browsers
