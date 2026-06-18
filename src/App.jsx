@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 // eslint-disable-next-line no-unused-vars -- used as JSX element
 import FlashCard from './components/FlashCard'
 import { clearOldEntries } from './utils/definitionsCache'
@@ -93,6 +93,11 @@ function App() {
   const [error, setError] = useState(null);
   const [exitDirection, setExitDirection] = useState(null);
   const [hasTransitioned, setHasTransitioned] = useState(false);
+
+  // Stable refs so the keyboard effect (registered once) always calls the latest handlers.
+  const handleKnownRef = useRef(null);
+  const handleReviewRef = useRef(null);
+  const currentWordRef = useRef(null);
 
   // SRS state: { [wordId]: { box, nextReview } }
   const [srsState, setSrsState] = useState(() => loadAndMigrateSrsState());
@@ -300,6 +305,22 @@ function App() {
     }
     setCurrentIndex(0);
   };
+
+  // Sync refs every render so the keyboard effect always sees the latest values.
+  handleKnownRef.current = handleKnown;
+  handleReviewRef.current = handleReview;
+  currentWordRef.current = deck[currentIndex] || deck[0];
+
+  // AC7: keyboard arrow navigation alongside swipe.
+  // Registered once; always reads the latest handler/word via refs.
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'ArrowRight') handleKnownRef.current?.(currentWordRef.current?.id);
+      else if (e.key === 'ArrowLeft') handleReviewRef.current?.(currentWordRef.current?.id);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []); // refs are always current — no deps needed
 
   if (loading) {
     return <div className="app-container"><p className="status">Loading...</p></div>;

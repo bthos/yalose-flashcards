@@ -1,5 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { getCachedDefinition, cacheDefinition } from '../utils/definitionsCache';
+import {
+  createSwipeState,
+  onPointerDown,
+  onPointerMove,
+  onPointerUp,
+  onPointerCancel,
+  computeProgress,
+} from '../utils/swipeGesture';
 import './FlashCard.css';
 
 // Match the CSS transition duration (0.6s)
@@ -9,7 +17,13 @@ function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned, bo
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef(null);
-  
+
+  // Swipe gesture state
+  const swipeStateRef = useRef(createSwipeState());
+  const cardContainerRef = useRef(null);
+  // Suppresses the click event that fires after a completed swipe on pointer devices.
+  const swipeDidFire = useRef(false);
+
   // Track current word ID to prevent stale updates from async operations
   const currentWordIdRef = useRef(word.id);
   
@@ -167,10 +181,66 @@ function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned, bo
     fetchDefinitions();
   };
 
+  // Read --swipe-threshold from the CSS custom property (default 60 px).
+  const getSwipeThreshold = () => {
+    if (!cardContainerRef.current) return 60;
+    const val = parseFloat(
+      getComputedStyle(cardContainerRef.current).getPropertyValue('--swipe-threshold')
+    );
+    return isNaN(val) ? 60 : val;
+  };
+
+  const handlePointerDown = (e) => {
+    // AC6: don't start a swipe when tapping the definitions area.
+    if (e.target.closest('.definitions-section')) return;
+    swipeStateRef.current = onPointerDown(e.clientX, e.clientY);
+    // Capture keeps pointermove/pointerup firing even if the pointer leaves the element.
+    e.currentTarget.setPointerCapture(e.pointerId);
+    e.currentTarget.setAttribute('data-swiping', '');
+  };
+
+  const handlePointerMove = (e) => {
+    if (!swipeStateRef.current.active) return;
+    swipeStateRef.current = onPointerMove(swipeStateRef.current, e.clientX, e.clientY);
+    const threshold = getSwipeThreshold();
+    const progress = computeProgress(swipeStateRef.current, threshold);
+    e.currentTarget.style.setProperty('--swipe-progress', progress);
+  };
+
+  const handlePointerUp = (e) => {
+    if (!swipeStateRef.current.active) return;
+    const threshold = getSwipeThreshold();
+    const { state, action } = onPointerUp(swipeStateRef.current, threshold);
+    swipeStateRef.current = state;
+
+    // Remove swiping class and reset progress — CSS transition springs it back.
+    e.currentTarget.removeAttribute('data-swiping');
+    e.currentTarget.style.setProperty('--swipe-progress', 0);
+
+    if (action) {
+      swipeDidFire.current = true;
+      // Clear the flag after pointer-event → click propagation window (AC5/pointer compat).
+      setTimeout(() => { swipeDidFire.current = false; }, 300);
+      if (action === 'known') handleCardAction(onKnown);
+      else handleCardAction(onReview);
+    }
+  };
+
+  const handlePointerCancel = (e) => {
+    swipeStateRef.current = onPointerCancel();
+    e.currentTarget.removeAttribute('data-swiping');
+    e.currentTarget.style.setProperty('--swipe-progress', 0);
+  };
+
   const handleCardClick = (e) => {
+    // Suppress the synthetic click that fires right after a completed swipe.
+    if (swipeDidFire.current) {
+      swipeDidFire.current = false;
+      return;
+    }
     // Don't flip if clicking on buttons, definitions area, or during animation
-    if (e.target.closest('.flashcard-actions') || 
-        e.target.closest('.definitions-section') || 
+    if (e.target.closest('.flashcard-actions') ||
+        e.target.closest('.definitions-section') ||
         isAnimating) {
       return;
     }
@@ -301,7 +371,16 @@ function FlashCard({ word, onKnown, onReview, exitDirection, hasTransitioned, bo
   return (
     <>
       <div className={`flashcard-wrapper ${exitDirection ? `exit-${exitDirection}` : (hasTransitioned ? 'fade-in' : '')}`}>
-        <div className="flashcard-container" onClick={handleCardClick}>
+        <div
+          ref={cardContainerRef}
+          className="flashcard-container"
+          onClick={handleCardClick}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerCancel}
+        >
+          <div className="swipe-overlay" aria-hidden="true" />
           <div className={`flashcard ${isFlipped ? 'flipped' : ''}`}>
             <div className="flashcard-front">
               <h2>{word.word}</h2>

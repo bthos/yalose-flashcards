@@ -74,11 +74,58 @@
 }
 
 .flashcard-container {
+  /* Gesture configuration — tune these without touching JS */
+  --swipe-threshold: 60; /* px, read by JS */
+  --swipe-max-tilt: 12deg;
+  --swipe-progress: 0; /* set by JS during drag, range -1…1 */
+
   perspective: 1000px;
   cursor: pointer;
   width: 100%;
   height: 400px;
+  position: relative;
+  /* Spring snap-back when pointer is released */
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: rotate(calc(var(--swipe-progress) * var(--swipe-max-tilt)));
 }
+
+/* Disable the snap-back transition while the pointer is actively held down */
+.flashcard-container[data-swiping] {
+  transition: none;
+}
+
+/* ===== Swipe gesture overlay ===== */
+
+.swipe-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* Green tint — right swipe (known) */
+.swipe-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #4ade80;
+  opacity: clamp(0, calc(var(--swipe-progress, 0) * 0.45), 0.45);
+}
+
+/* Red tint — left swipe (review) */
+.swipe-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #f87171;
+  opacity: clamp(0, calc(var(--swipe-progress, 0) * -0.45), 0.45);
+}
+
+/* ===== End swipe overlay ===== */
 
 .flashcard {
   position: relative;
