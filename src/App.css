@@ -98,6 +98,65 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== Empty state banner (AC5) ===== */
+
+.empty-state-banner {
+  text-align: center;
+  padding: 16px 24px;
+  background: rgba(255, 233, 36, 0.08);
+  border: 1px solid rgba(255, 233, 36, 0.25);
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.empty-state-message {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-electric-yellow);
+  margin: 0 0 6px;
+}
+
+.empty-state-countdown {
+  font-size: 1rem;
+  color: var(--color-electric-yellow);
+  opacity: 0.75;
+  margin: 0 0 8px;
+}
+
+.empty-state-hint {
+  font-size: 0.95rem;
+  color: var(--color-electric-yellow);
+  opacity: 0.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Subtle variant of reset button — small, unobtrusive */
+.reset-button--subtle {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: transparent;
+  color: rgba(255, 233, 36, 0.45);
+  border: 1px solid rgba(255, 233, 36, 0.2);
+  border-radius: 8px;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+.reset-button--subtle:hover {
+  color: rgba(255, 233, 36, 0.75);
+  border-color: rgba(255, 233, 36, 0.4);
+  transform: none;
+  box-shadow: none;
+}
+
+.reset-button--subtle:active {
+  transform: none;
+  box-shadow: none;
+}
+
 @media (max-width: 600px) {
   .app-header h1 {
     font-size: 3rem;
@@ -109,6 +168,15 @@
 
   .reset-button {
     padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+
+  .reset-button--subtle {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+
+  .empty-state-message {
     font-size: 1.1rem;
   }
 }

@@ -3,5 +3,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "framework": "vite"
+  "framework": "vite",
+  "functions": {
+    "api/definition.js": {
+      "memory": 256,
+      "maxDuration": 5
+    }
+  }
 }

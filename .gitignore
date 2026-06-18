@@ -16,13 +16,19 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+AGENTS.md
+CLAUDE.md
+PIPELINE.md
 
 # RAE scraper state (local only)
 .rae-scraper-state.json
 
 # Editor directories and files
+.claude
+.specstory
 .vscode/*
 !.vscode/extensions.json
+.cursorindexingignore
 .idea
 .DS_Store
 *.suo
@@ -30,3 +36,33 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# >>> agentic-kit (managed) >>>
+# Managed by agentic-kit. Re-run `agentic-kit/init.sh` to refresh, or
+# `agentic-kit/teardown.sh` to remove the whole block. Edits inside this block
+# are overwritten on init.
+#
+# --- Runtime / ephemeral (pipeline scratch; usually not committed) ---
+.akt/memory/
+.akt/features/
+.akt/archive/
+.akt/proposed-patches/
+.akt/scratch/
+.akt/SESSION-STATE.md
+.akt/MEMORY.md
+.akt/PROJECT_PROFILE.md
+#
+# --- Per-machine kit bookkeeping (usually not committed) ---
+.akt/.agentic-kit.cfg
+.akt/.agentic-kit.files
+#
+# Optional — ignore all of .akt/ except PIPELINE.md + PROJECT.md (uncomment all 4 lines):
+# .akt/**
+# !.akt/
+# !.akt/PIPELINE.md
+# !.akt/PROJECT.md
+#
+# <<< agentic-kit (managed) <<<
+
+.akt/autoresearch/
