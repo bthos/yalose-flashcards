@@ -9,6 +9,7 @@
     "build:vocabulary-source": "node scripts/build_vocabulary_source.js",
     "build:vocabulary": "node scripts/build_slim_vocabulary.js",
     "build:translations": "node scripts/build_translations.js",
+    "crowdin:set-context": "node scripts/crowdin_set_context.js",
     "prebuild": "npm run build:vocabulary-source && npm run build:vocabulary",
     "lint": "eslint .",
     "test": "vitest run",

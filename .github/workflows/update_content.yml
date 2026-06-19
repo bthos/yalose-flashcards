@@ -114,6 +114,13 @@ jobs:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
+      - name: Set RAE context on Crowdin vocabulary strings
+        if: steps.check_secrets.outputs.configured == 'true'
+        run: node scripts/crowdin_set_context.js
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
       - name: Build vocabulary translation files
         if: steps.check_secrets.outputs.configured == 'true'
         run: npm run build:translations
