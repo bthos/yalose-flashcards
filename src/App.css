@@ -32,6 +32,91 @@
   font-style: italic;
 }
 
+/* ===== Header controls: difficulty filter + card-back toggle ===== */
+
+.header-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  margin-top: 16px;
+}
+
+.freq-filter,
+.card-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.freq-filter__label,
+.card-mode-toggle__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 233, 36, 0.7);
+}
+
+.freq-filter__select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-electric-yellow);
+  background: transparent;
+  border: 1px solid rgba(255, 233, 36, 0.4);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.freq-filter__select:hover,
+.freq-filter__select:focus-visible {
+  border-color: var(--color-electric-yellow);
+  outline: none;
+}
+
+/* Make options readable regardless of OS theme */
+.freq-filter__select option {
+  background: var(--color-deep-purple);
+  color: var(--color-electric-yellow);
+}
+
+.card-mode-toggle {
+  border: 1px solid rgba(255, 233, 36, 0.4);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.card-mode-seg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 233, 36, 0.55);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.card-mode-seg:hover {
+  color: var(--color-electric-yellow);
+}
+
+.card-mode-seg:focus-visible {
+  outline: 2px solid var(--color-electric-yellow);
+  outline-offset: 2px;
+}
+
+.card-mode-seg--active {
+  background: var(--color-electric-yellow);
+  color: var(--color-deep-purple);
+}
+
 .app-main {
   display: flex;
   flex-direction: column;

@@ -12,6 +12,8 @@
 import { useState, useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars -- used as JSX element
 import React from 'react';
+// eslint-disable-next-line no-unused-vars -- used as JSX elements
+import { CheckIcon, ChevronDownIcon } from './icons';
 import './LanguagePicker.css';
 
 /**
@@ -100,7 +102,7 @@ function LanguagePicker({ manifest, activeLocale, onSelect }) {
         aria-expanded={isOpen}
         onClick={handleOpen}
       >
-        {displayCode} <span className="lang-picker-arrow" aria-hidden="true">▾</span>
+        {displayCode} <ChevronDownIcon className="lang-picker-arrow" size={16} />
       </button>
 
       {isOpen && (
@@ -125,7 +127,7 @@ function LanguagePicker({ manifest, activeLocale, onSelect }) {
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelect('en'); } }}
             >
               <span className="lang-picker-check" aria-hidden="true">
-                {activeLocale === 'en' ? '✓' : ''}
+                {activeLocale === 'en' ? <CheckIcon size={16} /> : null}
               </span>
               <span className="lang-picker-name">English</span>
             </li>
@@ -144,7 +146,7 @@ function LanguagePicker({ manifest, activeLocale, onSelect }) {
                   onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleSelect(code); } }}
                 >
                   <span className="lang-picker-check" aria-hidden="true">
-                    {isActive ? '✓' : ''}
+                    {isActive ? <CheckIcon size={16} /> : null}
                   </span>
                   <span className="lang-picker-name">{name}</span>
                   {coverageLabel && (

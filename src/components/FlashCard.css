@@ -525,6 +525,79 @@
   text-decoration: underline;
 }
 
+/* ===== Inline definitions (definition / mixed card-back modes, FR-07) ===== */
+
+.inline-definitions-wrap {
+  width: 100%;
+}
+
+.inline-definitions {
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-definitions--loading {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.inline-definitions--error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+}
+
+.inline-definitions--pending p {
+  margin: 0 0 12px 0;
+  opacity: 0.85;
+}
+
+.definitions-list--inline {
+  margin: 0;
+  padding-left: 22px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  align-self: stretch;
+}
+
+.definitions-list--inline .definition-item {
+  margin-bottom: 10px;
+}
+
+/* Align inline SVG icons with adjacent text inside buttons, links and messages */
+.definitions-error__msg,
+.inline-definitions--pending p,
+.rae-link,
+.rae-link-prominent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.definitions-button svg,
+.modal-close svg,
+.card-mode-seg svg,
+.lang-picker-arrow {
+  flex-shrink: 0;
+}
+
+/* Definition / mixed modes can hold more content — align from the top */
+.flashcard-back--definition,
+.flashcard-back--mixed {
+  justify-content: flex-start;
+  padding-top: 32px;
+  gap: 16px;
+}
+
 /* Custom scrollbar for modal body */
 .definitions-modal-body::-webkit-scrollbar {
   width: 8px;

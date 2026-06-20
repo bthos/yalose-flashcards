@@ -28,7 +28,7 @@ describe('getNextState', () => {
     expect(getNextState('idle', 'install_clicked')).toBe('idle');
   });
 
-  it('available + dismissed → dismissed (AC7 — ✕ click)', () => {
+  it('available + dismissed → dismissed (AC7 — close click)', () => {
     expect(getNextState('available', 'dismissed')).toBe('dismissed');
   });
 

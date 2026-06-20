@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 // eslint-disable-next-line no-unused-vars -- used as JSX element
 import FlashCard from './components/FlashCard'
 // eslint-disable-next-line no-unused-vars -- used as JSX element
@@ -16,7 +16,28 @@ import {
   getEarliestNextReview,
 } from './utils/srsEngine'
 import { detectLocale, resolveTranslation } from './utils/translationsLoader'
+import {
+  FREQUENCY_BANDS,
+  ALL_WORDS_LIMIT,
+  filterByFrequency,
+  parseFrequencyLimit,
+} from './utils/frequencyFilter'
+import {
+  CARD_MODES,
+  CARD_MODE_LABELS,
+  nextCardMode,
+  prevCardMode,
+  parseCardMode,
+} from './utils/cardMode'
+import { GlobeIcon, BookIcon, LayersIcon } from './components/icons'
 import './App.css'
+
+// Icon per card-back mode (FR-07 toggle)
+const CARD_MODE_ICONS = {
+  translation: GlobeIcon,
+  definition: BookIcon,
+  mixed: LayersIcon,
+};
 
 const SRS_STATE_KEY = 'yalose-srs-state';
 const LEGACY_KNOWN_WORDS_KEY = 'yalose-known-words';
@@ -27,6 +48,10 @@ const SLIDE_ANIMATION_DURATION = 500; // milliseconds
 // Locale / translation storage keys (AC13, AC8, AC9)
 const LOCALE_KEY = 'yalose-locale';
 const MANIFEST_CACHE_KEY = 'yalose-translations-manifest-cache';
+
+// Feature storage keys
+const FREQUENCY_FILTER_KEY = 'yalose-frequency-filter'; // FR-08
+const CARD_MODE_KEY = 'yalose-card-mode'; // FR-07
 
 // GitHub repository configuration - uses full vocabulary.json for version checking
 const GITHUB_REPO_OWNER = 'bthos';
@@ -132,6 +157,19 @@ function App() {
   // SRS state: { [wordId]: { box, nextReview } }
   const [srsState, setSrsState] = useState(() => loadAndMigrateSrsState());
 
+  // FR-08 — difficulty filter: integer frequency-band limit, persisted.
+  const [frequencyLimit, setFrequencyLimit] = useState(() =>
+    parseFrequencyLimit(localStorage.getItem(FREQUENCY_FILTER_KEY))
+  );
+  // Ref so the deferred deck rebuild inside handleKnown's timeout reads the
+  // latest limit without re-registering the handler.
+  const frequencyLimitRef = useRef(frequencyLimit);
+
+  // FR-07 — card-back content mode, persisted.
+  const [cardMode, setCardMode] = useState(() =>
+    parseCardMode(localStorage.getItem(CARD_MODE_KEY))
+  );
+
   // Session deck: words due now (or one casual word when empty)
   const [deck, setDeck] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -144,6 +182,22 @@ function App() {
 
   // Earliest upcoming nextReview ms (for empty-state countdown, AC5)
   const [earliestReview, setEarliestReview] = useState(null);
+
+  // FR-08 — vocabulary restricted to the active frequency band.
+  const filteredVocab = useMemo(
+    () => (fullVocab ? filterByFrequency(fullVocab, frequencyLimit) : null),
+    [fullVocab, frequencyLimit]
+  );
+
+  // FR-08 — due-word count per band, for the filter option labels (AC4).
+  const dueByBand = useMemo(() => {
+    if (!fullVocab) return {};
+    const now = Date.now();
+    return FREQUENCY_BANDS.reduce((acc, band) => {
+      acc[band] = buildDeck(filterByFrequency(fullVocab, band), srsState, now).length;
+      return acc;
+    }, {});
+  }, [fullVocab, srsState]);
 
   // Rebuild deck from fullVocab + srsState whenever either changes
   const rebuildDeck = useCallback((vocab, state) => {
@@ -173,7 +227,8 @@ function App() {
       const words = data.words;
       setFullVocab(words);
       setTotalWordCount(words.length);
-      rebuildDeck(words, srsState);
+      // Build the first deck from the active frequency band (FR-08).
+      rebuildDeck(filterByFrequency(words, frequencyLimitRef.current), srsState);
       setLoading(false);
     };
 
@@ -389,10 +444,13 @@ function App() {
       setSrsState(newState);
       localStorage.setItem(SRS_STATE_KEY, JSON.stringify(newState));
 
-      // Rebuild deck — remove word from session deck (advance index)
+      // Rebuild deck — remove word from session deck (advance index).
+      // FR-08 AC2: the new band (if the filter changed mid-card) takes effect
+      // here, on the next card — read the latest limit via the ref.
       if (fullVocab) {
-        const due = buildDeck(fullVocab, newState, now);
-        const earliest = getEarliestNextReview(fullVocab, newState, now);
+        const bandVocab = filterByFrequency(fullVocab, frequencyLimitRef.current);
+        const due = buildDeck(bandVocab, newState, now);
+        const earliest = getEarliestNextReview(bandVocab, newState, now);
         setEarliestReview(earliest);
 
         if (due.length > 0) {
@@ -405,13 +463,13 @@ function App() {
           } else {
             // All due words answered — flip to empty state
             setIsDeckEmpty(true);
-            const randomWord = fullVocab[Math.floor(Math.random() * fullVocab.length)];
+            const randomWord = bandVocab[Math.floor(Math.random() * bandVocab.length)];
             setDeck([randomWord]);
             setCurrentIndex(0);
           }
         } else {
           setIsDeckEmpty(true);
-          const randomWord = fullVocab[Math.floor(Math.random() * fullVocab.length)];
+          const randomWord = bandVocab[Math.floor(Math.random() * bandVocab.length)];
           setDeck([randomWord]);
           setCurrentIndex(0);
         }
@@ -455,15 +513,43 @@ function App() {
     const empty = {};
     setSrsState(empty);
     if (fullVocab) {
-      rebuildDeck(fullVocab, empty);
+      rebuildDeck(filterByFrequency(fullVocab, frequencyLimitRef.current), empty);
     }
     setCurrentIndex(0);
+  };
+
+  // FR-08 — change frequency band. Persist + update state, but do NOT rebuild
+  // the deck now: the new band applies on the next card (AC2). The current card
+  // is left untouched.
+  const handleFrequencyChange = (e) => {
+    const limit = parseFrequencyLimit(e.target.value);
+    setFrequencyLimit(limit);
+    localStorage.setItem(FREQUENCY_FILTER_KEY, String(limit));
+  };
+
+  // FR-07 — select a card-back mode. Takes effect immediately on the current
+  // card (AC7); the back face re-renders in place via the FlashCard prop.
+  const selectCardMode = (mode) => {
+    setCardMode(mode);
+    localStorage.setItem(CARD_MODE_KEY, mode);
+  };
+
+  // FR-07 AC9 — keyboard support on the toggle group: arrow keys cycle modes.
+  const handleCardModeKeyDown = (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      selectCardMode(nextCardMode(cardMode));
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      selectCardMode(prevCardMode(cardMode));
+    }
   };
 
   // Sync refs every render so the keyboard effect always sees the latest values.
   handleKnownRef.current = handleKnown;
   handleReviewRef.current = handleReview;
   currentWordRef.current = deck[currentIndex] || deck[0];
+  frequencyLimitRef.current = frequencyLimit;
 
   // AC7: keyboard arrow navigation alongside swipe.
   // Registered once; always reads the latest handler/word via refs.
@@ -514,6 +600,53 @@ function App() {
           activeLocale={activeLocale || 'en'}
           onSelect={handleLocaleChange}
         />
+
+        <div className="header-controls">
+          {/* FR-08 — difficulty filter (native select: keyboard-accessible, AC7) */}
+          <div className="freq-filter">
+            <label htmlFor="freq-filter-select" className="freq-filter__label">Showing</label>
+            <select
+              id="freq-filter-select"
+              className="freq-filter__select"
+              value={frequencyLimit}
+              onChange={handleFrequencyChange}
+            >
+              {FREQUENCY_BANDS.map((band) => (
+                <option key={band} value={band}>
+                  Top {band} · {dueByBand[band] ?? 0} due{band >= ALL_WORDS_LIMIT ? ' (all)' : ''}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* FR-07 — card-back mode toggle (AC6, AC9) */}
+          <div
+            className="card-mode-toggle"
+            role="group"
+            aria-label="Card back content"
+            onKeyDown={handleCardModeKeyDown}
+          >
+            <span className="card-mode-toggle__label">Back:</span>
+            {CARD_MODES.map((mode) => {
+              // eslint-disable-next-line no-unused-vars -- used as JSX element
+              const Icon = CARD_MODE_ICONS[mode];
+              const isActive = cardMode === mode;
+              return (
+                <button
+                  key={mode}
+                  type="button"
+                  className={`card-mode-seg ${isActive ? 'card-mode-seg--active' : ''}`}
+                  aria-pressed={isActive}
+                  aria-label={CARD_MODE_LABELS[mode]}
+                  title={CARD_MODE_LABELS[mode]}
+                  onClick={() => selectCardMode(mode)}
+                >
+                  <Icon size={18} />
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </header>
       <main className="app-main">
         {isDeckEmpty && (
@@ -538,13 +671,14 @@ function App() {
             exitDirection={exitDirection}
             hasTransitioned={hasTransitioned}
             boxNumber={srsState[currentWord.id]?.box ?? 0}
+            cardMode={cardMode}
           />
         )}
 
-        {/* AC9: "X due / Y total" counter */}
+        {/* AC9: "X due / Y total" counter — total reflects the active band (FR-08) */}
         <div className="navigation">
           <p className="word-counter">
-            {dueCount} due / {totalWordCount} total
+            {dueCount} due / {filteredVocab ? filteredVocab.length : totalWordCount} total
           </p>
         </div>
 

@@ -8,12 +8,27 @@ import {
   onPointerCancel,
   computeProgress,
 } from '../utils/swipeGesture';
+// eslint-disable-next-line no-unused-vars -- used as JSX elements
+import { BookIcon, LinkIcon, NoteIcon, AlertIcon, CloseIcon } from './icons';
 import './FlashCard.css';
 
 // Match the CSS transition duration (0.6s)
 const FLIP_TRANSITION_DURATION = 600;
 
-function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTransitioned, boxNumber = 0 }) {
+function FlashCard({
+  word,
+  translation,
+  onKnown,
+  onReview,
+  exitDirection,
+  hasTransitioned,
+  boxNumber = 0,
+  cardMode = 'translation',
+}) {
+  // Which parts of the back face this mode shows (FR-07).
+  const showTranslation = cardMode === 'translation' || cardMode === 'mixed';
+  const showInlineDefinitions = cardMode === 'definition' || cardMode === 'mixed';
+
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const timeoutRef = useRef(null);
@@ -43,6 +58,22 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
     setDefinitionsError(null);
     setRaeLink(null);
   }, [word.id]);
+
+  // Auto-load definitions inline when the card is flipped to the back in
+  // definition/mixed mode — and when the mode changes while already flipped
+  // (AC3, AC4, AC7 immediate switch, AC8 spinner/error).
+  useEffect(() => {
+    if (
+      isFlipped &&
+      showInlineDefinitions &&
+      !definitions &&
+      !definitionsLoading &&
+      !definitionsError
+    ) {
+      fetchDefinitions({ openModal: false });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFlipped, cardMode]);
 
   // Cleanup timeout on unmount
   useEffect(() => {
@@ -80,9 +111,9 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
     return false;
   };
 
-  const fetchDefinitions = async () => {
+  const fetchDefinitions = async ({ openModal = true } = {}) => {
     if (definitionsLoading || definitions) return;
-    
+
     // Capture the word ID at the start to detect stale updates
     const requestedWordId = word.id;
     
@@ -103,7 +134,7 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
         setDefinitions(cached.definitions);
         setRaeLink(cached.rae_link);
         setDefinitionsLoading(false);
-        setShowDefinitions(true);
+        if (openModal) setShowDefinitions(true);
         return;
       }
 
@@ -144,7 +175,7 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
 
       setDefinitions(data.definitions);
       setRaeLink(data.rae_link);
-      setShowDefinitions(true);
+      if (openModal) setShowDefinitions(true);
     } catch (error) {
       // Only set error if still on the same word
       if (currentWordIdRef.current === requestedWordId) {
@@ -296,7 +327,9 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
     if (definitionsError) {
       return (
         <div className="definitions-error">
-          <span>❌ {definitionsError}</span>
+          <span className="definitions-error__msg">
+            <AlertIcon size={18} /> {definitionsError}
+          </span>
           <button className="definitions-retry" onClick={handleRetry}>
             Retry
           </button>
@@ -305,13 +338,76 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
     }
 
     return (
-      <button 
-        className="definitions-button" 
+      <button
+        className="definitions-button"
         onClick={handleDefinitionsClick}
       >
-        📖 See definitions
+        <BookIcon size={18} /> See definitions
       </button>
     );
+  };
+
+  const handleInlineRetry = (e) => {
+    e.stopPropagation();
+    setDefinitionsError(null);
+    fetchDefinitions({ openModal: false });
+  };
+
+  // Inline definitions block for definition / mixed modes (AC3, AC4, AC8).
+  const renderInlineDefinitions = () => {
+    if (definitionsLoading) {
+      return (
+        <div className="inline-definitions inline-definitions--loading" aria-live="polite">
+          <span className="definitions-spinner" aria-hidden="true"></span>
+          <span>Fetching from RAE...</span>
+        </div>
+      );
+    }
+
+    if (definitionsError) {
+      return (
+        <div className="inline-definitions inline-definitions--error" aria-live="polite">
+          <span className="definitions-error__msg">
+            <AlertIcon size={18} /> Definition unavailable — check connection.
+          </span>
+          <button className="definitions-retry" onClick={handleInlineRetry}>
+            Retry
+          </button>
+        </div>
+      );
+    }
+
+    if (definitions) {
+      if (isPlaceholder(definitions)) {
+        return (
+          <div className="inline-definitions inline-definitions--pending">
+            <p><NoteIcon size={18} /> Definitions not yet available.</p>
+            {raeLink && (
+              <a href={raeLink} target="_blank" rel="noopener noreferrer" className="rae-link">
+                <LinkIcon size={16} /> Ver en RAE
+              </a>
+            )}
+          </div>
+        );
+      }
+      return (
+        <div className="inline-definitions">
+          <ol className="definitions-list definitions-list--inline">
+            {definitions.map((def, index) => (
+              <li key={index} className="definition-item">{def}</li>
+            ))}
+          </ol>
+          {raeLink && (
+            <a href={raeLink} target="_blank" rel="noopener noreferrer" className="rae-link">
+              <LinkIcon size={16} /> Ver en RAE
+            </a>
+          )}
+        </div>
+      );
+    }
+
+    // Not yet loaded — the flip effect will trigger the fetch.
+    return null;
   };
 
   const renderDefinitionsModal = () => {
@@ -325,21 +421,21 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
           <div className="definitions-modal-header">
             <h3>{word.word}</h3>
             <button className="modal-close" onClick={handleCloseModal} aria-label="Close">
-              ✕
+              <CloseIcon size={20} />
             </button>
           </div>
           <div className="definitions-modal-body">
             {isPending ? (
               <div className="definitions-pending">
-                <p>📝 Definitions not yet available in our database.</p>
+                <p><NoteIcon size={18} /> Definitions not yet available in our database.</p>
                 {raeLink && (
-                  <a 
-                    href={raeLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={raeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rae-link-prominent"
                   >
-                    🔗 View definition on RAE website
+                    <LinkIcon size={18} /> View definition on RAE website
                   </a>
                 )}
               </div>
@@ -351,13 +447,13 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
                   ))}
                 </ol>
                 {raeLink && (
-                  <a 
-                    href={raeLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={raeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rae-link"
                   >
-                    🔗 Ver en RAE
+                    <LinkIcon size={16} /> Ver en RAE
                   </a>
                 )}
               </>
@@ -391,8 +487,8 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
                 </span>
               )}
             </div>
-            <div className="flashcard-back">
-              <h2>{translation ?? word.translations.en}</h2>
+            <div className={`flashcard-back flashcard-back--${cardMode}`}>
+              {showTranslation && <h2>{translation ?? word.translations.en}</h2>}
               {word.tags && word.tags.length > 0 && (
                 <div className="tags">
                   {word.tags.map((tag, index) => (
@@ -400,9 +496,23 @@ function FlashCard({ word, translation, onKnown, onReview, exitDirection, hasTra
                   ))}
                 </div>
               )}
-              <div className="definitions-section">
-                {renderDefinitionsButton()}
-              </div>
+              {showInlineDefinitions ? (
+                <>
+                  <div className="definitions-section inline-definitions-wrap">
+                    {renderInlineDefinitions()}
+                  </div>
+                  {/* Modal is kept available in every mode (UAT decision) */}
+                  <div className="definitions-section">
+                    <button className="definitions-button" onClick={handleDefinitionsClick}>
+                      <BookIcon size={18} /> See definitions
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <div className="definitions-section">
+                  {renderDefinitionsButton()}
+                </div>
+              )}
             </div>
           </div>
         </div>

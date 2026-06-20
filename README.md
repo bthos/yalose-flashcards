@@ -23,9 +23,31 @@ The current box is shown as a small **"Box N"** badge on the card so you can alw
 
 The counter below the card reads **"X due / Y total"**:
 - **due** — how many words are scheduled for today's session.
-- **total** — the full vocabulary size.
+- **total** — the number of words in the selected frequency band (see [Studying by frequency](#studying-by-frequency)).
 
 Work through the due words at your own pace. There is no penalty for stopping mid-session; your progress is saved automatically.
+
+### Studying by frequency
+
+Spanish vocabulary is ranked by how common each word is. The **Showing** menu in the header limits today's session to the most frequent words so you are not overwhelmed by rare ones:
+
+- **Top 100** — the most essential everyday words
+- **Top 500**, **Top 1000** (default), **Top 2000**
+- **Top 5000** — the full vocabulary
+
+Each option shows how many words are currently due in that band (for example, "Top 1000 · 47 due"). Changing the band takes effect on the next card, so the word you are looking at is never interrupted. Your spaced-repetition progress always covers all 5000 words regardless of the band, so switching never loses anything. Your choice is saved locally.
+
+### Choosing what the back shows
+
+The **Back** toggle in the header controls what appears when you flip a card:
+
+| Mode | Back of the card shows |
+|------|------------------------|
+| Translation (default) | the translation in your language |
+| Definition | the Spanish RAE definition only — full immersion |
+| Mixed | the translation and the definition together |
+
+Switching takes effect immediately on the current card. In Definition and Mixed modes the definition is fetched the first time you flip; if it cannot be loaded you will see "Definition unavailable — check connection" with a Retry button. The full-screen **See definitions** view remains available in every mode. Your choice is saved locally.
 
 ### When nothing is due
 
@@ -84,6 +106,11 @@ If the language list is unavailable (for example, you are fully offline with no 
 #### Coverage
 
 Each community language shows a completion percentage in the picker. This reflects how many of the 5 000 words have a confirmed translation. English is always 100% — it is the authoritative source. Other languages may be partial; the card falls back silently to English for any untranslated word, so you can always study even when a language is incomplete.
+
+### Phase 5: Study customisation
+- **Difficulty filter** — restrict the session to a frequency band (Top 100 / 500 / 1000 / 2000 / 5000), with live due counts per band
+- **Card-back modes** — choose Translation, Definition, or Mixed for the back of each card; switches instantly mid-session
+- **Crisp UI icons** — all interface glyphs are dependency-free inline SVG icons (replacing the previous emoji), so they render consistently across platforms and offline
 
 ## Install as app
 

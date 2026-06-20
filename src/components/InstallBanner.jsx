@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useInstallPrompt } from '../hooks/useInstallPrompt.js';
+// eslint-disable-next-line no-unused-vars -- used as JSX element
+import { CloseIcon } from './icons';
 import './InstallBanner.css';
 
 /**
@@ -9,7 +11,7 @@ import './InstallBanner.css';
  *  - beforeinstallprompt not fired / already installed / dismissed: not rendered
  *  - Prompt available:     slides up after 2s delay (handled in hook)
  *  - User clicks Instalar: triggers native prompt, hides banner
- *  - User clicks ✕ / Escape: dismisses, sets sessionStorage flag
+ *  - User clicks close / Escape: dismisses, sets sessionStorage flag
  *
  * Accessibility:
  *  - role="dialog" aria-modal="false" aria-label="Instalar aplicación"
@@ -88,7 +90,7 @@ export default function InstallBanner() {
           aria-label="Cerrar"
           onClick={handleDismiss}
         >
-          ✕
+          <CloseIcon size={20} />
         </button>
       </div>
 
